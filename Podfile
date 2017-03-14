@@ -16,4 +16,7 @@ target 'Invoice' do
 
   pod 'ChameleonFramework'
   pod 'HMSegmentedControl'
+
+  pod 'CYLTabBarController'
+
 end
