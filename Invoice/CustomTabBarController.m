@@ -74,33 +74,34 @@
                                                             backgroundImage:[UIImage imageNamed:@"chooser-moment-button"]
                                                  backgroundHighlightedImage:[UIImage imageNamed:@"chooser-moment-button-highlighted"]];
     
-    DCPathItemButton *itemButton_3 = [[DCPathItemButton alloc]initWithImage:[UIImage imageNamed:@"chooser-moment-icon-camera"]
-                                                           highlightedImage:[UIImage imageNamed:@"chooser-moment-icon-camera-highlighted"]
-                                                            backgroundImage:[UIImage imageNamed:@"chooser-moment-button"]
-                                                 backgroundHighlightedImage:[UIImage imageNamed:@"chooser-moment-button-highlighted"]];
-    
-    DCPathItemButton *itemButton_4 = [[DCPathItemButton alloc]initWithImage:[UIImage imageNamed:@"chooser-moment-icon-thought"]
-                                                           highlightedImage:[UIImage imageNamed:@"chooser-moment-icon-thought-highlighted"]
-                                                            backgroundImage:[UIImage imageNamed:@"chooser-moment-button"]
-                                                 backgroundHighlightedImage:[UIImage imageNamed:@"chooser-moment-button-highlighted"]];
-    
-    DCPathItemButton *itemButton_5 = [[DCPathItemButton alloc]initWithImage:[UIImage imageNamed:@"chooser-moment-icon-sleep"]
-                                                           highlightedImage:[UIImage imageNamed:@"chooser-moment-icon-sleep-highlighted"]
-                                                            backgroundImage:[UIImage imageNamed:@"chooser-moment-button"]
-                                                 backgroundHighlightedImage:[UIImage imageNamed:@"chooser-moment-button-highlighted"]];
+//    DCPathItemButton *itemButton_3 = [[DCPathItemButton alloc]initWithImage:[UIImage imageNamed:@"chooser-moment-icon-camera"]
+//                                                           highlightedImage:[UIImage imageNamed:@"chooser-moment-icon-camera-highlighted"]
+//                                                            backgroundImage:[UIImage imageNamed:@"chooser-moment-button"]
+//                                                 backgroundHighlightedImage:[UIImage imageNamed:@"chooser-moment-button-highlighted"]];
+//    
+//    DCPathItemButton *itemButton_4 = [[DCPathItemButton alloc]initWithImage:[UIImage imageNamed:@"chooser-moment-icon-thought"]
+//                                                           highlightedImage:[UIImage imageNamed:@"chooser-moment-icon-thought-highlighted"]
+//                                                            backgroundImage:[UIImage imageNamed:@"chooser-moment-button"]
+//                                                 backgroundHighlightedImage:[UIImage imageNamed:@"chooser-moment-button-highlighted"]];
+//    
+//    DCPathItemButton *itemButton_5 = [[DCPathItemButton alloc]initWithImage:[UIImage imageNamed:@"chooser-moment-icon-sleep"]
+//                                                           highlightedImage:[UIImage imageNamed:@"chooser-moment-icon-sleep-highlighted"]
+//                                                            backgroundImage:[UIImage imageNamed:@"chooser-moment-button"]
+//                                                 backgroundHighlightedImage:[UIImage imageNamed:@"chooser-moment-button-highlighted"]];
     
     // Add the item button into the center button
     //
     [dcPathButton addPathItems:@[itemButton_1,
                                  itemButton_2,
-                                 itemButton_3,
-                                 itemButton_4,
-                                 itemButton_5
+//                                 itemButton_3,
+//                                 itemButton_4,
+//                                 itemButton_5
                                  ]];
     
     // Change the bloom radius, default is 105.0f
     //
-    dcPathButton.bloomRadius = 120.0f;
+    dcPathButton.bloomRadius = 110.0f;
+    dcPathButton.bloomAngel = 70.0;
     
     // Change the DCButton's center
     //

@@ -7,7 +7,6 @@
 //
 
 #import "AppDelegate.h"
-#import "CYLPlusButtonSubclass.h"
 
 @interface AppDelegate ()
 @end
@@ -17,8 +16,6 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
-//    [CYLPlusButtonSubclass registerPlusButton];
-
     return YES;
 }
 

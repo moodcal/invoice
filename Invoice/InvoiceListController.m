@@ -6,13 +6,13 @@
 //  Copyright © 2017年 links. All rights reserved.
 //
 
-#import "FirstViewController.h"
+#import "InvoiceListController.h"
 
-@interface FirstViewController ()
+@interface InvoiceListController ()
 
 @end
 
-@implementation FirstViewController
+@implementation InvoiceListController
 
 - (void)viewDidLoad {
     [super viewDidLoad];

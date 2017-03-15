@@ -6,13 +6,13 @@
 //  Copyright © 2017年 links. All rights reserved.
 //
 
-#import "SecondViewController.h"
+#import "MyController.h"
 
-@interface SecondViewController ()
+@interface MyController ()
 
 @end
 
-@implementation SecondViewController
+@implementation MyController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
