@@ -28,7 +28,7 @@ typedef NS_ENUM(NSUInteger, AFSSLPinningMode) {
     AFSSLPinningModeCertificate,
 };
 
-/**
+/*
  `AFSecurityPolicy` evaluates server trust against pinned X.509 certificates and public keys over secure connections.
 
  Adding pinned SSL certificates to your app helps prevent man-in-the-middle attacks and other vulnerabilities. Applications dealing with sensitive customer data or financial information are strongly encouraged to route all communication over an HTTPS connection with SSL pinning configured and enabled.
@@ -38,12 +38,12 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface AFSecurityPolicy : NSObject <NSSecureCoding, NSCopying>
 
-/**
+/*
  The criteria by which server trust should be evaluated against the pinned SSL certificates. Defaults to `AFSSLPinningModeNone`.
  */
 @property (readonly, nonatomic, assign) AFSSLPinningMode SSLPinningMode;
 
-/**
+/*
  The certificates used to evaluate server trust according to the SSL pinning mode. 
 
   By default, this property is set to any (`.cer`) certificates included in the target compiling AFNetworking. Note that if you are using AFNetworking as embedded framework, no certificates will be pinned by default. Use `certificatesInBundle` to load certificates from your target, and then create a new policy by calling `policyWithPinningMode:withPinnedCertificates`.
@@ -52,12 +52,12 @@ NS_ASSUME_NONNULL_BEGIN
  */
 @property (nonatomic, strong, nullable) NSSet <NSData *> *pinnedCertificates;
 
-/**
+/*
  Whether or not to trust servers with an invalid or expired SSL certificates. Defaults to `NO`.
  */
 @property (nonatomic, assign) BOOL allowInvalidCertificates;
 
-/**
+/*
  Whether or not to validate the domain name in the certificate's CN field. Defaults to `YES`.
  */
 @property (nonatomic, assign) BOOL validatesDomainName;
@@ -66,7 +66,7 @@ NS_ASSUME_NONNULL_BEGIN
 /// @name Getting Certificates from the Bundle
 ///-----------------------------------------
 
-/**
+/*
  Returns any certificates included in the bundle. If you are using AFNetworking as an embedded framework, you must use this method to find the certificates you have included in your app bundle, and use them when creating your security policy by calling `policyWithPinningMode:withPinnedCertificates`.
 
  @return The certificates included in the given bundle.
@@ -77,7 +77,7 @@ NS_ASSUME_NONNULL_BEGIN
 /// @name Getting Specific Security Policies
 ///-----------------------------------------
 
-/**
+/*
  Returns the shared default security policy, which does not allow invalid certificates, validates domain name, and does not validate against pinned certificates or public keys.
 
  @return The default security policy.
@@ -88,7 +88,7 @@ NS_ASSUME_NONNULL_BEGIN
 /// @name Initialization
 ///---------------------
 
-/**
+/*
  Creates and returns a security policy with the specified pinning mode.
 
  @param pinningMode The SSL pinning mode.
@@ -97,7 +97,7 @@ NS_ASSUME_NONNULL_BEGIN
  */
 + (instancetype)policyWithPinningMode:(AFSSLPinningMode)pinningMode;
 
-/**
+/*
  Creates and returns a security policy with the specified pinning mode.
 
  @param pinningMode The SSL pinning mode.
@@ -111,7 +111,7 @@ NS_ASSUME_NONNULL_BEGIN
 /// @name Evaluating Server Trust
 ///------------------------------
 
-/**
+/*
  Whether or not the specified server trust should be accepted, based on the security policy.
 
  This method should be used when responding to an authentication challenge from a server.
@@ -132,7 +132,7 @@ NS_ASSUME_NONNULL_END
 /// @name Constants
 ///----------------
 
-/**
+/*
  ## SSL Pinning Modes
 
  The following constants are provided by `AFSSLPinningMode` as possible SSL pinning modes.

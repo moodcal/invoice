@@ -8,6 +8,9 @@
 
 #import "CustomTabBarController.h"
 #import <DCPathButton/DCPathButton.h>
+#import "ScanController.h"
+#import "RITLPhotoNavigationViewModel.h"
+#import "RITLPhotoNavigationViewController.h"
 
 @interface CustomTabBarController ()<DCPathButtonDelegate>
 
@@ -134,6 +137,39 @@
 
 - (void)pathButton:(DCPathButton *)dcPathButton clickItemButtonAtIndex:(NSUInteger)itemButtonIndex {
     NSLog(@"You tap %@ at index : %tu", dcPathButton, itemButtonIndex);
+    
+    if (itemButtonIndex == 0) {
+        ScanController *controller = [ScanController new];
+        [self presentViewController:controller animated:YES completion:nil];
+    } else {
+        RITLPhotoNavigationViewModel * viewModel = [RITLPhotoNavigationViewModel new];
+        
+        __weak typeof(self) weakSelf = self;
+        
+        //    设置需要图片剪切的大小，不设置为图片的原比例大小
+        //    viewModel.imageSize = _assetSize;
+        
+        viewModel.RITLBridgeGetImageBlock = ^(NSArray <UIImage *> * images){
+            
+            //获得图片
+            __strong typeof(weakSelf) strongSelf = weakSelf;
+            
+
+            
+        };
+        
+        viewModel.RITLBridgeGetImageDataBlock = ^(NSArray <NSData *> * datas){
+            
+            //可以进行数据上传操作..
+            __strong typeof(weakSelf) strongSelf = weakSelf;
+
+            
+        };
+        
+        RITLPhotoNavigationViewController * viewController = [RITLPhotoNavigationViewController photosViewModelInstance:viewModel];
+        
+        [self presentViewController:viewController animated:true completion:nil];
+    }
 }
 
 - (void)didPresentDCPathButtonItems:(DCPathButton *)dcPathButton {

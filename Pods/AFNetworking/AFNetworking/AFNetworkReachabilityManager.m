@@ -70,7 +70,7 @@ static AFNetworkReachabilityStatus AFNetworkReachabilityStatusForFlags(SCNetwork
     return status;
 }
 
-/**
+/*
  * Queue a status change notification for the main thread.
  *
  * This is done to ensure that the notifications are received in the same order

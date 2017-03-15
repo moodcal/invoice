@@ -16,6 +16,63 @@
 		AB330D1B1E777F9D002C6FCD /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AB330D191E777F9D002C6FCD /* LaunchScreen.storyboard */; };
 		AB330D241E77CBC7002C6FCD /* CustomTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = AB330D231E77CBC7002C6FCD /* CustomTabBarController.m */; };
 		AB330D271E77CDB9002C6FCD /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AB330D251E77CDB9002C6FCD /* Main.storyboard */; };
+		C28FB7D31E78EC66009AE91A /* ScanController.m in Sources */ = {isa = PBXBuildFile; fileRef = C28FB7D21E78EC66009AE91A /* ScanController.m */; };
+		C28FB7D81E791035009AE91A /* UIView+Frame.m in Sources */ = {isa = PBXBuildFile; fileRef = C28FB7D71E791035009AE91A /* UIView+Frame.m */; };
+		C28FB7DB1E791057009AE91A /* UIUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = C28FB7DA1E791057009AE91A /* UIUtil.m */; };
+		C28FB7DE1E7910B8009AE91A /* YHButton.m in Sources */ = {isa = PBXBuildFile; fileRef = C28FB7DD1E7910B8009AE91A /* YHButton.m */; };
+		C28FB7E31E791211009AE91A /* UIColor+HexColor.m in Sources */ = {isa = PBXBuildFile; fileRef = C28FB7E21E791211009AE91A /* UIColor+HexColor.m */; };
+		C28FB8231E791541009AE91A /* RITLBaseViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = C28FB7E81E791541009AE91A /* RITLBaseViewModel.m */; };
+		C28FB8241E791541009AE91A /* RITLPhotoBrowseCell.m in Sources */ = {isa = PBXBuildFile; fileRef = C28FB7EB1E791541009AE91A /* RITLPhotoBrowseCell.m */; };
+		C28FB8251E791541009AE91A /* RITLPhotoBrowseController.m in Sources */ = {isa = PBXBuildFile; fileRef = C28FB7ED1E791541009AE91A /* RITLPhotoBrowseController.m */; };
+		C28FB8261E791541009AE91A /* RITLPhotoBrowseViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = C28FB7EF1E791541009AE91A /* RITLPhotoBrowseViewModel.m */; };
+		C28FB8271E791541009AE91A /* RITLPhotoGroupCell.m in Sources */ = {isa = PBXBuildFile; fileRef = C28FB7F21E791541009AE91A /* RITLPhotoGroupCell.m */; };
+		C28FB8281E791541009AE91A /* RITLPhotoGroupViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C28FB7F41E791541009AE91A /* RITLPhotoGroupViewController.m */; };
+		C28FB8291E791541009AE91A /* RITLPhotoGroupViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = C28FB7F61E791541009AE91A /* RITLPhotoGroupViewModel.m */; };
+		C28FB82A1E791541009AE91A /* RITLPhotoNavigationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C28FB7F91E791541009AE91A /* RITLPhotoNavigationViewController.m */; };
+		C28FB82B1E791541009AE91A /* RITLPhotoNavigationViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = C28FB7FB1E791541009AE91A /* RITLPhotoNavigationViewModel.m */; };
+		C28FB82C1E791541009AE91A /* RITLPhotoBridgeManager.m in Sources */ = {isa = PBXBuildFile; fileRef = C28FB7FE1E791541009AE91A /* RITLPhotoBridgeManager.m */; };
+		C28FB82D1E791541009AE91A /* RITLPhotoCacheManager.mm in Sources */ = {isa = PBXBuildFile; fileRef = C28FB8001E791541009AE91A /* RITLPhotoCacheManager.mm */; };
+		C28FB82E1E791541009AE91A /* RITLPhotoHandleManager.m in Sources */ = {isa = PBXBuildFile; fileRef = C28FB8021E791541009AE91A /* RITLPhotoHandleManager.m */; };
+		C28FB82F1E791541009AE91A /* RITLPhotoBottomReusableView.m in Sources */ = {isa = PBXBuildFile; fileRef = C28FB8051E791541009AE91A /* RITLPhotoBottomReusableView.m */; };
+		C28FB8301E791541009AE91A /* RITLPhotoPreviewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C28FB8071E791541009AE91A /* RITLPhotoPreviewController.m */; };
+		C28FB8311E791541009AE91A /* RITLPhotosCell.m in Sources */ = {isa = PBXBuildFile; fileRef = C28FB8091E791541009AE91A /* RITLPhotosCell.m */; };
+		C28FB8321E791541009AE91A /* RITLPhotosViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C28FB80B1E791541009AE91A /* RITLPhotosViewController.m */; };
+		C28FB8331E791541009AE91A /* RITLPhotosViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = C28FB80D1E791541009AE91A /* RITLPhotosViewModel.m */; };
+		C28FB8341E791541009AE91A /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = C28FB80F1E791541009AE91A /* Localizable.strings */; };
+		C28FB8351E791541009AE91A /* RITLPhotoRequestStore.m in Sources */ = {isa = PBXBuildFile; fileRef = C28FB8121E791541009AE91A /* RITLPhotoRequestStore.m */; };
+		C28FB8361E791541009AE91A /* RITLPhotoStore.m in Sources */ = {isa = PBXBuildFile; fileRef = C28FB8141E791541009AE91A /* RITLPhotoStore.m */; };
+		C28FB8371E791541009AE91A /* RITLPhotoStoreConfiguraion.m in Sources */ = {isa = PBXBuildFile; fileRef = C28FB8161E791541009AE91A /* RITLPhotoStoreConfiguraion.m */; };
+		C28FB8381E791541009AE91A /* PHObject+SupportCategory.m in Sources */ = {isa = PBXBuildFile; fileRef = C28FB81A1E791541009AE91A /* PHObject+SupportCategory.m */; };
+		C28FB8391E791541009AE91A /* RITLPhotos.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C28FB81C1E791541009AE91A /* RITLPhotos.xcassets */; };
+		C28FB83A1E791541009AE91A /* UIKit+YPPhotoDemo.m in Sources */ = {isa = PBXBuildFile; fileRef = C28FB81E1E791541009AE91A /* UIKit+YPPhotoDemo.m */; };
+		C28FB83B1E791541009AE91A /* UIView+Category.m in Sources */ = {isa = PBXBuildFile; fileRef = C28FB8201E791541009AE91A /* UIView+Category.m */; };
+		C28FB83C1E791541009AE91A /* UIViewController+Frame.m in Sources */ = {isa = PBXBuildFile; fileRef = C28FB8221E791541009AE91A /* UIViewController+Frame.m */; };
+		C28FB83E1E791559009AE91A /* Photos.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C28FB83D1E791559009AE91A /* Photos.framework */; };
+		C28FB8831E7915A0009AE91A /* PHAsset+RITLPhotoRepresentation.m in Sources */ = {isa = PBXBuildFile; fileRef = C28FB8421E7915A0009AE91A /* PHAsset+RITLPhotoRepresentation.m */; };
+		C28FB8841E7915A0009AE91A /* PHAssetCollection+RITLPhotoRepresentation.m in Sources */ = {isa = PBXBuildFile; fileRef = C28FB8441E7915A0009AE91A /* PHAssetCollection+RITLPhotoRepresentation.m */; };
+		C28FB8851E7915A0009AE91A /* PHFetchResult+RITLPhotoRepresentation.m in Sources */ = {isa = PBXBuildFile; fileRef = C28FB8461E7915A0009AE91A /* PHFetchResult+RITLPhotoRepresentation.m */; };
+		C28FB8861E7915A0009AE91A /* PHImageRequestOptions+RITLPhotoRepresentation.m in Sources */ = {isa = PBXBuildFile; fileRef = C28FB8481E7915A0009AE91A /* PHImageRequestOptions+RITLPhotoRepresentation.m */; };
+		C28FB8871E7915A0009AE91A /* UIButton+RITLBlockButton.m in Sources */ = {isa = PBXBuildFile; fileRef = C28FB84A1E7915A0009AE91A /* UIButton+RITLBlockButton.m */; };
+		C28FB8881E7915A0009AE91A /* UIViewController+RITLPhotoAlertController.m in Sources */ = {isa = PBXBuildFile; fileRef = C28FB84C1E7915A0009AE91A /* UIViewController+RITLPhotoAlertController.m */; };
+		C28FB8891E7915A0009AE91A /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = C28FB84E1E7915A0009AE91A /* Info.plist */; };
+		C28FB88A1E7915A0009AE91A /* MASCompositeConstraint.m in Sources */ = {isa = PBXBuildFile; fileRef = C28FB8501E7915A0009AE91A /* MASCompositeConstraint.m */; };
+		C28FB88B1E7915A0009AE91A /* MASConstraint.m in Sources */ = {isa = PBXBuildFile; fileRef = C28FB8531E7915A0009AE91A /* MASConstraint.m */; };
+		C28FB88C1E7915A0009AE91A /* MASConstraintMaker.m in Sources */ = {isa = PBXBuildFile; fileRef = C28FB8551E7915A0009AE91A /* MASConstraintMaker.m */; };
+		C28FB88D1E7915A0009AE91A /* MASLayoutConstraint.m in Sources */ = {isa = PBXBuildFile; fileRef = C28FB8571E7915A0009AE91A /* MASLayoutConstraint.m */; };
+		C28FB88E1E7915A0009AE91A /* MASViewAttribute.m in Sources */ = {isa = PBXBuildFile; fileRef = C28FB85B1E7915A0009AE91A /* MASViewAttribute.m */; };
+		C28FB88F1E7915A0009AE91A /* MASViewConstraint.m in Sources */ = {isa = PBXBuildFile; fileRef = C28FB85D1E7915A0009AE91A /* MASViewConstraint.m */; };
+		C28FB8901E7915A0009AE91A /* NSArray+MASAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = C28FB85F1E7915A0009AE91A /* NSArray+MASAdditions.m */; };
+		C28FB8911E7915A0009AE91A /* NSLayoutConstraint+MASDebugAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = C28FB8621E7915A0009AE91A /* NSLayoutConstraint+MASDebugAdditions.m */; };
+		C28FB8921E7915A0009AE91A /* View+MASAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = C28FB8641E7915A0009AE91A /* View+MASAdditions.m */; };
+		C28FB8931E7915A0009AE91A /* ViewController+MASAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = C28FB8671E7915A0009AE91A /* ViewController+MASAdditions.m */; };
+		C28FB8941E7915A0009AE91A /* NSObject+MemoryLeak.m in Sources */ = {isa = PBXBuildFile; fileRef = C28FB86B1E7915A0009AE91A /* NSObject+MemoryLeak.m */; };
+		C28FB8951E7915A0009AE91A /* UIApplication+MemoryLeak.m in Sources */ = {isa = PBXBuildFile; fileRef = C28FB86D1E7915A0009AE91A /* UIApplication+MemoryLeak.m */; };
+		C28FB8961E7915A0009AE91A /* UINavigationController+MemoryLeak.m in Sources */ = {isa = PBXBuildFile; fileRef = C28FB86F1E7915A0009AE91A /* UINavigationController+MemoryLeak.m */; };
+		C28FB8971E7915A0009AE91A /* UIPageViewController+MemoryLeak.m in Sources */ = {isa = PBXBuildFile; fileRef = C28FB8711E7915A0009AE91A /* UIPageViewController+MemoryLeak.m */; };
+		C28FB8981E7915A0009AE91A /* UISplitViewController+MemoryLeak.m in Sources */ = {isa = PBXBuildFile; fileRef = C28FB8731E7915A0009AE91A /* UISplitViewController+MemoryLeak.m */; };
+		C28FB8991E7915A0009AE91A /* UITabBarController+MemoryLeak.m in Sources */ = {isa = PBXBuildFile; fileRef = C28FB8751E7915A0009AE91A /* UITabBarController+MemoryLeak.m */; };
+		C28FB89A1E7915A0009AE91A /* UIView+MemoryLeak.m in Sources */ = {isa = PBXBuildFile; fileRef = C28FB8771E7915A0009AE91A /* UIView+MemoryLeak.m */; };
+		C28FB89B1E7915A0009AE91A /* UIViewController+MemoryLeak.m in Sources */ = {isa = PBXBuildFile; fileRef = C28FB8791E7915A0009AE91A /* UIViewController+MemoryLeak.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -36,6 +93,133 @@
 		AB330D221E77CBC7002C6FCD /* CustomTabBarController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomTabBarController.h; sourceTree = "<group>"; };
 		AB330D231E77CBC7002C6FCD /* CustomTabBarController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomTabBarController.m; sourceTree = "<group>"; };
 		AB330D261E77CDB9002C6FCD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		C28FB7D11E78EC66009AE91A /* ScanController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ScanController.h; sourceTree = "<group>"; };
+		C28FB7D21E78EC66009AE91A /* ScanController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ScanController.m; sourceTree = "<group>"; };
+		C28FB7D61E791035009AE91A /* UIView+Frame.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+Frame.h"; sourceTree = "<group>"; };
+		C28FB7D71E791035009AE91A /* UIView+Frame.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+Frame.m"; sourceTree = "<group>"; };
+		C28FB7D91E791057009AE91A /* UIUtil.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UIUtil.h; sourceTree = "<group>"; };
+		C28FB7DA1E791057009AE91A /* UIUtil.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UIUtil.m; sourceTree = "<group>"; };
+		C28FB7DC1E7910B8009AE91A /* YHButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YHButton.h; sourceTree = "<group>"; };
+		C28FB7DD1E7910B8009AE91A /* YHButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YHButton.m; sourceTree = "<group>"; };
+		C28FB7E01E79115A009AE91A /* PrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
+		C28FB7E11E791211009AE91A /* UIColor+HexColor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+HexColor.h"; sourceTree = "<group>"; };
+		C28FB7E21E791211009AE91A /* UIColor+HexColor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+HexColor.m"; sourceTree = "<group>"; };
+		C28FB7E71E791541009AE91A /* RITLBaseViewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RITLBaseViewModel.h; sourceTree = "<group>"; };
+		C28FB7E81E791541009AE91A /* RITLBaseViewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RITLBaseViewModel.m; sourceTree = "<group>"; };
+		C28FB7EA1E791541009AE91A /* RITLPhotoBrowseCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RITLPhotoBrowseCell.h; sourceTree = "<group>"; };
+		C28FB7EB1E791541009AE91A /* RITLPhotoBrowseCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RITLPhotoBrowseCell.m; sourceTree = "<group>"; };
+		C28FB7EC1E791541009AE91A /* RITLPhotoBrowseController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RITLPhotoBrowseController.h; sourceTree = "<group>"; };
+		C28FB7ED1E791541009AE91A /* RITLPhotoBrowseController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RITLPhotoBrowseController.m; sourceTree = "<group>"; };
+		C28FB7EE1E791541009AE91A /* RITLPhotoBrowseViewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RITLPhotoBrowseViewModel.h; sourceTree = "<group>"; };
+		C28FB7EF1E791541009AE91A /* RITLPhotoBrowseViewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RITLPhotoBrowseViewModel.m; sourceTree = "<group>"; };
+		C28FB7F11E791541009AE91A /* RITLPhotoGroupCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RITLPhotoGroupCell.h; sourceTree = "<group>"; };
+		C28FB7F21E791541009AE91A /* RITLPhotoGroupCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RITLPhotoGroupCell.m; sourceTree = "<group>"; };
+		C28FB7F31E791541009AE91A /* RITLPhotoGroupViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RITLPhotoGroupViewController.h; sourceTree = "<group>"; };
+		C28FB7F41E791541009AE91A /* RITLPhotoGroupViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RITLPhotoGroupViewController.m; sourceTree = "<group>"; };
+		C28FB7F51E791541009AE91A /* RITLPhotoGroupViewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RITLPhotoGroupViewModel.h; sourceTree = "<group>"; };
+		C28FB7F61E791541009AE91A /* RITLPhotoGroupViewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RITLPhotoGroupViewModel.m; sourceTree = "<group>"; };
+		C28FB7F81E791541009AE91A /* RITLPhotoNavigationViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RITLPhotoNavigationViewController.h; sourceTree = "<group>"; };
+		C28FB7F91E791541009AE91A /* RITLPhotoNavigationViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RITLPhotoNavigationViewController.m; sourceTree = "<group>"; };
+		C28FB7FA1E791541009AE91A /* RITLPhotoNavigationViewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RITLPhotoNavigationViewModel.h; sourceTree = "<group>"; };
+		C28FB7FB1E791541009AE91A /* RITLPhotoNavigationViewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RITLPhotoNavigationViewModel.m; sourceTree = "<group>"; };
+		C28FB7FD1E791541009AE91A /* RITLPhotoBridgeManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RITLPhotoBridgeManager.h; sourceTree = "<group>"; };
+		C28FB7FE1E791541009AE91A /* RITLPhotoBridgeManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RITLPhotoBridgeManager.m; sourceTree = "<group>"; };
+		C28FB7FF1E791541009AE91A /* RITLPhotoCacheManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RITLPhotoCacheManager.h; sourceTree = "<group>"; };
+		C28FB8001E791541009AE91A /* RITLPhotoCacheManager.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = RITLPhotoCacheManager.mm; sourceTree = "<group>"; };
+		C28FB8011E791541009AE91A /* RITLPhotoHandleManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RITLPhotoHandleManager.h; sourceTree = "<group>"; };
+		C28FB8021E791541009AE91A /* RITLPhotoHandleManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RITLPhotoHandleManager.m; sourceTree = "<group>"; };
+		C28FB8041E791541009AE91A /* RITLPhotoBottomReusableView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RITLPhotoBottomReusableView.h; sourceTree = "<group>"; };
+		C28FB8051E791541009AE91A /* RITLPhotoBottomReusableView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RITLPhotoBottomReusableView.m; sourceTree = "<group>"; };
+		C28FB8061E791541009AE91A /* RITLPhotoPreviewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RITLPhotoPreviewController.h; sourceTree = "<group>"; };
+		C28FB8071E791541009AE91A /* RITLPhotoPreviewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RITLPhotoPreviewController.m; sourceTree = "<group>"; };
+		C28FB8081E791541009AE91A /* RITLPhotosCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RITLPhotosCell.h; sourceTree = "<group>"; };
+		C28FB8091E791541009AE91A /* RITLPhotosCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RITLPhotosCell.m; sourceTree = "<group>"; };
+		C28FB80A1E791541009AE91A /* RITLPhotosViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RITLPhotosViewController.h; sourceTree = "<group>"; };
+		C28FB80B1E791541009AE91A /* RITLPhotosViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RITLPhotosViewController.m; sourceTree = "<group>"; };
+		C28FB80C1E791541009AE91A /* RITLPhotosViewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RITLPhotosViewModel.h; sourceTree = "<group>"; };
+		C28FB80D1E791541009AE91A /* RITLPhotosViewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RITLPhotosViewModel.m; sourceTree = "<group>"; };
+		C28FB8101E791541009AE91A /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
+		C28FB8111E791541009AE91A /* RITLPhotoRequestStore.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RITLPhotoRequestStore.h; sourceTree = "<group>"; };
+		C28FB8121E791541009AE91A /* RITLPhotoRequestStore.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RITLPhotoRequestStore.m; sourceTree = "<group>"; };
+		C28FB8131E791541009AE91A /* RITLPhotoStore.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RITLPhotoStore.h; sourceTree = "<group>"; };
+		C28FB8141E791541009AE91A /* RITLPhotoStore.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RITLPhotoStore.m; sourceTree = "<group>"; };
+		C28FB8151E791541009AE91A /* RITLPhotoStoreConfiguraion.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RITLPhotoStoreConfiguraion.h; sourceTree = "<group>"; };
+		C28FB8161E791541009AE91A /* RITLPhotoStoreConfiguraion.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RITLPhotoStoreConfiguraion.m; sourceTree = "<group>"; };
+		C28FB8171E791541009AE91A /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/Localizable.strings"; sourceTree = "<group>"; };
+		C28FB8191E791541009AE91A /* PHObject+SupportCategory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "PHObject+SupportCategory.h"; sourceTree = "<group>"; };
+		C28FB81A1E791541009AE91A /* PHObject+SupportCategory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "PHObject+SupportCategory.m"; sourceTree = "<group>"; };
+		C28FB81B1E791541009AE91A /* RITLPhotoConfig.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RITLPhotoConfig.h; sourceTree = "<group>"; };
+		C28FB81C1E791541009AE91A /* RITLPhotos.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = RITLPhotos.xcassets; sourceTree = "<group>"; };
+		C28FB81D1E791541009AE91A /* UIKit+YPPhotoDemo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIKit+YPPhotoDemo.h"; sourceTree = "<group>"; };
+		C28FB81E1E791541009AE91A /* UIKit+YPPhotoDemo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIKit+YPPhotoDemo.m"; sourceTree = "<group>"; };
+		C28FB81F1E791541009AE91A /* UIView+Category.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+Category.h"; sourceTree = "<group>"; };
+		C28FB8201E791541009AE91A /* UIView+Category.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+Category.m"; sourceTree = "<group>"; };
+		C28FB8211E791541009AE91A /* UIViewController+Frame.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIViewController+Frame.h"; sourceTree = "<group>"; };
+		C28FB8221E791541009AE91A /* UIViewController+Frame.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+Frame.m"; sourceTree = "<group>"; };
+		C28FB83D1E791559009AE91A /* Photos.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Photos.framework; path = System/Library/Frameworks/Photos.framework; sourceTree = SDKROOT; };
+		C28FB8411E7915A0009AE91A /* PHAsset+RITLPhotoRepresentation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "PHAsset+RITLPhotoRepresentation.h"; sourceTree = "<group>"; };
+		C28FB8421E7915A0009AE91A /* PHAsset+RITLPhotoRepresentation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "PHAsset+RITLPhotoRepresentation.m"; sourceTree = "<group>"; };
+		C28FB8431E7915A0009AE91A /* PHAssetCollection+RITLPhotoRepresentation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "PHAssetCollection+RITLPhotoRepresentation.h"; sourceTree = "<group>"; };
+		C28FB8441E7915A0009AE91A /* PHAssetCollection+RITLPhotoRepresentation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "PHAssetCollection+RITLPhotoRepresentation.m"; sourceTree = "<group>"; };
+		C28FB8451E7915A0009AE91A /* PHFetchResult+RITLPhotoRepresentation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "PHFetchResult+RITLPhotoRepresentation.h"; sourceTree = "<group>"; };
+		C28FB8461E7915A0009AE91A /* PHFetchResult+RITLPhotoRepresentation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "PHFetchResult+RITLPhotoRepresentation.m"; sourceTree = "<group>"; };
+		C28FB8471E7915A0009AE91A /* PHImageRequestOptions+RITLPhotoRepresentation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "PHImageRequestOptions+RITLPhotoRepresentation.h"; sourceTree = "<group>"; };
+		C28FB8481E7915A0009AE91A /* PHImageRequestOptions+RITLPhotoRepresentation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "PHImageRequestOptions+RITLPhotoRepresentation.m"; sourceTree = "<group>"; };
+		C28FB8491E7915A0009AE91A /* UIButton+RITLBlockButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIButton+RITLBlockButton.h"; sourceTree = "<group>"; };
+		C28FB84A1E7915A0009AE91A /* UIButton+RITLBlockButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIButton+RITLBlockButton.m"; sourceTree = "<group>"; };
+		C28FB84B1E7915A0009AE91A /* UIViewController+RITLPhotoAlertController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIViewController+RITLPhotoAlertController.h"; sourceTree = "<group>"; };
+		C28FB84C1E7915A0009AE91A /* UIViewController+RITLPhotoAlertController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+RITLPhotoAlertController.m"; sourceTree = "<group>"; };
+		C28FB84E1E7915A0009AE91A /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C28FB84F1E7915A0009AE91A /* MASCompositeConstraint.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MASCompositeConstraint.h; sourceTree = "<group>"; };
+		C28FB8501E7915A0009AE91A /* MASCompositeConstraint.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MASCompositeConstraint.m; sourceTree = "<group>"; };
+		C28FB8511E7915A0009AE91A /* MASConstraint+Private.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "MASConstraint+Private.h"; sourceTree = "<group>"; };
+		C28FB8521E7915A0009AE91A /* MASConstraint.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MASConstraint.h; sourceTree = "<group>"; };
+		C28FB8531E7915A0009AE91A /* MASConstraint.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MASConstraint.m; sourceTree = "<group>"; };
+		C28FB8541E7915A0009AE91A /* MASConstraintMaker.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MASConstraintMaker.h; sourceTree = "<group>"; };
+		C28FB8551E7915A0009AE91A /* MASConstraintMaker.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MASConstraintMaker.m; sourceTree = "<group>"; };
+		C28FB8561E7915A0009AE91A /* MASLayoutConstraint.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MASLayoutConstraint.h; sourceTree = "<group>"; };
+		C28FB8571E7915A0009AE91A /* MASLayoutConstraint.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MASLayoutConstraint.m; sourceTree = "<group>"; };
+		C28FB8581E7915A0009AE91A /* Masonry.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Masonry.h; sourceTree = "<group>"; };
+		C28FB8591E7915A0009AE91A /* MASUtilities.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MASUtilities.h; sourceTree = "<group>"; };
+		C28FB85A1E7915A0009AE91A /* MASViewAttribute.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MASViewAttribute.h; sourceTree = "<group>"; };
+		C28FB85B1E7915A0009AE91A /* MASViewAttribute.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MASViewAttribute.m; sourceTree = "<group>"; };
+		C28FB85C1E7915A0009AE91A /* MASViewConstraint.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MASViewConstraint.h; sourceTree = "<group>"; };
+		C28FB85D1E7915A0009AE91A /* MASViewConstraint.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MASViewConstraint.m; sourceTree = "<group>"; };
+		C28FB85E1E7915A0009AE91A /* NSArray+MASAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSArray+MASAdditions.h"; sourceTree = "<group>"; };
+		C28FB85F1E7915A0009AE91A /* NSArray+MASAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSArray+MASAdditions.m"; sourceTree = "<group>"; };
+		C28FB8601E7915A0009AE91A /* NSArray+MASShorthandAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSArray+MASShorthandAdditions.h"; sourceTree = "<group>"; };
+		C28FB8611E7915A0009AE91A /* NSLayoutConstraint+MASDebugAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSLayoutConstraint+MASDebugAdditions.h"; sourceTree = "<group>"; };
+		C28FB8621E7915A0009AE91A /* NSLayoutConstraint+MASDebugAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSLayoutConstraint+MASDebugAdditions.m"; sourceTree = "<group>"; };
+		C28FB8631E7915A0009AE91A /* View+MASAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "View+MASAdditions.h"; sourceTree = "<group>"; };
+		C28FB8641E7915A0009AE91A /* View+MASAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "View+MASAdditions.m"; sourceTree = "<group>"; };
+		C28FB8651E7915A0009AE91A /* View+MASShorthandAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "View+MASShorthandAdditions.h"; sourceTree = "<group>"; };
+		C28FB8661E7915A0009AE91A /* ViewController+MASAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "ViewController+MASAdditions.h"; sourceTree = "<group>"; };
+		C28FB8671E7915A0009AE91A /* ViewController+MASAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "ViewController+MASAdditions.m"; sourceTree = "<group>"; };
+		C28FB8691E7915A0009AE91A /* MLeaksFinder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MLeaksFinder.h; sourceTree = "<group>"; };
+		C28FB86A1E7915A0009AE91A /* NSObject+MemoryLeak.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+MemoryLeak.h"; sourceTree = "<group>"; };
+		C28FB86B1E7915A0009AE91A /* NSObject+MemoryLeak.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+MemoryLeak.m"; sourceTree = "<group>"; };
+		C28FB86C1E7915A0009AE91A /* UIApplication+MemoryLeak.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIApplication+MemoryLeak.h"; sourceTree = "<group>"; };
+		C28FB86D1E7915A0009AE91A /* UIApplication+MemoryLeak.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIApplication+MemoryLeak.m"; sourceTree = "<group>"; };
+		C28FB86E1E7915A0009AE91A /* UINavigationController+MemoryLeak.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UINavigationController+MemoryLeak.h"; sourceTree = "<group>"; };
+		C28FB86F1E7915A0009AE91A /* UINavigationController+MemoryLeak.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UINavigationController+MemoryLeak.m"; sourceTree = "<group>"; };
+		C28FB8701E7915A0009AE91A /* UIPageViewController+MemoryLeak.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIPageViewController+MemoryLeak.h"; sourceTree = "<group>"; };
+		C28FB8711E7915A0009AE91A /* UIPageViewController+MemoryLeak.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIPageViewController+MemoryLeak.m"; sourceTree = "<group>"; };
+		C28FB8721E7915A0009AE91A /* UISplitViewController+MemoryLeak.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UISplitViewController+MemoryLeak.h"; sourceTree = "<group>"; };
+		C28FB8731E7915A0009AE91A /* UISplitViewController+MemoryLeak.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UISplitViewController+MemoryLeak.m"; sourceTree = "<group>"; };
+		C28FB8741E7915A0009AE91A /* UITabBarController+MemoryLeak.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UITabBarController+MemoryLeak.h"; sourceTree = "<group>"; };
+		C28FB8751E7915A0009AE91A /* UITabBarController+MemoryLeak.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UITabBarController+MemoryLeak.m"; sourceTree = "<group>"; };
+		C28FB8761E7915A0009AE91A /* UIView+MemoryLeak.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+MemoryLeak.h"; sourceTree = "<group>"; };
+		C28FB8771E7915A0009AE91A /* UIView+MemoryLeak.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+MemoryLeak.m"; sourceTree = "<group>"; };
+		C28FB8781E7915A0009AE91A /* UIViewController+MemoryLeak.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIViewController+MemoryLeak.h"; sourceTree = "<group>"; };
+		C28FB8791E7915A0009AE91A /* UIViewController+MemoryLeak.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+MemoryLeak.m"; sourceTree = "<group>"; };
+		C28FB87B1E7915A0009AE91A /* RITLCollectionCellViewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RITLCollectionCellViewModel.h; sourceTree = "<group>"; };
+		C28FB87C1E7915A0009AE91A /* RITLCollectionViewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RITLCollectionViewModel.h; sourceTree = "<group>"; };
+		C28FB87D1E7915A0009AE91A /* RITLPhotoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RITLPhotoViewController.h; sourceTree = "<group>"; };
+		C28FB87E1E7915A0009AE91A /* RITLPublicViewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RITLPublicViewModel.h; sourceTree = "<group>"; };
+		C28FB87F1E7915A0009AE91A /* RITLScrollViewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RITLScrollViewModel.h; sourceTree = "<group>"; };
+		C28FB8801E7915A0009AE91A /* RITLTableCellViewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RITLTableCellViewModel.h; sourceTree = "<group>"; };
+		C28FB8811E7915A0009AE91A /* RITLTableViewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RITLTableViewModel.h; sourceTree = "<group>"; };
+		C28FB8821E7915A0009AE91A /* RITLTextFieldViewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RITLTextFieldViewModel.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -43,6 +227,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C28FB83E1E791559009AE91A /* Photos.framework in Frameworks */,
 				54A1D054E8CAB2589DB0D721 /* Pods_Invoice.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -53,6 +238,7 @@
 		06C0DED426FB8167C246CE43 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				C28FB83D1E791559009AE91A /* Photos.framework */,
 				909D58A3E8F08A0A7A02A7A3 /* Pods_Invoice.framework */,
 			);
 			name = Frameworks;
@@ -88,6 +274,9 @@
 		AB330D071E777F9D002C6FCD /* Invoice */ = {
 			isa = PBXGroup;
 			children = (
+				C28FB7E41E791515009AE91A /* Third */,
+				C28FB7D51E791001009AE91A /* Category */,
+				C28FB7D41E790FE4009AE91A /* Common */,
 				AB330D0B1E777F9D002C6FCD /* AppDelegate.h */,
 				AB330D0C1E777F9D002C6FCD /* AppDelegate.m */,
 				AB330D221E77CBC7002C6FCD /* CustomTabBarController.h */,
@@ -96,6 +285,8 @@
 				AB330D0F1E777F9D002C6FCD /* InvoiceListController.m */,
 				AB330D111E777F9D002C6FCD /* MyController.h */,
 				AB330D121E777F9D002C6FCD /* MyController.m */,
+				C28FB7D11E78EC66009AE91A /* ScanController.h */,
+				C28FB7D21E78EC66009AE91A /* ScanController.m */,
 				AB330D171E777F9D002C6FCD /* Assets.xcassets */,
 				AB330D191E777F9D002C6FCD /* LaunchScreen.storyboard */,
 				AB330D251E77CDB9002C6FCD /* Main.storyboard */,
@@ -109,8 +300,264 @@
 			isa = PBXGroup;
 			children = (
 				AB330D091E777F9D002C6FCD /* main.m */,
+				C28FB7E01E79115A009AE91A /* PrefixHeader.pch */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		C28FB7D41E790FE4009AE91A /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				C28FB7DC1E7910B8009AE91A /* YHButton.h */,
+				C28FB7DD1E7910B8009AE91A /* YHButton.m */,
+				C28FB7D91E791057009AE91A /* UIUtil.h */,
+				C28FB7DA1E791057009AE91A /* UIUtil.m */,
+			);
+			name = Common;
+			sourceTree = "<group>";
+		};
+		C28FB7D51E791001009AE91A /* Category */ = {
+			isa = PBXGroup;
+			children = (
+				C28FB7E11E791211009AE91A /* UIColor+HexColor.h */,
+				C28FB7E21E791211009AE91A /* UIColor+HexColor.m */,
+				C28FB7D61E791035009AE91A /* UIView+Frame.h */,
+				C28FB7D71E791035009AE91A /* UIView+Frame.m */,
+			);
+			name = Category;
+			sourceTree = "<group>";
+		};
+		C28FB7E41E791515009AE91A /* Third */ = {
+			isa = PBXGroup;
+			children = (
+				C28FB83F1E7915A0009AE91A /* Tool */,
+				C28FB7E51E791541009AE91A /* PhotosFiles */,
+			);
+			name = Third;
+			sourceTree = "<group>";
+		};
+		C28FB7E51E791541009AE91A /* PhotosFiles */ = {
+			isa = PBXGroup;
+			children = (
+				C28FB7E61E791541009AE91A /* BaseClass */,
+				C28FB7E91E791541009AE91A /* Brower */,
+				C28FB7F01E791541009AE91A /* Group */,
+				C28FB7F71E791541009AE91A /* Navigation */,
+				C28FB7FC1E791541009AE91A /* PhotoDataManager */,
+				C28FB8031E791541009AE91A /* Photos */,
+				C28FB80E1E791541009AE91A /* PhotosStore */,
+				C28FB8181E791541009AE91A /* Supporting */,
+			);
+			path = PhotosFiles;
+			sourceTree = "<group>";
+		};
+		C28FB7E61E791541009AE91A /* BaseClass */ = {
+			isa = PBXGroup;
+			children = (
+				C28FB7E71E791541009AE91A /* RITLBaseViewModel.h */,
+				C28FB7E81E791541009AE91A /* RITLBaseViewModel.m */,
+			);
+			path = BaseClass;
+			sourceTree = "<group>";
+		};
+		C28FB7E91E791541009AE91A /* Brower */ = {
+			isa = PBXGroup;
+			children = (
+				C28FB7EA1E791541009AE91A /* RITLPhotoBrowseCell.h */,
+				C28FB7EB1E791541009AE91A /* RITLPhotoBrowseCell.m */,
+				C28FB7EC1E791541009AE91A /* RITLPhotoBrowseController.h */,
+				C28FB7ED1E791541009AE91A /* RITLPhotoBrowseController.m */,
+				C28FB7EE1E791541009AE91A /* RITLPhotoBrowseViewModel.h */,
+				C28FB7EF1E791541009AE91A /* RITLPhotoBrowseViewModel.m */,
+			);
+			path = Brower;
+			sourceTree = "<group>";
+		};
+		C28FB7F01E791541009AE91A /* Group */ = {
+			isa = PBXGroup;
+			children = (
+				C28FB7F11E791541009AE91A /* RITLPhotoGroupCell.h */,
+				C28FB7F21E791541009AE91A /* RITLPhotoGroupCell.m */,
+				C28FB7F31E791541009AE91A /* RITLPhotoGroupViewController.h */,
+				C28FB7F41E791541009AE91A /* RITLPhotoGroupViewController.m */,
+				C28FB7F51E791541009AE91A /* RITLPhotoGroupViewModel.h */,
+				C28FB7F61E791541009AE91A /* RITLPhotoGroupViewModel.m */,
+			);
+			path = Group;
+			sourceTree = "<group>";
+		};
+		C28FB7F71E791541009AE91A /* Navigation */ = {
+			isa = PBXGroup;
+			children = (
+				C28FB7F81E791541009AE91A /* RITLPhotoNavigationViewController.h */,
+				C28FB7F91E791541009AE91A /* RITLPhotoNavigationViewController.m */,
+				C28FB7FA1E791541009AE91A /* RITLPhotoNavigationViewModel.h */,
+				C28FB7FB1E791541009AE91A /* RITLPhotoNavigationViewModel.m */,
+			);
+			path = Navigation;
+			sourceTree = "<group>";
+		};
+		C28FB7FC1E791541009AE91A /* PhotoDataManager */ = {
+			isa = PBXGroup;
+			children = (
+				C28FB7FD1E791541009AE91A /* RITLPhotoBridgeManager.h */,
+				C28FB7FE1E791541009AE91A /* RITLPhotoBridgeManager.m */,
+				C28FB7FF1E791541009AE91A /* RITLPhotoCacheManager.h */,
+				C28FB8001E791541009AE91A /* RITLPhotoCacheManager.mm */,
+				C28FB8011E791541009AE91A /* RITLPhotoHandleManager.h */,
+				C28FB8021E791541009AE91A /* RITLPhotoHandleManager.m */,
+			);
+			path = PhotoDataManager;
+			sourceTree = "<group>";
+		};
+		C28FB8031E791541009AE91A /* Photos */ = {
+			isa = PBXGroup;
+			children = (
+				C28FB8041E791541009AE91A /* RITLPhotoBottomReusableView.h */,
+				C28FB8051E791541009AE91A /* RITLPhotoBottomReusableView.m */,
+				C28FB8061E791541009AE91A /* RITLPhotoPreviewController.h */,
+				C28FB8071E791541009AE91A /* RITLPhotoPreviewController.m */,
+				C28FB8081E791541009AE91A /* RITLPhotosCell.h */,
+				C28FB8091E791541009AE91A /* RITLPhotosCell.m */,
+				C28FB80A1E791541009AE91A /* RITLPhotosViewController.h */,
+				C28FB80B1E791541009AE91A /* RITLPhotosViewController.m */,
+				C28FB80C1E791541009AE91A /* RITLPhotosViewModel.h */,
+				C28FB80D1E791541009AE91A /* RITLPhotosViewModel.m */,
+			);
+			path = Photos;
+			sourceTree = "<group>";
+		};
+		C28FB80E1E791541009AE91A /* PhotosStore */ = {
+			isa = PBXGroup;
+			children = (
+				C28FB80F1E791541009AE91A /* Localizable.strings */,
+				C28FB8111E791541009AE91A /* RITLPhotoRequestStore.h */,
+				C28FB8121E791541009AE91A /* RITLPhotoRequestStore.m */,
+				C28FB8131E791541009AE91A /* RITLPhotoStore.h */,
+				C28FB8141E791541009AE91A /* RITLPhotoStore.m */,
+				C28FB8151E791541009AE91A /* RITLPhotoStoreConfiguraion.h */,
+				C28FB8161E791541009AE91A /* RITLPhotoStoreConfiguraion.m */,
+			);
+			path = PhotosStore;
+			sourceTree = "<group>";
+		};
+		C28FB8181E791541009AE91A /* Supporting */ = {
+			isa = PBXGroup;
+			children = (
+				C28FB8191E791541009AE91A /* PHObject+SupportCategory.h */,
+				C28FB81A1E791541009AE91A /* PHObject+SupportCategory.m */,
+				C28FB81B1E791541009AE91A /* RITLPhotoConfig.h */,
+				C28FB81C1E791541009AE91A /* RITLPhotos.xcassets */,
+				C28FB81D1E791541009AE91A /* UIKit+YPPhotoDemo.h */,
+				C28FB81E1E791541009AE91A /* UIKit+YPPhotoDemo.m */,
+				C28FB81F1E791541009AE91A /* UIView+Category.h */,
+				C28FB8201E791541009AE91A /* UIView+Category.m */,
+				C28FB8211E791541009AE91A /* UIViewController+Frame.h */,
+				C28FB8221E791541009AE91A /* UIViewController+Frame.m */,
+			);
+			path = Supporting;
+			sourceTree = "<group>";
+		};
+		C28FB83F1E7915A0009AE91A /* Tool */ = {
+			isa = PBXGroup;
+			children = (
+				C28FB8401E7915A0009AE91A /* Category */,
+				C28FB84D1E7915A0009AE91A /* Masonry */,
+				C28FB8681E7915A0009AE91A /* MLeaksFinder */,
+				C28FB87A1E7915A0009AE91A /* Protocol */,
+			);
+			path = Tool;
+			sourceTree = "<group>";
+		};
+		C28FB8401E7915A0009AE91A /* Category */ = {
+			isa = PBXGroup;
+			children = (
+				C28FB8411E7915A0009AE91A /* PHAsset+RITLPhotoRepresentation.h */,
+				C28FB8421E7915A0009AE91A /* PHAsset+RITLPhotoRepresentation.m */,
+				C28FB8431E7915A0009AE91A /* PHAssetCollection+RITLPhotoRepresentation.h */,
+				C28FB8441E7915A0009AE91A /* PHAssetCollection+RITLPhotoRepresentation.m */,
+				C28FB8451E7915A0009AE91A /* PHFetchResult+RITLPhotoRepresentation.h */,
+				C28FB8461E7915A0009AE91A /* PHFetchResult+RITLPhotoRepresentation.m */,
+				C28FB8471E7915A0009AE91A /* PHImageRequestOptions+RITLPhotoRepresentation.h */,
+				C28FB8481E7915A0009AE91A /* PHImageRequestOptions+RITLPhotoRepresentation.m */,
+				C28FB8491E7915A0009AE91A /* UIButton+RITLBlockButton.h */,
+				C28FB84A1E7915A0009AE91A /* UIButton+RITLBlockButton.m */,
+				C28FB84B1E7915A0009AE91A /* UIViewController+RITLPhotoAlertController.h */,
+				C28FB84C1E7915A0009AE91A /* UIViewController+RITLPhotoAlertController.m */,
+			);
+			path = Category;
+			sourceTree = "<group>";
+		};
+		C28FB84D1E7915A0009AE91A /* Masonry */ = {
+			isa = PBXGroup;
+			children = (
+				C28FB84E1E7915A0009AE91A /* Info.plist */,
+				C28FB84F1E7915A0009AE91A /* MASCompositeConstraint.h */,
+				C28FB8501E7915A0009AE91A /* MASCompositeConstraint.m */,
+				C28FB8511E7915A0009AE91A /* MASConstraint+Private.h */,
+				C28FB8521E7915A0009AE91A /* MASConstraint.h */,
+				C28FB8531E7915A0009AE91A /* MASConstraint.m */,
+				C28FB8541E7915A0009AE91A /* MASConstraintMaker.h */,
+				C28FB8551E7915A0009AE91A /* MASConstraintMaker.m */,
+				C28FB8561E7915A0009AE91A /* MASLayoutConstraint.h */,
+				C28FB8571E7915A0009AE91A /* MASLayoutConstraint.m */,
+				C28FB8581E7915A0009AE91A /* Masonry.h */,
+				C28FB8591E7915A0009AE91A /* MASUtilities.h */,
+				C28FB85A1E7915A0009AE91A /* MASViewAttribute.h */,
+				C28FB85B1E7915A0009AE91A /* MASViewAttribute.m */,
+				C28FB85C1E7915A0009AE91A /* MASViewConstraint.h */,
+				C28FB85D1E7915A0009AE91A /* MASViewConstraint.m */,
+				C28FB85E1E7915A0009AE91A /* NSArray+MASAdditions.h */,
+				C28FB85F1E7915A0009AE91A /* NSArray+MASAdditions.m */,
+				C28FB8601E7915A0009AE91A /* NSArray+MASShorthandAdditions.h */,
+				C28FB8611E7915A0009AE91A /* NSLayoutConstraint+MASDebugAdditions.h */,
+				C28FB8621E7915A0009AE91A /* NSLayoutConstraint+MASDebugAdditions.m */,
+				C28FB8631E7915A0009AE91A /* View+MASAdditions.h */,
+				C28FB8641E7915A0009AE91A /* View+MASAdditions.m */,
+				C28FB8651E7915A0009AE91A /* View+MASShorthandAdditions.h */,
+				C28FB8661E7915A0009AE91A /* ViewController+MASAdditions.h */,
+				C28FB8671E7915A0009AE91A /* ViewController+MASAdditions.m */,
+			);
+			path = Masonry;
+			sourceTree = "<group>";
+		};
+		C28FB8681E7915A0009AE91A /* MLeaksFinder */ = {
+			isa = PBXGroup;
+			children = (
+				C28FB8691E7915A0009AE91A /* MLeaksFinder.h */,
+				C28FB86A1E7915A0009AE91A /* NSObject+MemoryLeak.h */,
+				C28FB86B1E7915A0009AE91A /* NSObject+MemoryLeak.m */,
+				C28FB86C1E7915A0009AE91A /* UIApplication+MemoryLeak.h */,
+				C28FB86D1E7915A0009AE91A /* UIApplication+MemoryLeak.m */,
+				C28FB86E1E7915A0009AE91A /* UINavigationController+MemoryLeak.h */,
+				C28FB86F1E7915A0009AE91A /* UINavigationController+MemoryLeak.m */,
+				C28FB8701E7915A0009AE91A /* UIPageViewController+MemoryLeak.h */,
+				C28FB8711E7915A0009AE91A /* UIPageViewController+MemoryLeak.m */,
+				C28FB8721E7915A0009AE91A /* UISplitViewController+MemoryLeak.h */,
+				C28FB8731E7915A0009AE91A /* UISplitViewController+MemoryLeak.m */,
+				C28FB8741E7915A0009AE91A /* UITabBarController+MemoryLeak.h */,
+				C28FB8751E7915A0009AE91A /* UITabBarController+MemoryLeak.m */,
+				C28FB8761E7915A0009AE91A /* UIView+MemoryLeak.h */,
+				C28FB8771E7915A0009AE91A /* UIView+MemoryLeak.m */,
+				C28FB8781E7915A0009AE91A /* UIViewController+MemoryLeak.h */,
+				C28FB8791E7915A0009AE91A /* UIViewController+MemoryLeak.m */,
+			);
+			path = MLeaksFinder;
+			sourceTree = "<group>";
+		};
+		C28FB87A1E7915A0009AE91A /* Protocol */ = {
+			isa = PBXGroup;
+			children = (
+				C28FB87B1E7915A0009AE91A /* RITLCollectionCellViewModel.h */,
+				C28FB87C1E7915A0009AE91A /* RITLCollectionViewModel.h */,
+				C28FB87D1E7915A0009AE91A /* RITLPhotoViewController.h */,
+				C28FB87E1E7915A0009AE91A /* RITLPublicViewModel.h */,
+				C28FB87F1E7915A0009AE91A /* RITLScrollViewModel.h */,
+				C28FB8801E7915A0009AE91A /* RITLTableCellViewModel.h */,
+				C28FB8811E7915A0009AE91A /* RITLTableViewModel.h */,
+				C28FB8821E7915A0009AE91A /* RITLTextFieldViewModel.h */,
+			);
+			path = Protocol;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -159,6 +606,7 @@
 			knownRegions = (
 				en,
 				Base,
+				"zh-Hans",
 			);
 			mainGroup = AB330CFC1E777F9D002C6FCD;
 			productRefGroup = AB330D061E777F9D002C6FCD /* Products */;
@@ -176,8 +624,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				AB330D271E77CDB9002C6FCD /* Main.storyboard in Resources */,
+				C28FB8341E791541009AE91A /* Localizable.strings in Resources */,
+				C28FB8891E7915A0009AE91A /* Info.plist in Resources */,
 				AB330D1B1E777F9D002C6FCD /* LaunchScreen.storyboard in Resources */,
 				AB330D181E777F9D002C6FCD /* Assets.xcassets in Resources */,
+				C28FB8391E791541009AE91A /* RITLPhotos.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -239,8 +690,61 @@
 				AB330D131E777F9D002C6FCD /* MyController.m in Sources */,
 				AB330D0D1E777F9D002C6FCD /* AppDelegate.m in Sources */,
 				AB330D101E777F9D002C6FCD /* InvoiceListController.m in Sources */,
+				C28FB88A1E7915A0009AE91A /* MASCompositeConstraint.m in Sources */,
+				C28FB88C1E7915A0009AE91A /* MASConstraintMaker.m in Sources */,
+				C28FB88E1E7915A0009AE91A /* MASViewAttribute.m in Sources */,
+				C28FB89A1E7915A0009AE91A /* UIView+MemoryLeak.m in Sources */,
+				C28FB8241E791541009AE91A /* RITLPhotoBrowseCell.m in Sources */,
+				C28FB8941E7915A0009AE91A /* NSObject+MemoryLeak.m in Sources */,
+				C28FB88F1E7915A0009AE91A /* MASViewConstraint.m in Sources */,
+				C28FB82C1E791541009AE91A /* RITLPhotoBridgeManager.m in Sources */,
+				C28FB7D81E791035009AE91A /* UIView+Frame.m in Sources */,
+				C28FB8291E791541009AE91A /* RITLPhotoGroupViewModel.m in Sources */,
 				AB330D241E77CBC7002C6FCD /* CustomTabBarController.m in Sources */,
+				C28FB8271E791541009AE91A /* RITLPhotoGroupCell.m in Sources */,
+				C28FB8921E7915A0009AE91A /* View+MASAdditions.m in Sources */,
+				C28FB82F1E791541009AE91A /* RITLPhotoBottomReusableView.m in Sources */,
+				C28FB83C1E791541009AE91A /* UIViewController+Frame.m in Sources */,
+				C28FB8301E791541009AE91A /* RITLPhotoPreviewController.m in Sources */,
+				C28FB8331E791541009AE91A /* RITLPhotosViewModel.m in Sources */,
+				C28FB8261E791541009AE91A /* RITLPhotoBrowseViewModel.m in Sources */,
+				C28FB8961E7915A0009AE91A /* UINavigationController+MemoryLeak.m in Sources */,
+				C28FB8951E7915A0009AE91A /* UIApplication+MemoryLeak.m in Sources */,
+				C28FB8871E7915A0009AE91A /* UIButton+RITLBlockButton.m in Sources */,
+				C28FB8881E7915A0009AE91A /* UIViewController+RITLPhotoAlertController.m in Sources */,
+				C28FB8351E791541009AE91A /* RITLPhotoRequestStore.m in Sources */,
+				C28FB82B1E791541009AE91A /* RITLPhotoNavigationViewModel.m in Sources */,
+				C28FB8381E791541009AE91A /* PHObject+SupportCategory.m in Sources */,
+				C28FB8911E7915A0009AE91A /* NSLayoutConstraint+MASDebugAdditions.m in Sources */,
+				C28FB8311E791541009AE91A /* RITLPhotosCell.m in Sources */,
+				C28FB8251E791541009AE91A /* RITLPhotoBrowseController.m in Sources */,
+				C28FB82A1E791541009AE91A /* RITLPhotoNavigationViewController.m in Sources */,
+				C28FB7D31E78EC66009AE91A /* ScanController.m in Sources */,
+				C28FB8281E791541009AE91A /* RITLPhotoGroupViewController.m in Sources */,
+				C28FB82D1E791541009AE91A /* RITLPhotoCacheManager.mm in Sources */,
+				C28FB88B1E7915A0009AE91A /* MASConstraint.m in Sources */,
+				C28FB8861E7915A0009AE91A /* PHImageRequestOptions+RITLPhotoRepresentation.m in Sources */,
+				C28FB8371E791541009AE91A /* RITLPhotoStoreConfiguraion.m in Sources */,
+				C28FB83A1E791541009AE91A /* UIKit+YPPhotoDemo.m in Sources */,
+				C28FB8851E7915A0009AE91A /* PHFetchResult+RITLPhotoRepresentation.m in Sources */,
+				C28FB8931E7915A0009AE91A /* ViewController+MASAdditions.m in Sources */,
+				C28FB8361E791541009AE91A /* RITLPhotoStore.m in Sources */,
+				C28FB8991E7915A0009AE91A /* UITabBarController+MemoryLeak.m in Sources */,
+				C28FB8831E7915A0009AE91A /* PHAsset+RITLPhotoRepresentation.m in Sources */,
+				C28FB89B1E7915A0009AE91A /* UIViewController+MemoryLeak.m in Sources */,
+				C28FB83B1E791541009AE91A /* UIView+Category.m in Sources */,
+				C28FB8971E7915A0009AE91A /* UIPageViewController+MemoryLeak.m in Sources */,
 				AB330D0A1E777F9D002C6FCD /* main.m in Sources */,
+				C28FB8841E7915A0009AE91A /* PHAssetCollection+RITLPhotoRepresentation.m in Sources */,
+				C28FB8321E791541009AE91A /* RITLPhotosViewController.m in Sources */,
+				C28FB7E31E791211009AE91A /* UIColor+HexColor.m in Sources */,
+				C28FB8231E791541009AE91A /* RITLBaseViewModel.m in Sources */,
+				C28FB88D1E7915A0009AE91A /* MASLayoutConstraint.m in Sources */,
+				C28FB82E1E791541009AE91A /* RITLPhotoHandleManager.m in Sources */,
+				C28FB7DE1E7910B8009AE91A /* YHButton.m in Sources */,
+				C28FB8901E7915A0009AE91A /* NSArray+MASAdditions.m in Sources */,
+				C28FB7DB1E791057009AE91A /* UIUtil.m in Sources */,
+				C28FB8981E7915A0009AE91A /* UISplitViewController+MemoryLeak.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -261,6 +765,15 @@
 				AB330D261E77CDB9002C6FCD /* Base */,
 			);
 			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		C28FB80F1E791541009AE91A /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				C28FB8101E791541009AE91A /* en */,
+				C28FB8171E791541009AE91A /* zh-Hans */,
+			);
+			name = Localizable.strings;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -360,6 +873,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = 25WUPDZ7Y7;
+				GCC_PREFIX_HEADER = Invoice/PrefixHeader.pch;
 				INFOPLIST_FILE = Invoice/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -374,6 +888,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = 25WUPDZ7Y7;
+				GCC_PREFIX_HEADER = Invoice/PrefixHeader.pch;
 				INFOPLIST_FILE = Invoice/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";

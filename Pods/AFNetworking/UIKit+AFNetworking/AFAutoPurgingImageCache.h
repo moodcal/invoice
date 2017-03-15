@@ -27,12 +27,12 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-/**
+/*
  The `AFImageCache` protocol defines a set of APIs for adding, removing and fetching images from a cache synchronously.
  */
 @protocol AFImageCache <NSObject>
 
-/**
+/*
  Adds the image to the cache with the given identifier.
 
  @param image The image to cache.
@@ -40,7 +40,7 @@ NS_ASSUME_NONNULL_BEGIN
  */
 - (void)addImage:(UIImage *)image withIdentifier:(NSString *)identifier;
 
-/**
+/*
  Removes the image from the cache matching the given identifier.
 
  @param identifier The unique identifier for the image in the cache.
@@ -49,14 +49,14 @@ NS_ASSUME_NONNULL_BEGIN
  */
 - (BOOL)removeImageWithIdentifier:(NSString *)identifier;
 
-/**
+/*
  Removes all images from the cache.
 
  @return A BOOL indicating whether or not all images were removed from the cache.
  */
 - (BOOL)removeAllImages;
 
-/**
+/*
  Returns the image in the cache associated with the given identifier.
 
  @param identifier The unique identifier for the image in the cache.
@@ -67,12 +67,12 @@ NS_ASSUME_NONNULL_BEGIN
 @end
 
 
-/**
+/*
  The `ImageRequestCache` protocol extends the `ImageCache` protocol by adding methods for adding, removing and fetching images from a cache given an `NSURLRequest` and additional identifier.
  */
 @protocol AFImageRequestCache <AFImageCache>
 
-/**
+/*
  Adds the image to the cache using an identifier created from the request and additional identifier.
 
  @param image The image to cache.
@@ -81,7 +81,7 @@ NS_ASSUME_NONNULL_BEGIN
  */
 - (void)addImage:(UIImage *)image forRequest:(NSURLRequest *)request withAdditionalIdentifier:(nullable NSString *)identifier;
 
-/**
+/*
  Removes the image from the cache using an identifier created from the request and additional identifier.
 
  @param request The unique URL request identifing the image asset.
@@ -91,7 +91,7 @@ NS_ASSUME_NONNULL_BEGIN
  */
 - (BOOL)removeImageforRequest:(NSURLRequest *)request withAdditionalIdentifier:(nullable NSString *)identifier;
 
-/**
+/*
  Returns the image from the cache associated with an identifier created from the request and additional identifier.
 
  @param request The unique URL request identifing the image asset.
@@ -103,34 +103,34 @@ NS_ASSUME_NONNULL_BEGIN
 
 @end
 
-/**
+/*
  The `AutoPurgingImageCache` in an in-memory image cache used to store images up to a given memory capacity. When the memory capacity is reached, the image cache is sorted by last access date, then the oldest image is continuously purged until the preferred memory usage after purge is met. Each time an image is accessed through the cache, the internal access date of the image is updated.
  */
 @interface AFAutoPurgingImageCache : NSObject <AFImageRequestCache>
 
-/**
+/*
  The total memory capacity of the cache in bytes.
  */
 @property (nonatomic, assign) UInt64 memoryCapacity;
 
-/**
+/*
  The preferred memory usage after purge in bytes. During a purge, images will be purged until the memory capacity drops below this limit.
  */
 @property (nonatomic, assign) UInt64 preferredMemoryUsageAfterPurge;
 
-/**
+/*
  The current total memory usage in bytes of all images stored within the cache.
  */
 @property (nonatomic, assign, readonly) UInt64 memoryUsage;
 
-/**
+/*
  Initialies the `AutoPurgingImageCache` instance with default values for memory capacity and preferred memory usage after purge limit. `memoryCapcity` defaults to `100 MB`. `preferredMemoryUsageAfterPurge` defaults to `60 MB`.
 
  @return The new `AutoPurgingImageCache` instance.
  */
 - (instancetype)init;
 
-/**
+/*
  Initialies the `AutoPurgingImageCache` instance with the given memory capacity and preferred memory usage
  after purge limit.
 

@@ -9,10 +9,20 @@
 			<key>orderHint</key>
 			<integer>1</integer>
 		</dict>
+		<key>CYLTabBarController.xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>9</integer>
+		</dict>
 		<key>ChameleonFramework.xcscheme</key>
 		<dict>
 			<key>orderHint</key>
 			<integer>2</integer>
+		</dict>
+		<key>DCPathButton.xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>10</integer>
 		</dict>
 		<key>HMSegmentedControl.xcscheme</key>
 		<dict>
@@ -47,7 +57,57 @@
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
+		<key>118F90F4C2C0BF6A23918F21F46C93F5</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>2F132D068FDEFCC6DC0BBCDA3F0FE8D9</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>33A53F66CA34D008A662FA878D808DE9</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>36E3A43591BF26661B3834DE823172F6</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>5090E6FF72AB457173901B9CAA688115</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>5323D3CEE37936E395FC48C3F6CD3BED</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>58FE0486E83AA749B9E8C1300B64E2A2</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>5CAED25382272612C110064040035195</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
 		<key>5D627D0D6A5DD051D1DA3BEA3B847097</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>6C0555DB5AE51AAD074AD1642857EF61</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>7764533D6B4098922368C95F6DDDF004</key>
 		<dict>
 			<key>primary</key>
 			<true/>
@@ -67,6 +127,11 @@
 			<key>primary</key>
 			<true/>
 		</dict>
+		<key>A77832AB130ECDC256E7D45CC6DA02BA</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
 		<key>C6FE51A4B04A97215A95B11336385A40</key>
 		<dict>
 			<key>primary</key>
@@ -78,6 +143,11 @@
 			<true/>
 		</dict>
 		<key>E02F89D4B7CEA6EBDB40FB020F5C3C85</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>EC9AFB12348C9259C6CF36994DCC7D1A</key>
 		<dict>
 			<key>primary</key>
 			<true/>

@@ -22,7 +22,7 @@
 
 #pragma mark - Global Theming
 
-/**
+/*
  *  Set a global theme using a primary color and the specified content style.
  *
  *  @param primaryColor The primary color to theme all controllers with.
@@ -35,7 +35,7 @@
 + (void)setGlobalThemeUsingPrimaryColor:(UIColor *)primaryColor
                  withContentStyle:(UIContentStyle)contentStyle;
 
-/**
+/*
  *  Set a global theme using a primary color, secondary color, and the specified content style.
  *
  *  @param primaryColor   The primary color to theme all controllers with.
@@ -48,7 +48,7 @@
                withSecondaryColor:(UIColor *)secondaryColor
                   andContentStyle:(UIContentStyle)contentStyle;
 
-/**
+/*
  *  Set a global theme using a primary color, secondary color, font name, and the specified content style.
  *
  *  @param primaryColor   The primary color to theme all controllers with.

@@ -14,7 +14,7 @@ static void *const CYLTabBarContext = (void*)&CYLTabBarContext;
 
 @interface CYLTabBar ()
 
-/** 发布按钮 */
+/* 发布按钮 */
 @property (nonatomic, strong) UIButton<CYLPlusButtonSubclassing> *plusButton;
 @property (nonatomic, assign) CGFloat tabBarItemWidth;
 @property (nonatomic, copy) NSArray *tabBarButtonArray;
@@ -53,7 +53,7 @@ static void *const CYLTabBarContext = (void*)&CYLTabBarContext;
     return self;
 }
 
-/**
+/*
  *  lazy load tabBarButtonArray
  *
  *  @return NSArray

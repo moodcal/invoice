@@ -138,7 +138,7 @@ static void * const CYLSwappableImageViewDefaultOffsetContext = (void*)&CYLSwapp
 #pragma mark -
 #pragma mark - Private Methods
 
-/**
+/*
  *  利用 KVC 把系统的 tabBar 类型改为自定义类型。
  */
 - (void)setUpTabBar {
@@ -195,7 +195,7 @@ static void * const CYLSwappableImageViewDefaultOffsetContext = (void*)&CYLSwapp
     }
 }
 
-/**
+/*
  *  添加一个子控制器
  *
  *  @param viewController    控制器

@@ -39,7 +39,7 @@
 
 #pragma mark Array of Constraints
 
-/**
+/*
  Activates the constraints in this array.
  */
 - (void)autoInstallConstraints
@@ -67,7 +67,7 @@
     }
 }
 
-/**
+/*
  Deactivates the constraints in this array.
  */
 - (void)autoRemoveConstraints
@@ -88,7 +88,7 @@
 
 #if PL__PureLayout_MinBaseSDK_iOS_8_0 || PL__PureLayout_MinBaseSDK_OSX_10_10
 
-/**
+/*
  Sets the string as the identifier for the constraints in this array. Available in iOS 7.0 and OS X 10.9 and later.
  The identifier will be printed along with each constraint's description.
  This is helpful to document the constraints' purpose and aid in debugging.
@@ -111,7 +111,7 @@
 
 #pragma mark Array of Views
 
-/**
+/*
  Aligns views in this array to one another along a given edge.
  Note: This array must contain at least 2 views, and all views must share a common superview.
  
@@ -136,7 +136,7 @@
     return constraints;
 }
 
-/**
+/*
  Aligns views in this array to one another along a given axis.
  Note: This array must contain at least 2 views, and all views must share a common superview.
  
@@ -161,7 +161,7 @@
     return constraints;
 }
 
-/**
+/*
  Matches a given dimension of all the views in this array.
  Note: This array must contain at least 2 views, and all views must share a common superview.
  
@@ -186,7 +186,7 @@
     return constraints;
 }
 
-/**
+/*
  Sets the given dimension of all the views in this array to a given size.
  Note: This array must contain at least 1 view.
  
@@ -208,7 +208,7 @@
     return constraints;
 }
 
-/**
+/*
  Sets all of the views in this array to a given size.
  Note: This array must contain at least 1 view.
  
@@ -224,7 +224,7 @@
 }
 
 
-/**
+/*
  Distributes the views in this array equally along the selected axis in their superview.
  Views will be the same size (variable) in the dimension along the axis and will have spacing (fixed) between them,
  including from the first and last views to their superview.
@@ -244,7 +244,7 @@
                                  insetSpacing:YES];
 }
 
-/**
+/*
  Distributes the views in this array equally along the selected axis in their superview.
  Views will be the same size (variable) in the dimension along the axis and will have spacing (fixed) between them.
  The first and last views can optionally be inset from their superview by the same amount of spacing as between views.
@@ -267,7 +267,7 @@
                                  matchedSizes:YES];
 }
 
-/**
+/*
  Distributes the views in this array equally along the selected axis in their superview.
  Views will have fixed spacing between them, and can optionally be constrained to the same size in the dimension along the axis.
  The first and last views can optionally be inset from their superview by the same amount of spacing as between views.
@@ -339,7 +339,7 @@
     return constraints;
 }
 
-/**
+/*
  Distributes the views in this array equally along the selected axis in their superview.
  Views will be the same size (fixed) in the dimension along the axis and will have spacing (variable) between them,
  including from the first and last views to their superview.
@@ -359,7 +359,7 @@
                                  insetSpacing:YES];
 }
 
-/**
+/*
  Distributes the views in this array equally along the selected axis in their superview.
  Views will be the same size (fixed) in the dimension along the axis and will have spacing (variable) between them.
  The first and last views can optionally be inset from their superview by the same amount of spacing as between views.
@@ -441,7 +441,7 @@
 
 #pragma mark Internal Helper Methods
 
-/**
+/*
  Returns the common superview for the views in this array. If there is only one view in the array, its superview will be returned.
  Raises an exception if the views in this array do not share a common superview.
  
@@ -466,7 +466,7 @@
     return commonSuperview;
 }
 
-/**
+/*
  Determines whether this array contains a minimum number of views.
  
  @param minimumNumberOfViews The minimum number of views to check for.
@@ -486,7 +486,7 @@
     return numberOfViews >= minimumNumberOfViews;
 }
 
-/**
+/*
  Creates a copy of this array containing only the view objects in it.
  
  @return A new array containing only the views that are in this array.

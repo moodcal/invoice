@@ -39,7 +39,7 @@
 
 #pragma mark Factory & Initializer Methods
 
-/** 
+/* 
  Creates and returns a new view that does not convert the autoresizing mask into constraints.
  */
 + (instancetype)newAutoLayoutView
@@ -49,7 +49,7 @@
     return view;
 }
 
-/**
+/*
  Initializes and returns a new view that does not convert the autoresizing mask into constraints.
  */
 - (instancetype)initForAutoLayout
@@ -61,7 +61,7 @@
     return self;
 }
 
-/**
+/*
  Configures an existing view to not convert the autoresizing mask into constraints and returns the view.
  */
 - (instancetype)configureForAutoLayout
@@ -73,7 +73,7 @@
 
 #pragma mark Center in Superview
 
-/**
+/*
  Centers the view in its superview.
  
  @return An array of constraints added.
@@ -86,7 +86,7 @@
     return constraints;
 }
 
-/**
+/*
  Aligns the view to the same axis of its superview.
  
  @param axis The axis of this view and of its superview to align.
@@ -102,7 +102,7 @@
 
 #if PL__PureLayout_MinBaseSDK_iOS_8_0
 
-/**
+/*
  Centers the view in its superview, taking into account the layout margins of both the view and its superview.
  
  @return An array of constraints added.
@@ -115,7 +115,7 @@
     return constraints;
 }
 
-/**
+/*
  Aligns the view to the corresponding margin axis of its superview.
  
  @param axis The axis of this view to align to the corresponding margin axis of its superview.
@@ -135,7 +135,7 @@
 
 #pragma mark Pin Edges to Superview
 
-/**
+/*
  Pins the given edge of the view to the same edge of its superview.
  
  @param edge The edge of this view and its superview to pin.
@@ -146,7 +146,7 @@
     return [self autoPinEdgeToSuperviewEdge:edge withInset:0.0];
 }
 
-/**
+/*
  Pins the given edge of the view to the same edge of its superview with an inset.
  
  @param edge The edge of this view and its superview to pin.
@@ -158,7 +158,7 @@
     return [self autoPinEdgeToSuperviewEdge:edge withInset:inset relation:NSLayoutRelationEqual];
 }
 
-/**
+/*
  Pins the given edge of the view to the same edge of its superview with an inset as a maximum or minimum.
  
  @param edge The edge of this view and its superview to pin.
@@ -183,7 +183,7 @@
     return [self autoPinEdge:edge toEdge:edge ofView:superview withOffset:inset relation:relation];
 }
 
-/**
+/*
  Pins the edges of the view to the edges of its superview.
  
  @return An array of constraints added.
@@ -193,7 +193,7 @@
     return [self autoPinEdgesToSuperviewEdgesWithInsets:ALEdgeInsetsZero];
 }
 
-/**
+/*
  Pins the edges of the view to the edges of its superview with the given edge insets.
  The insets.left corresponds to a leading edge constraint, and insets.right corresponds to a trailing edge constraint.
  
@@ -210,7 +210,7 @@
     return constraints;
 }
 
-/**
+/*
  Pins 3 of the 4 edges of the view to the edges of its superview with the given edge insets, excluding one edge.
  The insets.left corresponds to a leading edge constraint, and insets.right corresponds to a trailing edge constraint.
  
@@ -239,7 +239,7 @@
 
 #if PL__PureLayout_MinBaseSDK_iOS_8_0
         
-/**
+/*
  Pins the given edge of the view to the corresponding margin of its superview.
  
  @param edge The edge of this view to pin to the corresponding margin of its superview.
@@ -250,7 +250,7 @@
     return [self autoPinEdgeToSuperviewMargin:edge relation:NSLayoutRelationEqual];
 }
 
-/**
+/*
  Pins the given edge of the view to the corresponding margin of its superview as a maximum or minimum.
  
  @param edge The edge of this view to pin to the corresponding margin of its superview.
@@ -274,7 +274,7 @@
     return [self autoConstrainAttribute:(ALAttribute)edge toAttribute:(ALAttribute)margin ofView:superview withOffset:0.0 relation:relation];
 }
         
-/**
+/*
  Pins the edges of the view to the margins of its superview.
  
  @return An array of constraints added.
@@ -289,7 +289,7 @@
     return constraints;
 }
 
-/**
+/*
  Pins 3 of the 4 edges of the view to the margins of its superview, excluding one edge.
  
  @param edge The edge of this view to exclude in pinning to its superview; this method will not apply any constraint to it.
@@ -318,7 +318,7 @@
 
 #pragma mark Pin Edges
 
-/**
+/*
  Pins an edge of the view to a given edge of another view.
  
  @param edge The edge of this view to pin.
@@ -331,7 +331,7 @@
     return [self autoPinEdge:edge toEdge:toEdge ofView:otherView withOffset:0.0];
 }
 
-/**
+/*
  Pins an edge of the view to a given edge of another view with an offset.
  
  @param edge The edge of this view to pin.
@@ -345,7 +345,7 @@
     return [self autoPinEdge:edge toEdge:toEdge ofView:otherView withOffset:offset relation:NSLayoutRelationEqual];
 }
 
-/**
+/*
  Pins an edge of the view to a given edge of another view with an offset as a maximum or minimum.
  
  @param edge The edge of this view to pin.
@@ -363,7 +363,7 @@
 
 #pragma mark Align Axes
 
-/**
+/*
  Aligns an axis of the view to the same axis of another view.
  
  @param axis The axis of this view and the other view to align.
@@ -375,7 +375,7 @@
     return [self autoAlignAxis:axis toSameAxisOfView:otherView withOffset:0.0];
 }
 
-/**
+/*
  Aligns an axis of the view to the same axis of another view with an offset.
  
  @param axis The axis of this view and the other view to align.
@@ -388,7 +388,7 @@
     return [self autoConstrainAttribute:(ALAttribute)axis toAttribute:(ALAttribute)axis ofView:otherView withOffset:offset];
 }
 
-/**
+/*
  Aligns an axis of the view to the same axis of another view with a multiplier.
  
  @param axis The axis of this view and the other view to align.
@@ -404,7 +404,7 @@
 
 #pragma mark Match Dimensions
 
-/**
+/*
  Matches a dimension of the view to a given dimension of another view.
  
  @param dimension The dimension of this view to pin.
@@ -417,7 +417,7 @@
     return [self autoMatchDimension:dimension toDimension:toDimension ofView:otherView withOffset:0.0];
 }
 
-/**
+/*
  Matches a dimension of the view to a given dimension of another view with an offset.
  
  @param dimension The dimension of this view to pin.
@@ -431,7 +431,7 @@
     return [self autoMatchDimension:dimension toDimension:toDimension ofView:otherView withOffset:offset relation:NSLayoutRelationEqual];
 }
 
-/**
+/*
  Matches a dimension of the view to a given dimension of another view with an offset as a maximum or minimum.
  
  @param dimension The dimension of this view to pin.
@@ -446,7 +446,7 @@
     return [self autoConstrainAttribute:(ALAttribute)dimension toAttribute:(ALAttribute)toDimension ofView:otherView withOffset:offset relation:relation];
 }
 
-/**
+/*
  Matches a dimension of the view to a multiple of a given dimension of another view.
  
  @param dimension The dimension of this view to pin.
@@ -460,7 +460,7 @@
     return [self autoMatchDimension:dimension toDimension:toDimension ofView:otherView withMultiplier:multiplier relation:NSLayoutRelationEqual];
 }
 
-/**
+/*
  Matches a dimension of the view to a multiple of a given dimension of another view as a maximum or minimum.
  
  @param dimension The dimension of this view to pin.
@@ -478,7 +478,7 @@
 
 #pragma mark Set Dimensions
 
-/**
+/*
  Sets the view to a specific size.
  
  @param size The size to set this view's dimensions to.
@@ -492,7 +492,7 @@
     return constraints;
 }
 
-/**
+/*
  Sets the given dimension of the view to a specific size.
  
  @param dimension The dimension of this view to set.
@@ -504,7 +504,7 @@
     return [self autoSetDimension:dimension toSize:size relation:NSLayoutRelationEqual];
 }
 
-/**
+/*
  Sets the given dimension of the view to a specific size as a maximum or minimum.
  
  @param dimension The dimension of this view to set.
@@ -524,7 +524,7 @@
 
 #pragma mark Set Content Compression Resistance & Hugging
 
-/**
+/*
  Sets the priority of content compression resistance for an axis.
  NOTE: This method must be called from within the block passed into the method +[autoSetPriority:forConstraints:]
  
@@ -544,7 +544,7 @@
     }
 }
 
-/**
+/*
  Sets the priority of content hugging for an axis.
  NOTE: This method must be called from within the block passed into the method +[autoSetPriority:forConstraints:]
  
@@ -567,7 +567,7 @@
 
 #pragma mark Constrain Any Attributes
 
-/**
+/*
  Constrains an attribute of the view to a given attribute of another view.
  This method can be used to constrain different types of attributes across two views.
  
@@ -581,7 +581,7 @@
     return [self autoConstrainAttribute:attribute toAttribute:toAttribute ofView:otherView withOffset:0.0];
 }
 
-/**
+/*
  Constrains an attribute of the view to a given attribute of another view with an offset.
  This method can be used to constrain different types of attributes across two views.
  
@@ -596,7 +596,7 @@
     return [self autoConstrainAttribute:attribute toAttribute:toAttribute ofView:otherView withOffset:offset relation:NSLayoutRelationEqual];
 }
 
-/**
+/*
  Constrains an attribute of the view to a given attribute of another view with an offset as a maximum or minimum.
  This method can be used to constrain different types of attributes across two views.
  
@@ -617,7 +617,7 @@
     return constraint;
 }
 
-/**
+/*
  Constrains an attribute of the view to a given attribute of another view with a multiplier.
  This method can be used to constrain different types of attributes across two views.
  
@@ -632,7 +632,7 @@
     return [self autoConstrainAttribute:attribute toAttribute:toAttribute ofView:otherView withMultiplier:multiplier relation:NSLayoutRelationEqual];
 }
 
-/**
+/*
  Constrains an attribute of the view to a given attribute of another view with a multiplier as a maximum or minimum.
  This method can be used to constrain different types of attributes across two views.
  
@@ -658,7 +658,7 @@
 
 #if TARGET_OS_IPHONE
 
-/**
+/*
  Pins the top edge of the view to the top layout guide of the given view controller with an inset.
  For compatibility with iOS 6 (where layout guides do not exist), this method will simply pin the top edge of
  the view to the top edge of the given view controller's view with an inset.
@@ -685,7 +685,7 @@
     }
 }
 
-/**
+/*
  Pins the bottom edge of the view to the bottom layout guide of the given view controller with an inset.
  For compatibility with iOS 6 (where layout guides do not exist), this method will simply pin the bottom edge of
  the view to the bottom edge of the given view controller's view with an inset.
@@ -724,7 +724,7 @@
 
 #pragma mark Internal Methods
 
-/**
+/*
  Adds the given constraint to this view after applying the global state to the constraint.
  NOTE: This method is compatible with all versions of iOS, and should be used for older versions before the active
  property on NSLayoutConstraint was introduced.
@@ -743,7 +743,7 @@
     }
 }
 
-/**
+/*
  Returns the common superview for this view and the given other view.
  Raises an exception if this view and the other view do not share a common superview.
  
@@ -769,7 +769,7 @@
     return commonSuperview;
 }
 
-/**
+/*
  Aligns this view to another view with an alignment attribute.
  
  @param attribute The attribute to use to align the two views.

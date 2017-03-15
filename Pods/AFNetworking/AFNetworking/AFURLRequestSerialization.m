@@ -32,7 +32,7 @@ NSString * const AFNetworkingOperationFailingURLRequestErrorKey = @"com.alamofir
 
 typedef NSString * (^AFQueryStringSerializationBlock)(NSURLRequest *request, id parameters, NSError *__autoreleasing *error);
 
-/**
+/*
  Returns a percent-escaped string following RFC 3986 for a query string key or value.
  RFC 3986 states that the following characters are "reserved" characters.
     - General Delimiters: ":", "#", "[", "]", "@", "?", "/"

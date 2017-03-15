@@ -30,7 +30,7 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-/**
+/*
  Returns a percent-escaped string following RFC 3986 for a query string key or value.
  RFC 3986 states that the following characters are "reserved" characters.
  - General Delimiters: ":", "#", "[", "]", "@", "?", "/"
@@ -46,7 +46,7 @@ NS_ASSUME_NONNULL_BEGIN
  */
 FOUNDATION_EXPORT NSString * AFPercentEscapedStringFromString(NSString *string);
 
-/**
+/*
  A helper method to generate encoded url query parameters for appending to the end of a URL.
 
  @param parameters A dictionary of key/values to be encoded.
@@ -55,14 +55,14 @@ FOUNDATION_EXPORT NSString * AFPercentEscapedStringFromString(NSString *string);
  */
 FOUNDATION_EXPORT NSString * AFQueryStringFromParameters(NSDictionary *parameters);
 
-/**
+/*
  The `AFURLRequestSerialization` protocol is adopted by an object that encodes parameters for a specified HTTP requests. Request serializers may encode parameters as query strings, HTTP bodies, setting the appropriate HTTP header fields as necessary.
 
  For example, a JSON request serializer may set the HTTP body of the request to a JSON representation, and set the `Content-Type` HTTP header field value to `application/json`.
  */
 @protocol AFURLRequestSerialization <NSObject, NSSecureCoding, NSCopying>
 
-/**
+/*
  Returns a request with the specified parameters encoded into a copy of the original request.
 
  @param request The original request.
@@ -79,7 +79,7 @@ FOUNDATION_EXPORT NSString * AFQueryStringFromParameters(NSDictionary *parameter
 
 #pragma mark -
 
-/**
+/*
 
  */
 typedef NS_ENUM(NSUInteger, AFHTTPRequestQueryStringSerializationStyle) {
@@ -88,54 +88,54 @@ typedef NS_ENUM(NSUInteger, AFHTTPRequestQueryStringSerializationStyle) {
 
 @protocol AFMultipartFormData;
 
-/**
+/*
  `AFHTTPRequestSerializer` conforms to the `AFURLRequestSerialization` & `AFURLResponseSerialization` protocols, offering a concrete base implementation of query string / URL form-encoded parameter serialization and default request headers, as well as response status code and content type validation.
 
  Any request or response serializer dealing with HTTP is encouraged to subclass `AFHTTPRequestSerializer` in order to ensure consistent default behavior.
  */
 @interface AFHTTPRequestSerializer : NSObject <AFURLRequestSerialization>
 
-/**
+/*
  The string encoding used to serialize parameters. `NSUTF8StringEncoding` by default.
  */
 @property (nonatomic, assign) NSStringEncoding stringEncoding;
 
-/**
+/*
  Whether created requests can use the device’s cellular radio (if present). `YES` by default.
 
  @see NSMutableURLRequest -setAllowsCellularAccess:
  */
 @property (nonatomic, assign) BOOL allowsCellularAccess;
 
-/**
+/*
  The cache policy of created requests. `NSURLRequestUseProtocolCachePolicy` by default.
 
  @see NSMutableURLRequest -setCachePolicy:
  */
 @property (nonatomic, assign) NSURLRequestCachePolicy cachePolicy;
 
-/**
+/*
  Whether created requests should use the default cookie handling. `YES` by default.
 
  @see NSMutableURLRequest -setHTTPShouldHandleCookies:
  */
 @property (nonatomic, assign) BOOL HTTPShouldHandleCookies;
 
-/**
+/*
  Whether created requests can continue transmitting data before receiving a response from an earlier transmission. `NO` by default
 
  @see NSMutableURLRequest -setHTTPShouldUsePipelining:
  */
 @property (nonatomic, assign) BOOL HTTPShouldUsePipelining;
 
-/**
+/*
  The network service type for created requests. `NSURLNetworkServiceTypeDefault` by default.
 
  @see NSMutableURLRequest -setNetworkServiceType:
  */
 @property (nonatomic, assign) NSURLRequestNetworkServiceType networkServiceType;
 
-/**
+/*
  The timeout interval, in seconds, for created requests. The default timeout interval is 60 seconds.
 
  @see NSMutableURLRequest -setTimeoutInterval:
@@ -146,7 +146,7 @@ typedef NS_ENUM(NSUInteger, AFHTTPRequestQueryStringSerializationStyle) {
 /// @name Configuring HTTP Request Headers
 ///---------------------------------------
 
-/**
+/*
  Default HTTP header field values to be applied to serialized requests. By default, these include the following:
 
  - `Accept-Language` with the contents of `NSLocale +preferredLanguages`
@@ -156,12 +156,12 @@ typedef NS_ENUM(NSUInteger, AFHTTPRequestQueryStringSerializationStyle) {
  */
 @property (readonly, nonatomic, strong) NSDictionary <NSString *, NSString *> *HTTPRequestHeaders;
 
-/**
+/*
  Creates and returns a serializer with default configuration.
  */
 + (instancetype)serializer;
 
-/**
+/*
  Sets the value for the HTTP headers set in request objects made by the HTTP client. If `nil`, removes the existing value for that header.
 
  @param field The HTTP header to set a default value for
@@ -170,7 +170,7 @@ typedef NS_ENUM(NSUInteger, AFHTTPRequestQueryStringSerializationStyle) {
 - (void)setValue:(nullable NSString *)value
 forHTTPHeaderField:(NSString *)field;
 
-/**
+/*
  Returns the value for the HTTP headers set in the request serializer.
 
  @param field The HTTP header to retrieve the default value for
@@ -179,7 +179,7 @@ forHTTPHeaderField:(NSString *)field;
  */
 - (nullable NSString *)valueForHTTPHeaderField:(NSString *)field;
 
-/**
+/*
  Sets the "Authorization" HTTP header set in request objects made by the HTTP client to a basic authentication value with Base64-encoded username and password. This overwrites any existing value for this header.
 
  @param username The HTTP basic auth username
@@ -188,7 +188,7 @@ forHTTPHeaderField:(NSString *)field;
 - (void)setAuthorizationHeaderFieldWithUsername:(NSString *)username
                                        password:(NSString *)password;
 
-/**
+/*
  Clears any existing value for the "Authorization" HTTP header.
  */
 - (void)clearAuthorizationHeader;
@@ -197,12 +197,12 @@ forHTTPHeaderField:(NSString *)field;
 /// @name Configuring Query String Parameter Serialization
 ///-------------------------------------------------------
 
-/**
+/*
  HTTP methods for which serialized requests will encode parameters as a query string. `GET`, `HEAD`, and `DELETE` by default.
  */
 @property (nonatomic, strong) NSSet <NSString *> *HTTPMethodsEncodingParametersInURI;
 
-/**
+/*
  Set the method of query string serialization according to one of the pre-defined styles.
 
  @param style The serialization style.
@@ -211,7 +211,7 @@ forHTTPHeaderField:(NSString *)field;
  */
 - (void)setQueryStringSerializationWithStyle:(AFHTTPRequestQueryStringSerializationStyle)style;
 
-/**
+/*
  Set the a custom method of query string serialization according to the specified block.
 
  @param block A block that defines a process of encoding parameters into a query string. This block returns the query string and takes three arguments: the request, the parameters to encode, and the error that occurred when attempting to encode parameters for the given request.
@@ -222,7 +222,7 @@ forHTTPHeaderField:(NSString *)field;
 /// @name Creating Request Objects
 ///-------------------------------
 
-/**
+/*
  Creates an `NSMutableURLRequest` object with the specified HTTP method and URL string.
 
  If the HTTP method is `GET`, `HEAD`, or `DELETE`, the parameters will be used to construct a url-encoded query string that is appended to the request's URL. Otherwise, the parameters will be encoded according to the value of the `parameterEncoding` property, and set as the request body.
@@ -239,7 +239,7 @@ forHTTPHeaderField:(NSString *)field;
                                 parameters:(nullable id)parameters
                                      error:(NSError * _Nullable __autoreleasing *)error;
 
-/**
+/*
  Creates an `NSMutableURLRequest` object with the specified HTTP method and URLString, and constructs a `multipart/form-data` HTTP body, using the specified parameters and multipart form data block. See http://www.w3.org/TR/html4/interact/forms.html#h-17.13.4.2
 
  Multipart form requests are automatically streamed, reading files directly from disk along with in-memory data in a single HTTP body. The resulting `NSMutableURLRequest` object has an `HTTPBodyStream` property, so refrain from setting `HTTPBodyStream` or `HTTPBody` on this request object, as it will clear out the multipart form body stream.
@@ -258,7 +258,7 @@ forHTTPHeaderField:(NSString *)field;
                               constructingBodyWithBlock:(nullable void (^)(id <AFMultipartFormData> formData))block
                                                   error:(NSError * _Nullable __autoreleasing *)error;
 
-/**
+/*
  Creates an `NSMutableURLRequest` by removing the `HTTPBodyStream` from a request, and asynchronously writing its contents into the specified file, invoking the completion handler when finished.
 
  @param request The multipart form request. The `HTTPBodyStream` property of `request` must not be `nil`.
@@ -277,12 +277,12 @@ forHTTPHeaderField:(NSString *)field;
 
 #pragma mark -
 
-/**
+/*
  The `AFMultipartFormData` protocol defines the methods supported by the parameter in the block argument of `AFHTTPRequestSerializer -multipartFormRequestWithMethod:URLString:parameters:constructingBodyWithBlock:`.
  */
 @protocol AFMultipartFormData
 
-/**
+/*
  Appends the HTTP header `Content-Disposition: file; filename=#{generated filename}; name=#{name}"` and `Content-Type: #{generated mimeType}`, followed by the encoded file data and the multipart form boundary.
 
  The filename and MIME type for this data in the form will be automatically generated, using the last path component of the `fileURL` and system associated MIME type for the `fileURL` extension, respectively.
@@ -297,7 +297,7 @@ forHTTPHeaderField:(NSString *)field;
                          name:(NSString *)name
                         error:(NSError * _Nullable __autoreleasing *)error;
 
-/**
+/*
  Appends the HTTP header `Content-Disposition: file; filename=#{filename}; name=#{name}"` and `Content-Type: #{mimeType}`, followed by the encoded file data and the multipart form boundary.
 
  @param fileURL The URL corresponding to the file whose content will be appended to the form. This parameter must not be `nil`.
@@ -314,7 +314,7 @@ forHTTPHeaderField:(NSString *)field;
                      mimeType:(NSString *)mimeType
                         error:(NSError * _Nullable __autoreleasing *)error;
 
-/**
+/*
  Appends the HTTP header `Content-Disposition: file; filename=#{filename}; name=#{name}"` and `Content-Type: #{mimeType}`, followed by the data from the input stream and the multipart form boundary.
 
  @param inputStream The input stream to be appended to the form data
@@ -329,7 +329,7 @@ forHTTPHeaderField:(NSString *)field;
                            length:(int64_t)length
                          mimeType:(NSString *)mimeType;
 
-/**
+/*
  Appends the HTTP header `Content-Disposition: file; filename=#{filename}; name=#{name}"` and `Content-Type: #{mimeType}`, followed by the encoded file data and the multipart form boundary.
 
  @param data The data to be encoded and appended to the form data.
@@ -342,7 +342,7 @@ forHTTPHeaderField:(NSString *)field;
                       fileName:(NSString *)fileName
                       mimeType:(NSString *)mimeType;
 
-/**
+/*
  Appends the HTTP headers `Content-Disposition: form-data; name=#{name}"`, followed by the encoded data and the multipart form boundary.
 
  @param data The data to be encoded and appended to the form data.
@@ -353,7 +353,7 @@ forHTTPHeaderField:(NSString *)field;
                           name:(NSString *)name;
 
 
-/**
+/*
  Appends HTTP headers, followed by the encoded data and the multipart form boundary.
 
  @param headers The HTTP headers to be appended to the form data.
@@ -362,7 +362,7 @@ forHTTPHeaderField:(NSString *)field;
 - (void)appendPartWithHeaders:(nullable NSDictionary <NSString *, NSString *> *)headers
                          body:(NSData *)body;
 
-/**
+/*
  Throttles request bandwidth by limiting the packet size and adding a delay for each chunk read from the upload stream.
 
  When uploading over a 3G or EDGE connection, requests may fail with "request body stream exhausted". Setting a maximum packet size and delay according to the recommended values (`kAFUploadStream3GSuggestedPacketSize` and `kAFUploadStream3GSuggestedDelay`) lowers the risk of the input stream exceeding its allocated bandwidth. Unfortunately, there is no definite way to distinguish between a 3G, EDGE, or LTE connection over `NSURLConnection`. As such, it is not recommended that you throttle bandwidth based solely on network reachability. Instead, you should consider checking for the "request body stream exhausted" in a failure block, and then retrying the request with throttled bandwidth.
@@ -377,17 +377,17 @@ forHTTPHeaderField:(NSString *)field;
 
 #pragma mark -
 
-/**
+/*
  `AFJSONRequestSerializer` is a subclass of `AFHTTPRequestSerializer` that encodes parameters as JSON using `NSJSONSerialization`, setting the `Content-Type` of the encoded request to `application/json`.
  */
 @interface AFJSONRequestSerializer : AFHTTPRequestSerializer
 
-/**
+/*
  Options for writing the request JSON data from Foundation objects. For possible values, see the `NSJSONSerialization` documentation section "NSJSONWritingOptions". `0` by default.
  */
 @property (nonatomic, assign) NSJSONWritingOptions writingOptions;
 
-/**
+/*
  Creates and returns a JSON serializer with specified reading and writing options.
 
  @param writingOptions The specified JSON writing options.
@@ -398,22 +398,22 @@ forHTTPHeaderField:(NSString *)field;
 
 #pragma mark -
 
-/**
+/*
  `AFPropertyListRequestSerializer` is a subclass of `AFHTTPRequestSerializer` that encodes parameters as JSON using `NSPropertyListSerializer`, setting the `Content-Type` of the encoded request to `application/x-plist`.
  */
 @interface AFPropertyListRequestSerializer : AFHTTPRequestSerializer
 
-/**
+/*
  The property list format. Possible values are described in "NSPropertyListFormat".
  */
 @property (nonatomic, assign) NSPropertyListFormat format;
 
-/**
+/*
  @warning The `writeOptions` property is currently unused.
  */
 @property (nonatomic, assign) NSPropertyListWriteOptions writeOptions;
 
-/**
+/*
  Creates and returns a property list serializer with a specified format, read options, and write options.
 
  @param format The property list format.
@@ -432,7 +432,7 @@ forHTTPHeaderField:(NSString *)field;
 /// @name Constants
 ///----------------
 
-/**
+/*
  ## Error Domains
 
  The following error domain is predefined.
@@ -446,7 +446,7 @@ forHTTPHeaderField:(NSString *)field;
  */
 FOUNDATION_EXPORT NSString * const AFURLRequestSerializationErrorDomain;
 
-/**
+/*
  ## User info dictionary keys
 
  These keys may exist in the user info dictionary, in addition to those defined for NSError.
@@ -460,7 +460,7 @@ FOUNDATION_EXPORT NSString * const AFURLRequestSerializationErrorDomain;
  */
 FOUNDATION_EXPORT NSString * const AFNetworkingOperationFailingURLRequestErrorKey;
 
-/**
+/*
  ## Throttling Bandwidth for HTTP Request Input Streams
 
  @see -throttleBandwidthWithPacketSize:delay:

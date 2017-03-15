@@ -13,7 +13,7 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-/**
+/*
  Provide some data-model method:
  
  * Convert json to any object, or convert any object to json.
@@ -67,7 +67,7 @@ NS_ASSUME_NONNULL_BEGIN
  */
 @interface NSObject (YYModel)
 
-/**
+/*
  Creates and returns a new instance of the receiver from a json.
  This method is thread-safe.
  
@@ -77,7 +77,7 @@ NS_ASSUME_NONNULL_BEGIN
  */
 + (nullable instancetype)yy_modelWithJSON:(id)json;
 
-/**
+/*
  Creates and returns a new instance of the receiver from a key-value dictionary.
  This method is thread-safe.
  
@@ -98,7 +98,7 @@ NS_ASSUME_NONNULL_BEGIN
  */
 + (nullable instancetype)yy_modelWithDictionary:(NSDictionary *)dictionary;
 
-/**
+/*
  Set the receiver's properties with a json object.
  
  @discussion Any invalid data in json will be ignored.
@@ -110,7 +110,7 @@ NS_ASSUME_NONNULL_BEGIN
  */
 - (BOOL)yy_modelSetWithJSON:(id)json;
 
-/**
+/*
  Set the receiver's properties with a key-value dictionary.
  
  @param dic  A key-value dictionary mapped to the receiver's properties.
@@ -130,7 +130,7 @@ NS_ASSUME_NONNULL_BEGIN
  */
 - (BOOL)yy_modelSetWithDictionary:(NSDictionary *)dic;
 
-/**
+/*
  Generate a json object from the receiver's properties.
  
  @return A json object in `NSDictionary` or `NSArray`, or nil if an error occurs.
@@ -142,7 +142,7 @@ NS_ASSUME_NONNULL_BEGIN
  */
 - (nullable id)yy_modelToJSONObject;
 
-/**
+/*
  Generate a json string's data from the receiver's properties.
  
  @return A json string's data, or nil if an error occurs.
@@ -153,7 +153,7 @@ NS_ASSUME_NONNULL_BEGIN
  */
 - (nullable NSData *)yy_modelToJSONData;
 
-/**
+/*
  Generate a json string from the receiver's properties.
  
  @return A json string, or nil if an error occurs.
@@ -164,21 +164,21 @@ NS_ASSUME_NONNULL_BEGIN
  */
 - (nullable NSString *)yy_modelToJSONString;
 
-/**
+/*
  Copy a instance with the receiver's properties.
  
  @return A copied instance, or nil if an error occurs.
  */
 - (nullable id)yy_modelCopy;
 
-/**
+/*
  Encode the receiver's properties to a coder.
  
  @param aCoder  An archiver object.
  */
 - (void)yy_modelEncodeWithCoder:(NSCoder *)aCoder;
 
-/**
+/*
  Decode the receiver's properties from a decoder.
  
  @param aDecoder  An archiver object.
@@ -187,14 +187,14 @@ NS_ASSUME_NONNULL_BEGIN
  */
 - (id)yy_modelInitWithCoder:(NSCoder *)aDecoder;
 
-/**
+/*
  Get a hash code with the receiver's properties.
  
  @return Hash code.
  */
 - (NSUInteger)yy_modelHash;
 
-/**
+/*
  Compares the receiver with another object for equality, based on properties.
  
  @param model  Another object.
@@ -203,7 +203,7 @@ NS_ASSUME_NONNULL_BEGIN
  */
 - (BOOL)yy_modelIsEqual:(id)model;
 
-/**
+/*
  Description method for debugging purposes based on properties.
  
  @return A string that describes the contents of the receiver.
@@ -214,12 +214,12 @@ NS_ASSUME_NONNULL_BEGIN
 
 
 
-/**
+/*
  Provide some data-model method for NSArray.
  */
 @interface NSArray (YYModel)
 
-/**
+/*
  Creates and returns an array from a json-array.
  This method is thread-safe.
  
@@ -235,12 +235,12 @@ NS_ASSUME_NONNULL_BEGIN
 
 
 
-/**
+/*
  Provide some data-model method for NSDictionary.
  */
 @interface NSDictionary (YYModel)
 
-/**
+/*
  Creates and returns a dictionary from a json.
  This method is thread-safe.
  
@@ -255,7 +255,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 
 
-/**
+/*
  If the default model transform does not fit to your model class, implement one or
  more method in this protocol to change the default key-value transform process.
  There's no need to add '<YYModel>' to your class header.
@@ -263,7 +263,7 @@ NS_ASSUME_NONNULL_BEGIN
 @protocol YYModel <NSObject>
 @optional
 
-/**
+/*
  Custom property mapper.
  
  @discussion If the key in JSON/Dictionary does not match to the model's property name,
@@ -302,7 +302,7 @@ NS_ASSUME_NONNULL_BEGIN
  */
 + (nullable NSDictionary<NSString *, id> *)modelCustomPropertyMapper;
 
-/**
+/*
  The generic class mapper for container properties.
  
  @discussion If the property is a container object, such as NSArray/NSSet/NSDictionary,
@@ -331,7 +331,7 @@ NS_ASSUME_NONNULL_BEGIN
  */
 + (nullable NSDictionary<NSString *, id> *)modelContainerPropertyGenericClass;
 
-/**
+/*
  If you need to create instances of different classes during json->object transform,
  use the method to choose custom class based on dictionary data.
  
@@ -365,7 +365,7 @@ NS_ASSUME_NONNULL_BEGIN
  */
 + (nullable Class)modelCustomClassForDictionary:(NSDictionary *)dictionary;
 
-/**
+/*
  All the properties in blacklist will be ignored in model transform process.
  Returns nil to ignore this feature.
  
@@ -373,7 +373,7 @@ NS_ASSUME_NONNULL_BEGIN
  */
 + (nullable NSArray<NSString *> *)modelPropertyBlacklist;
 
-/**
+/*
  If a property is not in the whitelist, it will be ignored in model transform process.
  Returns nil to ignore this feature.
  
@@ -381,7 +381,7 @@ NS_ASSUME_NONNULL_BEGIN
  */
 + (nullable NSArray<NSString *> *)modelPropertyWhitelist;
 
-/**
+/*
  This method's behavior is similar to `- (BOOL)modelCustomTransformFromDictionary:(NSDictionary *)dic;`, 
  but be called before the model transform.
  
@@ -395,7 +395,7 @@ NS_ASSUME_NONNULL_BEGIN
  */
 - (NSDictionary *)modelCustomWillTransformFromDictionary:(NSDictionary *)dic;
 
-/**
+/*
  If the default json-to-model transform does not fit to your model object, implement
  this method to do additional process. You can also use this method to validate the 
  model's properties.
@@ -410,7 +410,7 @@ NS_ASSUME_NONNULL_BEGIN
  */
 - (BOOL)modelCustomTransformFromDictionary:(NSDictionary *)dic;
 
-/**
+/*
  If the default model-to-json transform does not fit to your model class, implement
  this method to do additional process. You can also use this method to validate the
  json dictionary.

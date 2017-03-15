@@ -37,7 +37,7 @@
 
 #pragma mark Batch Constraint Creation
 
-/**
+/*
  A global variable that stores a stack of arrays of constraints created without being immediately installed.
  When executing a constraints block passed into the +[autoCreateConstraintsWithoutInstalling:] method, a new
  mutable array is pushed onto this stack, and all constraints created with PureLayout in the block are added
@@ -48,7 +48,7 @@
  */
 static __NSMutableArray_of(__NSMutableArray_of(NSLayoutConstraint *) *) *_al_arraysOfCreatedConstraints = nil;
 
-/**
+/*
  A global variable that is set to YES when installing a batch of constraints collected from a call to +[autoCreateAndInstallConstraints].
  When this flag is YES, constraints are installed immediately without checking for or adding to the +[al_currentArrayOfCreatedConstraints].
  This is necessary to properly handle nested calls to +[autoCreateAndInstallConstraints], where calls whose block contains other call(s)
@@ -56,7 +56,7 @@ static __NSMutableArray_of(__NSMutableArray_of(NSLayoutConstraint *) *) *_al_arr
  */
 static BOOL _al_isInstallingCreatedConstraints = NO;
 
-/**
+/*
  Accessor for the global state that stores arrays of constraints created without being installed.
  */
 + (__NSMutableArray_of(__NSMutableArray_of(NSLayoutConstraint *) *) *)al_arraysOfCreatedConstraints
@@ -68,7 +68,7 @@ static BOOL _al_isInstallingCreatedConstraints = NO;
     return _al_arraysOfCreatedConstraints;
 }
 
-/**
+/*
  Accessor for the current mutable array of constraints created without being immediately installed.
  */
 + (__NSMutableArray_of(NSLayoutConstraint *) *)al_currentArrayOfCreatedConstraints
@@ -76,7 +76,7 @@ static BOOL _al_isInstallingCreatedConstraints = NO;
     return [[self al_arraysOfCreatedConstraints] lastObject];
 }
 
-/**
+/*
  Accessor for the global state that determines whether automatic constraint installation should be prevented.
  */
 + (BOOL)al_preventAutomaticConstraintInstallation
@@ -84,7 +84,7 @@ static BOOL _al_isInstallingCreatedConstraints = NO;
     return (_al_isInstallingCreatedConstraints == NO) && ([[self al_arraysOfCreatedConstraints] count] > 0);
 }
 
-/**
+/*
  Creates all of the constraints in the block, then installs (activates) them all at once.
  All constraints created from calls to the PureLayout API in the block are returned in a single array.
  This may be more efficient than installing (activating) each constraint one-by-one.
@@ -104,7 +104,7 @@ static BOOL _al_isInstallingCreatedConstraints = NO;
     return createdConstraints;
 }
 
-/**
+/*
  Creates all of the constraints in the block but prevents them from being automatically installed (activated).
  All constraints created from calls to the PureLayout API in the block are returned in a single array.
  
@@ -130,7 +130,7 @@ static BOOL _al_isInstallingCreatedConstraints = NO;
 
 #pragma mark Set Priority For Constraints
 
-/**
+/*
  A global variable that stores a stack of layout priorities to set on constraints.
  When executing a constraints block passed into the +[autoSetPriority:forConstraints:] method, the priority for
  that call is pushed onto this stack, and when the block finishes executing, that priority is popped off this
@@ -140,7 +140,7 @@ static BOOL _al_isInstallingCreatedConstraints = NO;
  */
 static __NSMutableArray_of(NSNumber *) *_al_globalConstraintPriorities = nil;
 
-/**
+/*
  Accessor for the global stack of layout priorities.
  */
 + (__NSMutableArray_of(NSNumber *) *)al_globalConstraintPriorities
@@ -152,7 +152,7 @@ static __NSMutableArray_of(NSNumber *) *_al_globalConstraintPriorities = nil;
     return _al_globalConstraintPriorities;
 }
 
-/**
+/*
  Returns the current layout priority to use for constraints.
  When executing a constraints block passed into +[autoSetPriority:forConstraints:], this will return
  the priority for the current block. Otherwise, the default Required priority is returned.
@@ -166,7 +166,7 @@ static __NSMutableArray_of(NSNumber *) *_al_globalConstraintPriorities = nil;
     return [[globalConstraintPriorities lastObject] floatValue];
 }
 
-/**
+/*
  Accessor for the global state that determines if we're currently in the scope of a priority constraints block.
  */
 + (BOOL)al_isExecutingPriorityConstraintsBlock
@@ -174,7 +174,7 @@ static __NSMutableArray_of(NSNumber *) *_al_globalConstraintPriorities = nil;
     return [[self al_globalConstraintPriorities] count] > 0;
 }
 
-/**
+/*
  Sets the constraint priority to the given value for all constraints created using the PureLayout
  API within the given constraints block.
  
@@ -199,7 +199,7 @@ static __NSMutableArray_of(NSNumber *) *_al_globalConstraintPriorities = nil;
 
 #if PL__PureLayout_MinBaseSDK_iOS_8_0 || PL__PureLayout_MinBaseSDK_OSX_10_10
 
-/**
+/*
  A global variable that stores a stack of identifier strings to set on constraints.
  When executing a constraints block passed into the +[autoSetIdentifier:forConstraints:] method, the identifier for
  that call is pushed onto this stack, and when the block finishes executing, that identifier is popped off this
@@ -209,7 +209,7 @@ static __NSMutableArray_of(NSNumber *) *_al_globalConstraintPriorities = nil;
  */
 static __NSMutableArray_of(NSString *) *_al_globalConstraintIdentifiers = nil;
 
-/**
+/*
  Accessor for the global state of constraint identifiers.
  */
 + (__NSMutableArray_of(NSString *) *)al_globalConstraintIdentifiers
@@ -221,7 +221,7 @@ static __NSMutableArray_of(NSString *) *_al_globalConstraintIdentifiers = nil;
     return _al_globalConstraintIdentifiers;
 }
 
-/**
+/*
  Returns the current identifier string to use for constraints.
  When executing a constraints block passed into +[autoSetIdentifier:forConstraints:], this will return
  the identifier for the current block. Otherwise, nil is returned.
@@ -235,7 +235,7 @@ static __NSMutableArray_of(NSString *) *_al_globalConstraintIdentifiers = nil;
     return [globalConstraintIdentifiers lastObject];
 }
 
-/**
+/*
  Sets the identifier for all constraints created using the PureLayout API within the given constraints block.
  
  NOTE: This method will have no effect (and will NOT set the identifier) on constraints created or added
@@ -259,7 +259,7 @@ static __NSMutableArray_of(NSString *) *_al_globalConstraintIdentifiers = nil;
     }
 }
 
-/**
+/*
  Sets the string as the identifier for this constraint. Available in iOS 7.0 and OS X 10.9 and later.
  The identifier will be printed along with the constraint's description.
  This is helpful to document a constraint's purpose and aid in debugging.
@@ -280,7 +280,7 @@ static __NSMutableArray_of(NSString *) *_al_globalConstraintIdentifiers = nil;
 
 #pragma mark Install & Remove Constraints
 
-/**
+/*
  Activates the constraint.
  */
 - (void)autoInstall
@@ -313,7 +313,7 @@ static __NSMutableArray_of(NSString *) *_al_globalConstraintIdentifiers = nil;
     }
 }
 
-/**
+/*
  Deactivates the constraint.
  */
 - (void)autoRemove
@@ -345,7 +345,7 @@ static __NSMutableArray_of(NSString *) *_al_globalConstraintIdentifiers = nil;
 
 #pragma mark Internal Methods
 
-/**
+/*
  Applies the global constraint priority and identifier to the given constraint.
  This should be done before installing all constraints.
  
@@ -364,7 +364,7 @@ static __NSMutableArray_of(NSString *) *_al_globalConstraintIdentifiers = nil;
 #endif /* PL__PureLayout_MinBaseSDK_iOS_8_0 || PL__PureLayout_MinBaseSDK_OSX_10_10 */
 }
 
-/**
+/*
  Returns the corresponding NSLayoutAttribute for the given ALAttribute.
  
  @return The layout attribute for the given ALAttribute.
@@ -451,7 +451,7 @@ static __NSMutableArray_of(NSString *) *_al_globalConstraintIdentifiers = nil;
     return layoutAttribute;
 }
 
-/**
+/*
  Returns the corresponding ALLayoutConstraintAxis for the given ALAxis.
  
  @return The constraint axis for the given axis.
@@ -480,7 +480,7 @@ static __NSMutableArray_of(NSString *) *_al_globalConstraintIdentifiers = nil;
 
 #if PL__PureLayout_MinBaseSDK_iOS_8_0
 
-/**
+/*
  Returns the corresponding margin for the given edge.
  
  @param edge The edge to convert to the corresponding margin.
@@ -517,7 +517,7 @@ static __NSMutableArray_of(NSString *) *_al_globalConstraintIdentifiers = nil;
     return margin;
 }
 
-/**
+/*
  Returns the corresponding margin axis for the given axis.
  
  @param axis The axis to convert to the corresponding margin axis.

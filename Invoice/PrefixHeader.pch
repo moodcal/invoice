@@ -1,0 +1,26 @@
+//
+//  PrefixHeader.pch
+//  Invoice
+//
+//  Created by zeppo on 2017/3/15.
+//  Copyright © 2017年 links. All rights reserved.
+//
+
+#ifndef PrefixHeader_pch
+#define PrefixHeader_pch
+
+#import "UIView+Frame.h"
+#import "UIUtil.h"
+#import "UIColor+HexColor.h"
+#import "View+MASAdditions.h"
+#import <Photos/Photos.h>
+#import "RITLPhotoStore.h"
+#import <Photos/Photos.h>
+#import "MLeaksFinder.h"
+//#import "YPPhotoDefines.h"
+#import "RITLPhotoConfig.h"
+#import "Masonry.h"
+#import "UIView+Category.h"
+#import "UIViewController+Frame.h"
+
+#endif /* PrefixHeader_pch */

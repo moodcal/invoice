@@ -30,7 +30,7 @@
 NS_ASSUME_NONNULL_BEGIN
 
 
-/**
+/*
  This category adds methods to the UIKit framework's `UIProgressView` class. The methods in this category provide support for binding the progress to the upload and download progress of a session task.
  */
 @interface UIProgressView (AFNetworking)
@@ -39,7 +39,7 @@ NS_ASSUME_NONNULL_BEGIN
 /// @name Setting Session Task Progress
 ///------------------------------------
 
-/**
+/*
  Binds the progress to the upload progress of the specified session task.
 
  @param task The session task.
@@ -48,7 +48,7 @@ NS_ASSUME_NONNULL_BEGIN
 - (void)setProgressWithUploadProgressOfTask:(NSURLSessionUploadTask *)task
                                    animated:(BOOL)animated;
 
-/**
+/*
  Binds the progress to the download progress of the specified session task.
 
  @param task The session task.

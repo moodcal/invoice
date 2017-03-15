@@ -259,7 +259,7 @@ static force_inline Class YYNSBlockClass() {
 
 
 
-/**
+/*
  Get the ISO date formatter.
  
  ISO8601 format example:
@@ -651,7 +651,7 @@ static force_inline id YYValueForMultiKeys(__unsafe_unretained NSDictionary *dic
 @end
 
 
-/**
+/*
  Get number from property.
  @discussion Caller should hold strong reference to the parameters before this function returns.
  @param model Should not be nil.
@@ -707,7 +707,7 @@ static force_inline NSNumber *ModelCreateNumberFromProperty(__unsafe_unretained 
     }
 }
 
-/**
+/*
  Set number to property.
  @discussion Caller should hold strong reference to the parameters before this function returns.
  @param model Should not be nil.
@@ -772,7 +772,7 @@ static force_inline void ModelSetNumberToProperty(__unsafe_unretained id model,
     }
 }
 
-/**
+/*
  Set value to model with a property meta.
  
  @discussion Caller should hold strong reference to the parameters before this function returns.
@@ -1105,7 +1105,7 @@ typedef struct {
     void *dictionary; ///< NSDictionary (json)
 } ModelSetContext;
 
-/**
+/*
  Apply function for dictionary, to set the key-value pair to model.
  
  @param _key     should not be nil, NSString.
@@ -1125,7 +1125,7 @@ static void ModelSetWithDictionaryFunction(const void *_key, const void *_value,
     };
 }
 
-/**
+/*
  Apply function for model property meta, to set dictionary to model.
  
  @param _propertyMeta should not be nil, _YYModelPropertyMeta.
@@ -1152,7 +1152,7 @@ static void ModelSetWithPropertyMetaArrayFunction(const void *_propertyMeta, voi
     }
 }
 
-/**
+/*
  Returns a valid JSON object (NSArray/NSDictionary/NSString/NSNumber/NSNull), 
  or nil if an error occurs.
  
