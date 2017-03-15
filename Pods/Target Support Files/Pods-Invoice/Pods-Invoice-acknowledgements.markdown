@@ -72,6 +72,10 @@ THE SOFTWARE
 > SOFTWARE. 
 
 
+## DCPathButton
+
+The DCPathButton use the MIT license
+
 ## HMSegmentedControl
 
 # License

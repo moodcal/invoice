@@ -18,5 +18,6 @@ target 'Invoice' do
   pod 'HMSegmentedControl'
 
   pod 'CYLTabBarController'
+  pod 'DCPathButton', '~> 2.1.3'
 
 end
