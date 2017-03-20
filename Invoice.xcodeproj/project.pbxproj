@@ -21,6 +21,8 @@
 		AB330D3C1E7F685F002C6FCD /* RSA.m in Sources */ = {isa = PBXBuildFile; fileRef = AB330D3B1E7F685F002C6FCD /* RSA.m */; };
 		AB330D3F1E7F6903002C6FCD /* NSString+MD5.m in Sources */ = {isa = PBXBuildFile; fileRef = AB330D3E1E7F6903002C6FCD /* NSString+MD5.m */; };
 		AB330D421E7F6950002C6FCD /* NSMutableDictionary+Signature.m in Sources */ = {isa = PBXBuildFile; fileRef = AB330D411E7F6950002C6FCD /* NSMutableDictionary+Signature.m */; };
+		AB330D4C1E7F7941002C6FCD /* Invoice.m in Sources */ = {isa = PBXBuildFile; fileRef = AB330D4B1E7F7941002C6FCD /* Invoice.m */; };
+		AB330D4F1E7F7957002C6FCD /* Profile.m in Sources */ = {isa = PBXBuildFile; fileRef = AB330D4E1E7F7957002C6FCD /* Profile.m */; };
 		C28FB7D31E78EC66009AE91A /* ScanController.m in Sources */ = {isa = PBXBuildFile; fileRef = C28FB7D21E78EC66009AE91A /* ScanController.m */; };
 		C28FB7D81E791035009AE91A /* UIView+Frame.m in Sources */ = {isa = PBXBuildFile; fileRef = C28FB7D71E791035009AE91A /* UIView+Frame.m */; };
 		C28FB7DB1E791057009AE91A /* UIUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = C28FB7DA1E791057009AE91A /* UIUtil.m */; };
@@ -108,6 +110,10 @@
 		AB330D3E1E7F6903002C6FCD /* NSString+MD5.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+MD5.m"; sourceTree = "<group>"; };
 		AB330D401E7F6950002C6FCD /* NSMutableDictionary+Signature.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSMutableDictionary+Signature.h"; sourceTree = "<group>"; };
 		AB330D411E7F6950002C6FCD /* NSMutableDictionary+Signature.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSMutableDictionary+Signature.m"; sourceTree = "<group>"; };
+		AB330D4A1E7F7941002C6FCD /* Invoice.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Invoice.h; sourceTree = "<group>"; };
+		AB330D4B1E7F7941002C6FCD /* Invoice.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Invoice.m; sourceTree = "<group>"; };
+		AB330D4D1E7F7957002C6FCD /* Profile.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Profile.h; sourceTree = "<group>"; };
+		AB330D4E1E7F7957002C6FCD /* Profile.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Profile.m; sourceTree = "<group>"; };
 		C28FB7D11E78EC66009AE91A /* ScanController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ScanController.h; sourceTree = "<group>"; };
 		C28FB7D21E78EC66009AE91A /* ScanController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ScanController.m; sourceTree = "<group>"; };
 		C28FB7D61E791035009AE91A /* UIView+Frame.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+Frame.h"; sourceTree = "<group>"; };
@@ -289,6 +295,7 @@
 		AB330D071E777F9D002C6FCD /* Invoice */ = {
 			isa = PBXGroup;
 			children = (
+				AB330D491E7F7932002C6FCD /* Model */,
 				AB330D331E7F67FD002C6FCD /* Manager */,
 				AB330D321E7F67F3002C6FCD /* Controller */,
 				C28FB7E41E791515009AE91A /* Third */,
@@ -340,6 +347,17 @@
 				AB330D371E7F6813002C6FCD /* SRUserManager.m */,
 			);
 			name = Manager;
+			sourceTree = "<group>";
+		};
+		AB330D491E7F7932002C6FCD /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				AB330D4A1E7F7941002C6FCD /* Invoice.h */,
+				AB330D4B1E7F7941002C6FCD /* Invoice.m */,
+				AB330D4D1E7F7957002C6FCD /* Profile.h */,
+				AB330D4E1E7F7957002C6FCD /* Profile.m */,
+			);
+			name = Model;
 			sourceTree = "<group>";
 		};
 		C28FB7D41E790FE4009AE91A /* Common */ = {
@@ -749,6 +767,7 @@
 				C28FB8301E791541009AE91A /* RITLPhotoPreviewController.m in Sources */,
 				C28FB8331E791541009AE91A /* RITLPhotosViewModel.m in Sources */,
 				C28FB8261E791541009AE91A /* RITLPhotoBrowseViewModel.m in Sources */,
+				AB330D4F1E7F7957002C6FCD /* Profile.m in Sources */,
 				C28FB8961E7915A0009AE91A /* UINavigationController+MemoryLeak.m in Sources */,
 				C28FB8951E7915A0009AE91A /* UIApplication+MemoryLeak.m in Sources */,
 				C28FB8871E7915A0009AE91A /* UIButton+RITLBlockButton.m in Sources */,
@@ -777,6 +796,7 @@
 				C28FB8991E7915A0009AE91A /* UITabBarController+MemoryLeak.m in Sources */,
 				C28FB8831E7915A0009AE91A /* PHAsset+RITLPhotoRepresentation.m in Sources */,
 				C28FB89B1E7915A0009AE91A /* UIViewController+MemoryLeak.m in Sources */,
+				AB330D4C1E7F7941002C6FCD /* Invoice.m in Sources */,
 				C28FB83B1E791541009AE91A /* UIView+Category.m in Sources */,
 				C28FB8971E7915A0009AE91A /* UIPageViewController+MemoryLeak.m in Sources */,
 				AB330D0A1E777F9D002C6FCD /* main.m in Sources */,

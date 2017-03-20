@@ -9,14 +9,39 @@
 #import "InvoiceListController.h"
 
 @interface InvoiceListController ()
-
+@property (nonatomic, strong) NSArray *invoices;
 @end
 
 @implementation InvoiceListController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view, typically from a nib.
+
+    if (![[SRUserManager sharedInstance] token]) {
+        [[NSNotificationCenter defaultCenter] postNotificationName:@"SRNotificationNeedSignin" object:nil];
+        return;
+    }
+    
+    AFHTTPSessionManager *sessionManager = [[SRApiManager sharedInstance] sessionManager];
+    NSMutableDictionary *params = [NSMutableDictionary dictionary];
+    [params appendInfo];
+    [sessionManager.requestSerializer setValue:params.signature forHTTPHeaderField:@"sign"];
+    [sessionManager GET:ApiMethodInvoicsList parameters:params progress:nil success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
+        DLog(@"response: %@", responseObject);
+        if ([[responseObject objectForKey:@"success"] boolValue]) {
+            self.invoices = [NSArray yy_modelArrayWithClass:[Invoice class] json:[responseObject objectForKey:@"invoices"]];
+//            [self.collectionView reloadData];
+        } else {
+            if ([[responseObject objectForKey:@"err_code"] integerValue] == 401) {
+                [[NSNotificationCenter defaultCenter] postNotificationName:@"SRNotificationNeedSignin" object:nil];
+            }
+            DLog(@"request incomes error");
+        }
+    } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
+        DLog(@"error: %@", error);
+    }];
+    
+
 }
 
 

@@ -7,25 +7,31 @@
 //
 
 #ifdef DEBUG
-#define ApiHost @"http://10.38.42.45:8086"
+#define ApiHost @"http://10.38.12.67:8088"
 //#define ApiHost @"http://10.38.12.97"
 #else
 //#define ApiHost @"http://10.38.42.45:8086"
 #define ApiHost @"https://app.haipingx.cn"
 #endif
 
-#define ApiMethodDashboardIncome (ApiHost @"/dashboard/income")
-#define ApiMethodDashboardProfit (ApiHost @"/dashboard/profit")
-#define ApiMethodDashboardCost (ApiHost @"/dashboard/cost")
-#define ApiMethodDashboardHistory (ApiHost @"/dashboard/history")
+#define ApiMethodInvoicsList (ApiHost @"/invoices/list")
+#define ApiMethodInvoicsCreate (ApiHost @"/invoices/create")
+#define ApiMethodInvoicsSingle (ApiHost @"/invoices/single")
+#define ApiMethodInvoicsSearch (ApiHost @"/invoices/search")
+#define ApiMethodInvoicsBindImage (ApiHost @"/invoices/bind_image")
+#define ApiMethodInvoicsExport (ApiHost @"/invoices/export")
+#define ApiMethodInvoicsVerify (ApiHost @"/invoices/verify")
+
+#define ApiMethodUserSignup (ApiHost @"/users/signup")
 #define ApiMethodUserSignin (ApiHost @"/users/signin")
 #define ApiMethodUserSignout (ApiHost @"/users/signout")
-#define ApiMethodIndexesRates (ApiHost @"/indexes/rates")
-#define ApiMethodIndexesRate (ApiHost @"/indexes/rate")
-#define ApiMethodAdminAppVersion (ApiHost @"/admin/app_version")
-#define ApiMethodCompaniesList (ApiHost @"/companies/list")
-#define ApiMethodProjects (ApiHost @"/projects/list")
-#define ApiMethodProjectDetail (ApiHost @"/projects/detail")
+#define ApiMethodUserProfile (ApiHost @"/users/profile")
+#define ApiMethodUserGetProfile (ApiHost @"/users/get_profile")
+#define ApiMethodUserPassword (ApiHost @"/users/password")
+#define ApiMethodUserCode (ApiHost @"/users/code")
+
+#define ApiMethodPhotosUpload (ApiHost @"/photos/upload")
+
 
 #import <Foundation/Foundation.h>
 

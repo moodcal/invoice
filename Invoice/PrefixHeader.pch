@@ -30,7 +30,11 @@
 #import "PureLayout.h"
 #import "SRApiManager.h"
 #import "SRUserManager.h"
+#import "NSMutableDictionary+Signature.h"
 
+// model
+#import "Invoice.h"
+#import "Profile.h"
 
 #ifdef DEBUG
 #	define DLog(fmt, ...) NSLog((@"%s #%d " fmt), __PRETTY_FUNCTION__, __LINE__, ##__VA_ARGS__);
