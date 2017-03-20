@@ -23,4 +23,20 @@
 #import "UIView+Category.h"
 #import "UIViewController+Frame.h"
 
+#import <AFNetworking/AFNetworking.h>
+#import <YYModel/YYModel.h>
+#import <SAMKeychain/SAMKeychain.h>
+#import "HMSegmentedControl.h"
+#import "PureLayout.h"
+#import "SRApiManager.h"
+#import "SRUserManager.h"
+
+
+#ifdef DEBUG
+#	define DLog(fmt, ...) NSLog((@"%s #%d " fmt), __PRETTY_FUNCTION__, __LINE__, ##__VA_ARGS__);
+#else
+#	define DLog(...)
+#endif
+
+
 #endif /* PrefixHeader_pch */

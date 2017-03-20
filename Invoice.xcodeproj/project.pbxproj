@@ -16,6 +16,11 @@
 		AB330D1B1E777F9D002C6FCD /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AB330D191E777F9D002C6FCD /* LaunchScreen.storyboard */; };
 		AB330D241E77CBC7002C6FCD /* CustomTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = AB330D231E77CBC7002C6FCD /* CustomTabBarController.m */; };
 		AB330D271E77CDB9002C6FCD /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AB330D251E77CDB9002C6FCD /* Main.storyboard */; };
+		AB330D381E7F6813002C6FCD /* SRApiManager.m in Sources */ = {isa = PBXBuildFile; fileRef = AB330D351E7F6813002C6FCD /* SRApiManager.m */; };
+		AB330D391E7F6813002C6FCD /* SRUserManager.m in Sources */ = {isa = PBXBuildFile; fileRef = AB330D371E7F6813002C6FCD /* SRUserManager.m */; };
+		AB330D3C1E7F685F002C6FCD /* RSA.m in Sources */ = {isa = PBXBuildFile; fileRef = AB330D3B1E7F685F002C6FCD /* RSA.m */; };
+		AB330D3F1E7F6903002C6FCD /* NSString+MD5.m in Sources */ = {isa = PBXBuildFile; fileRef = AB330D3E1E7F6903002C6FCD /* NSString+MD5.m */; };
+		AB330D421E7F6950002C6FCD /* NSMutableDictionary+Signature.m in Sources */ = {isa = PBXBuildFile; fileRef = AB330D411E7F6950002C6FCD /* NSMutableDictionary+Signature.m */; };
 		C28FB7D31E78EC66009AE91A /* ScanController.m in Sources */ = {isa = PBXBuildFile; fileRef = C28FB7D21E78EC66009AE91A /* ScanController.m */; };
 		C28FB7D81E791035009AE91A /* UIView+Frame.m in Sources */ = {isa = PBXBuildFile; fileRef = C28FB7D71E791035009AE91A /* UIView+Frame.m */; };
 		C28FB7DB1E791057009AE91A /* UIUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = C28FB7DA1E791057009AE91A /* UIUtil.m */; };
@@ -93,6 +98,16 @@
 		AB330D221E77CBC7002C6FCD /* CustomTabBarController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomTabBarController.h; sourceTree = "<group>"; };
 		AB330D231E77CBC7002C6FCD /* CustomTabBarController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomTabBarController.m; sourceTree = "<group>"; };
 		AB330D261E77CDB9002C6FCD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		AB330D341E7F6813002C6FCD /* SRApiManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SRApiManager.h; sourceTree = "<group>"; };
+		AB330D351E7F6813002C6FCD /* SRApiManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SRApiManager.m; sourceTree = "<group>"; };
+		AB330D361E7F6813002C6FCD /* SRUserManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SRUserManager.h; sourceTree = "<group>"; };
+		AB330D371E7F6813002C6FCD /* SRUserManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SRUserManager.m; sourceTree = "<group>"; };
+		AB330D3A1E7F685F002C6FCD /* RSA.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RSA.h; sourceTree = "<group>"; };
+		AB330D3B1E7F685F002C6FCD /* RSA.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RSA.m; sourceTree = "<group>"; };
+		AB330D3D1E7F6903002C6FCD /* NSString+MD5.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+MD5.h"; sourceTree = "<group>"; };
+		AB330D3E1E7F6903002C6FCD /* NSString+MD5.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+MD5.m"; sourceTree = "<group>"; };
+		AB330D401E7F6950002C6FCD /* NSMutableDictionary+Signature.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSMutableDictionary+Signature.h"; sourceTree = "<group>"; };
+		AB330D411E7F6950002C6FCD /* NSMutableDictionary+Signature.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSMutableDictionary+Signature.m"; sourceTree = "<group>"; };
 		C28FB7D11E78EC66009AE91A /* ScanController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ScanController.h; sourceTree = "<group>"; };
 		C28FB7D21E78EC66009AE91A /* ScanController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ScanController.m; sourceTree = "<group>"; };
 		C28FB7D61E791035009AE91A /* UIView+Frame.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+Frame.h"; sourceTree = "<group>"; };
@@ -274,6 +289,8 @@
 		AB330D071E777F9D002C6FCD /* Invoice */ = {
 			isa = PBXGroup;
 			children = (
+				AB330D331E7F67FD002C6FCD /* Manager */,
+				AB330D321E7F67F3002C6FCD /* Controller */,
 				C28FB7E41E791515009AE91A /* Third */,
 				C28FB7D51E791001009AE91A /* Category */,
 				C28FB7D41E790FE4009AE91A /* Common */,
@@ -305,6 +322,26 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		AB330D321E7F67F3002C6FCD /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Controller;
+			sourceTree = "<group>";
+		};
+		AB330D331E7F67FD002C6FCD /* Manager */ = {
+			isa = PBXGroup;
+			children = (
+				AB330D3A1E7F685F002C6FCD /* RSA.h */,
+				AB330D3B1E7F685F002C6FCD /* RSA.m */,
+				AB330D341E7F6813002C6FCD /* SRApiManager.h */,
+				AB330D351E7F6813002C6FCD /* SRApiManager.m */,
+				AB330D361E7F6813002C6FCD /* SRUserManager.h */,
+				AB330D371E7F6813002C6FCD /* SRUserManager.m */,
+			);
+			name = Manager;
+			sourceTree = "<group>";
+		};
 		C28FB7D41E790FE4009AE91A /* Common */ = {
 			isa = PBXGroup;
 			children = (
@@ -319,6 +356,10 @@
 		C28FB7D51E791001009AE91A /* Category */ = {
 			isa = PBXGroup;
 			children = (
+				AB330D401E7F6950002C6FCD /* NSMutableDictionary+Signature.h */,
+				AB330D411E7F6950002C6FCD /* NSMutableDictionary+Signature.m */,
+				AB330D3D1E7F6903002C6FCD /* NSString+MD5.h */,
+				AB330D3E1E7F6903002C6FCD /* NSString+MD5.m */,
 				C28FB7E11E791211009AE91A /* UIColor+HexColor.h */,
 				C28FB7E21E791211009AE91A /* UIColor+HexColor.m */,
 				C28FB7D61E791035009AE91A /* UIView+Frame.h */,
@@ -711,7 +752,9 @@
 				C28FB8961E7915A0009AE91A /* UINavigationController+MemoryLeak.m in Sources */,
 				C28FB8951E7915A0009AE91A /* UIApplication+MemoryLeak.m in Sources */,
 				C28FB8871E7915A0009AE91A /* UIButton+RITLBlockButton.m in Sources */,
+				AB330D3F1E7F6903002C6FCD /* NSString+MD5.m in Sources */,
 				C28FB8881E7915A0009AE91A /* UIViewController+RITLPhotoAlertController.m in Sources */,
+				AB330D391E7F6813002C6FCD /* SRUserManager.m in Sources */,
 				C28FB8351E791541009AE91A /* RITLPhotoRequestStore.m in Sources */,
 				C28FB82B1E791541009AE91A /* RITLPhotoNavigationViewModel.m in Sources */,
 				C28FB8381E791541009AE91A /* PHObject+SupportCategory.m in Sources */,
@@ -720,11 +763,13 @@
 				C28FB8251E791541009AE91A /* RITLPhotoBrowseController.m in Sources */,
 				C28FB82A1E791541009AE91A /* RITLPhotoNavigationViewController.m in Sources */,
 				C28FB7D31E78EC66009AE91A /* ScanController.m in Sources */,
+				AB330D3C1E7F685F002C6FCD /* RSA.m in Sources */,
 				C28FB8281E791541009AE91A /* RITLPhotoGroupViewController.m in Sources */,
 				C28FB82D1E791541009AE91A /* RITLPhotoCacheManager.mm in Sources */,
 				C28FB88B1E7915A0009AE91A /* MASConstraint.m in Sources */,
 				C28FB8861E7915A0009AE91A /* PHImageRequestOptions+RITLPhotoRepresentation.m in Sources */,
 				C28FB8371E791541009AE91A /* RITLPhotoStoreConfiguraion.m in Sources */,
+				AB330D381E7F6813002C6FCD /* SRApiManager.m in Sources */,
 				C28FB83A1E791541009AE91A /* UIKit+YPPhotoDemo.m in Sources */,
 				C28FB8851E7915A0009AE91A /* PHFetchResult+RITLPhotoRepresentation.m in Sources */,
 				C28FB8931E7915A0009AE91A /* ViewController+MASAdditions.m in Sources */,
@@ -738,6 +783,7 @@
 				C28FB8841E7915A0009AE91A /* PHAssetCollection+RITLPhotoRepresentation.m in Sources */,
 				C28FB8321E791541009AE91A /* RITLPhotosViewController.m in Sources */,
 				C28FB7E31E791211009AE91A /* UIColor+HexColor.m in Sources */,
+				AB330D421E7F6950002C6FCD /* NSMutableDictionary+Signature.m in Sources */,
 				C28FB8231E791541009AE91A /* RITLBaseViewModel.m in Sources */,
 				C28FB88D1E7915A0009AE91A /* MASLayoutConstraint.m in Sources */,
 				C28FB82E1E791541009AE91A /* RITLPhotoHandleManager.m in Sources */,
