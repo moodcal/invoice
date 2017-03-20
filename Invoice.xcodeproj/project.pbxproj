@@ -303,14 +303,6 @@
 				C28FB7D41E790FE4009AE91A /* Common */,
 				AB330D0B1E777F9D002C6FCD /* AppDelegate.h */,
 				AB330D0C1E777F9D002C6FCD /* AppDelegate.m */,
-				AB330D221E77CBC7002C6FCD /* CustomTabBarController.h */,
-				AB330D231E77CBC7002C6FCD /* CustomTabBarController.m */,
-				AB330D0E1E777F9D002C6FCD /* InvoiceListController.h */,
-				AB330D0F1E777F9D002C6FCD /* InvoiceListController.m */,
-				AB330D111E777F9D002C6FCD /* MyController.h */,
-				AB330D121E777F9D002C6FCD /* MyController.m */,
-				C28FB7D11E78EC66009AE91A /* ScanController.h */,
-				C28FB7D21E78EC66009AE91A /* ScanController.m */,
 				AB330D171E777F9D002C6FCD /* Assets.xcassets */,
 				AB330D191E777F9D002C6FCD /* LaunchScreen.storyboard */,
 				AB330D251E77CDB9002C6FCD /* Main.storyboard */,
@@ -332,6 +324,14 @@
 		AB330D321E7F67F3002C6FCD /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				AB330D221E77CBC7002C6FCD /* CustomTabBarController.h */,
+				AB330D231E77CBC7002C6FCD /* CustomTabBarController.m */,
+				AB330D0E1E777F9D002C6FCD /* InvoiceListController.h */,
+				AB330D0F1E777F9D002C6FCD /* InvoiceListController.m */,
+				AB330D111E777F9D002C6FCD /* MyController.h */,
+				AB330D121E777F9D002C6FCD /* MyController.m */,
+				C28FB7D11E78EC66009AE91A /* ScanController.h */,
+				C28FB7D21E78EC66009AE91A /* ScanController.m */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
