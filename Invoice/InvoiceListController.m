@@ -16,6 +16,8 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    
+    self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"搜索" style:UIBarButtonItemStylePlain target:self action:@selector(clickSearch)];
 
     if (![[SRUserManager sharedInstance] token]) {
         [[NSNotificationCenter defaultCenter] postNotificationName:@"SRNotificationNeedSignin" object:nil];
@@ -48,6 +50,13 @@
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+
+- (void)clickSearch {
+    UIWindow *window = ((AppDelegate *)[UIApplication sharedApplication].delegate).window;
+    SearchView *searchView = [[SearchView alloc] initWithFrame:window.bounds];
+    
+    [window addSubview:searchView];
 }
 
 

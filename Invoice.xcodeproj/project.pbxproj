@@ -80,6 +80,7 @@
 		C28FB8991E7915A0009AE91A /* UITabBarController+MemoryLeak.m in Sources */ = {isa = PBXBuildFile; fileRef = C28FB8751E7915A0009AE91A /* UITabBarController+MemoryLeak.m */; };
 		C28FB89A1E7915A0009AE91A /* UIView+MemoryLeak.m in Sources */ = {isa = PBXBuildFile; fileRef = C28FB8771E7915A0009AE91A /* UIView+MemoryLeak.m */; };
 		C28FB89B1E7915A0009AE91A /* UIViewController+MemoryLeak.m in Sources */ = {isa = PBXBuildFile; fileRef = C28FB8791E7915A0009AE91A /* UIViewController+MemoryLeak.m */; };
+		C28FB8A41E7FC87C009AE91A /* SearchView.m in Sources */ = {isa = PBXBuildFile; fileRef = C28FB8A31E7FC87C009AE91A /* SearchView.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -241,6 +242,8 @@
 		C28FB8801E7915A0009AE91A /* RITLTableCellViewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RITLTableCellViewModel.h; sourceTree = "<group>"; };
 		C28FB8811E7915A0009AE91A /* RITLTableViewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RITLTableViewModel.h; sourceTree = "<group>"; };
 		C28FB8821E7915A0009AE91A /* RITLTextFieldViewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RITLTextFieldViewModel.h; sourceTree = "<group>"; };
+		C28FB8A21E7FC87C009AE91A /* SearchView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SearchView.h; sourceTree = "<group>"; };
+		C28FB8A31E7FC87C009AE91A /* SearchView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SearchView.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -295,6 +298,7 @@
 		AB330D071E777F9D002C6FCD /* Invoice */ = {
 			isa = PBXGroup;
 			children = (
+				C28FB8A11E7FC86B009AE91A /* View */,
 				AB330D491E7F7932002C6FCD /* Model */,
 				AB330D331E7F67FD002C6FCD /* Manager */,
 				AB330D321E7F67F3002C6FCD /* Controller */,
@@ -619,6 +623,15 @@
 			path = Protocol;
 			sourceTree = "<group>";
 		};
+		C28FB8A11E7FC86B009AE91A /* View */ = {
+			isa = PBXGroup;
+			children = (
+				C28FB8A21E7FC87C009AE91A /* SearchView.h */,
+				C28FB8A31E7FC87C009AE91A /* SearchView.m */,
+			);
+			name = View;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -746,6 +759,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C28FB8A41E7FC87C009AE91A /* SearchView.m in Sources */,
 				AB330D131E777F9D002C6FCD /* MyController.m in Sources */,
 				AB330D0D1E777F9D002C6FCD /* AppDelegate.m in Sources */,
 				AB330D101E777F9D002C6FCD /* InvoiceListController.m in Sources */,
