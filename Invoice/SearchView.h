@@ -8,6 +8,12 @@
 
 #import <UIKit/UIKit.h>
 
-@interface SearchView : UIView
+@protocol SearchViewDelegate <NSObject>
 
+- (void)searchWithKeyword:(NSString *)keyword;
+
+@end
+
+@interface SearchView : UIView
+@property (nonatomic,weak) id<SearchViewDelegate> delegate;
 @end

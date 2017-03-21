@@ -8,7 +8,7 @@
 
 #import "InvoiceListController.h"
 
-@interface InvoiceListController ()
+@interface InvoiceListController () <SearchViewDelegate>
 @property (nonatomic, strong) NSArray *invoices;
 @end
 
@@ -55,8 +55,14 @@
 - (void)clickSearch {
     UIWindow *window = ((AppDelegate *)[UIApplication sharedApplication].delegate).window;
     SearchView *searchView = [[SearchView alloc] initWithFrame:window.bounds];
-    
+    searchView.delegate = self;
     [window addSubview:searchView];
+}
+
+#pragma mark - SearchViewDelegate
+- (void)searchWithKeyword:(NSString *)keyword
+{
+    
 }
 
 

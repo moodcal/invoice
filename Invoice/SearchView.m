@@ -8,11 +8,13 @@
 
 #import "SearchView.h"
 
-@interface SearchView ()
+@interface SearchView () <UITableViewDelegate, UITableViewDataSource,UITextFieldDelegate>
 @property (nonatomic,strong) UIView *searchView;
 @property (nonatomic,strong) UITextField *textField;
 @property (nonatomic,strong) UILabel *searchLabel;
 @property (nonatomic,strong) UIView *textFieldBG;
+@property (nonatomic,strong) NSMutableArray *dataArray;
+@property (nonatomic,strong) UITableView *tableView;
 
 @end
 
@@ -59,10 +61,23 @@
         _textField.autocapitalizationType = UITextAutocapitalizationTypeNone;
         _textField.textColor = [UIColor whiteColor];
         [_textField addTarget:self action:@selector(textFieldDidChange:) forControlEvents:UIControlEventEditingChanged];
+        _textField.delegate = self;
     }
     return _textField;
 }
 
+
+- (UITableView *)tableView {
+    if (!_tableView) {
+        _tableView = [[UITableView alloc] initWithFrame:CGRectMake(16, self.searchView.bottom, self.width-16*2, self.height-self.searchView.bottom) style:UITableViewStylePlain];
+        _tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
+        _tableView.delegate = self;
+        _tableView.dataSource = self;
+        _tableView.tableFooterView = [[UIView alloc] init];
+        _tableView.backgroundColor = [UIColor clearColor];
+    }
+    return _tableView;
+}
 
 - (id)initWithFrame:(CGRect)frame
 {
@@ -72,12 +87,21 @@
         self.userInteractionEnabled = YES;
         
         
-        [UIUtil drawLineInView:self frame:self.bounds color:[UIColor colorWithHex:0x000000 alpha:0.8]];
-        
-        [UIUtil drawLineInView:self frame:CGRectMake(0, 0, self.width, 20+44) color:[UIColor blackColor]];
-
+        [UIUtil drawLineInView:self frame:self.bounds color:[UIColor colorWithHex:0x000000 alpha:0.9]];
         
         [self addSubview:self.searchView];
+        [self addSubview:self.tableView];
+        
+        
+        //搜索记录
+        self.dataArray = [NSMutableArray array];
+        
+        NSString *filePath = [[NSHomeDirectory() stringByAppendingPathComponent:@"Documents"] stringByAppendingPathComponent:@"SearchHistory.plist"];
+        
+        if ([[NSFileManager defaultManager] fileExistsAtPath:filePath]) {
+            NSArray *array = [NSArray arrayWithContentsOfFile:filePath];
+            [self.dataArray addObjectsFromArray:array];
+        }
         
         
     }
@@ -105,4 +129,96 @@
     self.searchLabel.hidden = self.textField.text.length > 0 ? YES : NO;
     
 }
+
+#pragma mark - UITableViewDataSource
+- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
+    return 1;
+}
+
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
+    if (self.dataArray.count > 0) {
+        return self.dataArray.count+1;
+    } else {
+        return 2;
+    }
+}
+
+
+- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
+    return 44;
+}
+
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
+    
+    UITableViewCell *cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:nil];
+    cell.contentView.backgroundColor = [UIColor colorWithHex:0x000000 alpha:0.9];
+    cell.selectionStyle = UITableViewCellSelectionStyleNone;
+    
+    if (self.dataArray.count > 0) {
+        
+        if (indexPath.row == 0) {
+            
+            [UIUtil drawLabelInView:cell.contentView frame:CGRectMake(0, 0, tableView.width, 44) font:[UIFont systemFontOfSize:14] text:@"最近搜索" isCenter:NO color:[UIColor whiteColor]];
+            
+        } else {
+            NSString *keyword = self.dataArray[indexPath.row-1];
+            
+            [UIUtil drawLabelInView:cell.contentView frame:CGRectMake(0, 0, tableView.width, 44) font:[UIFont systemFontOfSize:14] text:keyword isCenter:NO color:[UIColor whiteColor]];
+
+        }
+        
+    } else {
+        if (indexPath.row == 0) {
+            [UIUtil drawLabelInView:cell.contentView frame:CGRectMake(0, 0, tableView.width, 44) font:[UIFont systemFontOfSize:14] text:@"最近搜索" isCenter:NO color:[UIColor whiteColor]];
+
+        } else {
+            [UIUtil drawLabelInView:cell.contentView frame:CGRectMake(0, 0, tableView.width, 44) font:[UIFont systemFontOfSize:14] text:@"暂无搜索历史" isCenter:YES color:[UIColor whiteColor]];
+
+        }
+    }
+    
+    [UIUtil drawLineInView:cell.contentView frame:CGRectMake(0, 44-[UIUtil lineWidth], tableView.width, [UIUtil lineWidth]) color:[UIColor grayColor]];
+    
+    return cell;
+    
+}
+
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    [tableView deselectRowAtIndexPath:indexPath animated:YES];
+    
+    if (self.dataArray.count > 0) {
+        
+        if (indexPath.row > 0) {
+            
+            NSString *keyword = self.dataArray[indexPath.row-1];
+            
+            [self.delegate searchWithKeyword:keyword];
+            [self clickCancel];
+        }
+        
+    }
+    
+}
+
+#pragma mark - UITextFieldDelegate
+- (BOOL)textFieldShouldReturn:(UITextField *)textField
+{
+    NSString *keyword = [textField.text stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceAndNewlineCharacterSet]];
+    if (keyword.length > 0) {
+        
+        [self.dataArray insertObject:keyword atIndex:0];
+        NSString *filePath = [[NSHomeDirectory() stringByAppendingPathComponent:@"Documents"] stringByAppendingPathComponent:@"SearchHistory.plist"];
+        [self.dataArray writeToFile:filePath atomically:YES];
+        
+        [self.delegate searchWithKeyword:keyword];
+        [self clickCancel];
+        
+        return YES;
+    } else {
+        return NO;
+    }
+    
+}
+
 @end
