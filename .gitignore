@@ -12,5 +12,6 @@ _Store
 build/*
 *.xcworkspace/*
 *.xcuserdata/*
+*/xcuserdata/*
 dump.rdb
 Pods/*

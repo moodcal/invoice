@@ -106,15 +106,18 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
                         <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
                     </tabBar>
+                    <connections>
+                        <segue destination="b6h-FZ-Bgj" kind="presentation" identifier="SignInSegue" id="t0w-uF-j5g"/>
+                    </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="HuB-VB-40B" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-849" y="-765"/>
         </scene>
-        <!--View Controller-->
+        <!--SignVC-->
         <scene sceneID="blk-2m-25R">
             <objects>
-                <viewController id="cNh-Co-TYT" sceneMemberID="viewController">
+                <viewController id="cNh-Co-TYT" customClass="SignVC" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="eox-ZV-lWR"/>
                         <viewControllerLayoutGuide type="bottom" id="03u-cb-ODK"/>
@@ -123,35 +126,50 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OLx-kv-JSd">
-                                <rect key="frame" x="75" y="391" width="31" height="30"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="sign_bg" translatesAutoresizingMaskIntoConstraints="NO" id="SFQ-KE-wyq">
+                                <rect key="frame" x="0.0" y="64" width="320" height="416"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BHM-HE-blq">
+                                <rect key="frame" x="90" y="399" width="31" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="注册"/>
                                 <connections>
-                                    <segue destination="9Jm-TC-v4f" kind="show" id="4bb-da-Jko"/>
+                                    <action selector="signupAction:" destination="cNh-Co-TYT" eventType="touchUpInside" id="Jd0-3u-V0d"/>
+                                    <segue destination="9Jm-TC-v4f" kind="show" id="1la-6H-6kl"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dgp-EF-jNy">
-                                <rect key="frame" x="181" y="391" width="31" height="30"/>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LdD-iY-KS3">
+                                <rect key="frame" x="211" y="399" width="31" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="登陆"/>
                                 <connections>
-                                    <segue destination="IW7-80-zhK" kind="show" id="Nse-63-dxv"/>
+                                    <action selector="signinAction:" destination="cNh-Co-TYT" eventType="touchUpInside" id="ur8-zm-TBS"/>
+                                    <segue destination="IW7-80-zhK" kind="show" id="qav-T9-Tkx"/>
                                 </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="SFQ-KE-wyq" secondAttribute="trailing" id="MAy-WE-VMu"/>
+                            <constraint firstItem="03u-cb-ODK" firstAttribute="top" secondItem="SFQ-KE-wyq" secondAttribute="bottom" id="MWg-K2-IOX"/>
+                            <constraint firstItem="SFQ-KE-wyq" firstAttribute="top" secondItem="eox-ZV-lWR" secondAttribute="bottom" id="RHV-0L-Fqh"/>
+                            <constraint firstItem="SFQ-KE-wyq" firstAttribute="leading" secondItem="oHh-4b-iG5" secondAttribute="leading" id="YzE-pt-O4N"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="MhC-2Q-WHs"/>
+                    <connections>
+                        <outlet property="signinButton" destination="LdD-iY-KS3" id="fen-r7-ucZ"/>
+                        <outlet property="signupButton" destination="BHM-HE-blq" id="A1K-4S-CXn"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4X0-WP-fow" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-846" y="931"/>
+            <point key="canvasLocation" x="-847.5" y="930"/>
         </scene>
-        <!--View Controller-->
+        <!--SignupVC-->
         <scene sceneID="Axx-Ae-NmO">
             <objects>
-                <viewController id="9Jm-TC-v4f" sceneMemberID="viewController">
+                <viewController id="9Jm-TC-v4f" customClass="SignupVC" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="hUn-mv-yhP"/>
                         <viewControllerLayoutGuide type="bottom" id="PYG-5z-3QE"/>
@@ -220,12 +238,12 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="SI1-ZD-4lk" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-69.375" y="930"/>
+            <point key="canvasLocation" x="-69" y="930"/>
         </scene>
-        <!--View Controller-->
+        <!--Sign InVC-->
         <scene sceneID="wSG-gl-lw0">
             <objects>
-                <viewController id="IW7-80-zhK" sceneMemberID="viewController">
+                <viewController id="IW7-80-zhK" customClass="SignInVC" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="BJj-AS-mGm"/>
                         <viewControllerLayoutGuide type="bottom" id="Fwa-34-QQh"/>
@@ -273,7 +291,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="wq1-O7-6CW" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-71.25" y="1680"/>
+            <point key="canvasLocation" x="-69" y="1718"/>
         </scene>
         <!--First-->
         <scene sceneID="F00-LU-fX7">
@@ -335,5 +353,6 @@
     <resources>
         <image name="first" width="30" height="30"/>
         <image name="second" width="30" height="30"/>
+        <image name="sign_bg" width="360" height="640"/>
     </resources>
 </document>

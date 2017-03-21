@@ -19,9 +19,24 @@
 @implementation CustomTabBarController
 
 - (void)viewDidLoad {
-    [super viewDidLoad];    
+    [super viewDidLoad];
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(presentSignVC:) name:@"SRNotificationNeedSignin" object:nil];
+
     [self settupViewControllers];
     [self configureDCPathButton];
+}
+
+- (void)presentSignVC:(NSNotification *)notification {
+    [self performSegueWithIdentifier:@"SignInSegue" sender:self];
+}
+
+- (void)tabBarController:(UITabBarController *)tabBarController didSelectViewController:(UIViewController *)viewController {
+    UIViewController *vc = viewController.childViewControllers.firstObject;
+//    if ([vc class] == [IndexLibVC class]) {
+//        [(IndexLibVC *)vc requestRates];
+//    } else if ([vc class] == [ProjectLibVC class]) {
+//        [(ProjectLibVC *)vc requestProjects];
+//    }
 }
 
 
