@@ -15,6 +15,7 @@
 
 + (SRUserManager *)sharedInstance;
 - (void)signinWithName:(NSString *)name password:(NSString *)password success:(void (^)())success fail:(void (^)(NSString *message))fail;
+- (void)signupWithName:(NSString *)name password:(NSString *)password code:(NSString *)code success:(void (^)())success fail:(void (^)(NSString *))fail;
 
 - (void)signout;
 

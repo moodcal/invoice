@@ -19,5 +19,6 @@ target 'Invoice' do
 
   pod 'CYLTabBarController'
   pod 'DCPathButton', '~> 2.1.3'
-
+  pod 'MZTimerLabel'
+  pod 'SVProgressHUD'
 end

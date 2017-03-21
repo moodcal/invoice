@@ -40,6 +40,38 @@
     return sharedInstance;
 }
 
+- (void)signupWithName:(NSString *)phone password:(NSString *)password code:(NSString *)code success:(void (^)())success fail:(void (^)(NSString *))fail {
+//    NSString *encrypedPassword = [RSA encryptString:password publicKey:SRRSAPublicKey];
+    
+    AFHTTPSessionManager *sessionManager = [[SRApiManager sharedInstance] sessionManager];
+    NSMutableDictionary *params = [NSMutableDictionary dictionary];
+    [params setObject:code forKey:@"code"];
+    [params setObject:phone forKey:@"phone"];
+    [params setObject:password forKey:@"password"];
+    [params appendInfo];
+    [sessionManager.requestSerializer setValue:params.signature forHTTPHeaderField:@"sign"];
+    
+    [sessionManager POST:ApiMethodUserSignup parameters:params progress:nil success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
+        DLog(@"response: %@", responseObject);
+        if ([[responseObject objectForKey:@"success"] boolValue] == YES) {
+            self.token = [responseObject objectForKey:@"token"];
+            [[SRApiManager sharedInstance] updateHeaderToken:self.token];
+            NSError *error = nil;
+            [SAMKeychain setPassword:phone forService:@"invoice" account:@"CurrentUserName" error:&error];
+            DLog(@"error: %@", error);
+            [SAMKeychain setPassword:self.token forService:@"invoice" account:phone];
+            success();
+        } else {
+            NSString *errMsg = [responseObject objectForKey:@"error_msg"];
+            DLog(@"signin error: %@", errMsg);
+            fail(errMsg);
+        }
+    } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
+        DLog(@"error: %@", error);
+        fail(@"网络错误");
+    }];
+}
+
 - (void)signinWithName:(NSString *)name password:(NSString *)password success:(void (^)())success fail:(void (^)(NSString *))fail {
     NSString *encrypedPassword = [RSA encryptString:password publicKey:SRRSAPublicKey];
     

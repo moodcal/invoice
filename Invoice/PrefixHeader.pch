@@ -33,6 +33,7 @@
 #import "SRApiManager.h"
 #import "SRUserManager.h"
 #import "NSMutableDictionary+Signature.h"
+#import <SVProgressHUD/SVProgressHUD.h>
 
 // model
 #import "Invoice.h"

@@ -9,6 +9,10 @@
 #import "SignInVC.h"
 
 @interface SignInVC ()
+@property (weak, nonatomic) IBOutlet UIButton *signinButton;
+- (IBAction)signinAction:(id)sender;
+@property (weak, nonatomic) IBOutlet UITextField *phoneTextField;
+@property (weak, nonatomic) IBOutlet UITextField *passwordTextField;
 
 @end
 
@@ -17,6 +21,14 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     [self.navigationController setNavigationBarHidden:NO animated:NO];
+}
+
+- (IBAction)signinAction:(id)sender {
+    [[SRUserManager sharedInstance] signinWithName:self.phoneTextField.text password:self.passwordTextField.text success:^{
+        [self dismissViewControllerAnimated:YES completion:nil];
+    } fail:^(NSString *message) {
+        [SVProgressHUD showErrorWithStatus:message];
+    }];
 }
 
 @end
