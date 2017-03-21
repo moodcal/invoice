@@ -11,7 +11,7 @@
 
 @interface SRUserManager : NSObject
 @property (nonatomic, copy) NSString *token;
-@property (nonatomic, copy) NSString *currentUserName;
+@property (nonatomic, copy) NSString *CurrentUserPhone;
 
 + (SRUserManager *)sharedInstance;
 - (void)signinWithName:(NSString *)name password:(NSString *)password success:(void (^)())success fail:(void (^)(NSString *message))fail;

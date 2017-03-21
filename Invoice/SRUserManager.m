@@ -20,8 +20,8 @@
 {
     self = [super init];
     if (self) {
-        self.currentUserName = [SAMKeychain passwordForService:@"kpi" account:@"CurrentUserName"];
-        self.token = [SAMKeychain passwordForService:@"kpi" account:self.currentUserName];
+        self.CurrentUserPhone = [SAMKeychain passwordForService:@"invoice" account:@"CurrentUserPhone"];
+        self.token = [SAMKeychain passwordForService:@"invoice" account:self.CurrentUserPhone];
         if (self.token) {
             [[SRApiManager sharedInstance] updateHeaderToken:self.token];
         }
@@ -57,7 +57,7 @@
             self.token = [responseObject objectForKey:@"token"];
             [[SRApiManager sharedInstance] updateHeaderToken:self.token];
             NSError *error = nil;
-            [SAMKeychain setPassword:phone forService:@"invoice" account:@"CurrentUserName" error:&error];
+            [SAMKeychain setPassword:phone forService:@"invoice" account:@"CurrentUserPhone" error:&error];
             DLog(@"error: %@", error);
             [SAMKeychain setPassword:self.token forService:@"invoice" account:phone];
             success();
@@ -73,12 +73,11 @@
 }
 
 - (void)signinWithName:(NSString *)name password:(NSString *)password success:(void (^)())success fail:(void (^)(NSString *))fail {
-    NSString *encrypedPassword = [RSA encryptString:password publicKey:SRRSAPublicKey];
-    
+//    NSString *encrypedPassword = [RSA encryptString:password publicKey:SRRSAPublicKey];
     AFHTTPSessionManager *sessionManager = [[SRApiManager sharedInstance] sessionManager];
     NSMutableDictionary *params = [NSMutableDictionary dictionary];
-    [params setObject:name forKey:@"name"];
-    [params setObject:encrypedPassword forKey:@"password"];
+    [params setObject:name forKey:@"phone"];
+    [params setObject:password forKey:@"password"];
     [params appendInfo];
     [sessionManager.requestSerializer setValue:params.signature forHTTPHeaderField:@"sign"];
     
@@ -89,9 +88,9 @@
             self.token = [responseObject objectForKey:@"token"];
             [[SRApiManager sharedInstance] updateHeaderToken:self.token];
             NSError *error = nil;
-            [SAMKeychain setPassword:name forService:@"kpi" account:@"CurrentUserName" error:&error];
+            [SAMKeychain setPassword:name forService:@"invoice" account:@"CurrentUserPhone" error:&error];
             DLog(@"error: %@", error);
-            [SAMKeychain setPassword:self.token forService:@"kpi" account:name];
+            [SAMKeychain setPassword:self.token forService:@"invoice" account:name];
             success();
         } else {
             NSString *errMsg = [responseObject objectForKey:@"error_msg"];
