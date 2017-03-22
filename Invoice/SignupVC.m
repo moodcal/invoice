@@ -28,6 +28,8 @@
     [super viewDidLoad];
     [self.navigationController setNavigationBarHidden:NO animated:NO];
     self.secondLabel.hidden = YES;
+    self.signupButton.layer.cornerRadius = 20;
+    self.codeButton.layer.cornerRadius = 4;
 }
 
 - (void)viewWillDisappear:(BOOL)animated {
@@ -52,9 +54,6 @@
 }
 
 - (IBAction)codeAction:(id)sender {
-    self.secondLabel.hidden = NO;
-    self.codeButton.hidden = YES;
-    
     AFHTTPSessionManager *sessionManager = [[SRApiManager sharedInstance] sessionManager];
     NSMutableDictionary *params = [NSMutableDictionary dictionary];
     [params setObject:self.phoneTextField.text forKey:@"phone"];
@@ -63,8 +62,9 @@
     [sessionManager POST:ApiMethodUserCode parameters:params progress:nil success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
         DLog(@"response: %@", responseObject);
         if ([[responseObject objectForKey:@"success"] boolValue]) {
+            self.secondLabel.hidden = NO;
+            self.codeButton.hidden = YES;
             self.code = [responseObject objectForKey:@"code"];
-
             MZTimerLabel *timer = [[MZTimerLabel alloc] initWithLabel:self.secondLabel andTimerType:MZTimerLabelTypeTimer];
             timer.timeFormat = @"ss";
             timer.delegate = self;
@@ -74,7 +74,8 @@
             if ([[responseObject objectForKey:@"err_code"] integerValue] == 401) {
                 [[NSNotificationCenter defaultCenter] postNotificationName:@"SRNotificationNeedSignin" object:nil];
             }
-            DLog(@"request incomes error");
+            DLog(@"request error");
+            [SVProgressHUD showErrorWithStatus:[responseObject objectForKey:@"error_msg"]];
         }
     } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
         DLog(@"error: %@", error);

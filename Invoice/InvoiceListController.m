@@ -37,7 +37,7 @@
             if ([[responseObject objectForKey:@"err_code"] integerValue] == 401) {
                 [[NSNotificationCenter defaultCenter] postNotificationName:@"SRNotificationNeedSignin" object:nil];
             }
-            DLog(@"request incomes error");
+            DLog(@"request error");
         }
     } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
         DLog(@"error: %@", error);

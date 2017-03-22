@@ -22,4 +22,8 @@
     return [UIColor colorWithRed:red/255.0f green:green/255.0f blue:blue/255.0f alpha:alpha];
 }
 
++ (UIColor *)mainColor {
+    return [UIColor colorWithHex:0x2DA8E9 alpha:1];
+}
+
 @end

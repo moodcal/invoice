@@ -34,6 +34,7 @@
 #import "SRUserManager.h"
 #import "NSMutableDictionary+Signature.h"
 #import <SVProgressHUD/SVProgressHUD.h>
+#import <ChameleonFramework/Chameleon.h>
 
 // model
 #import "Invoice.h"

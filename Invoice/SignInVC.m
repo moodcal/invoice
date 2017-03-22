@@ -21,6 +21,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     [self.navigationController setNavigationBarHidden:NO animated:NO];
+    self.signinButton.layer.cornerRadius = 20;
 }
 
 - (IBAction)signinAction:(id)sender {

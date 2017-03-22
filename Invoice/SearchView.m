@@ -28,7 +28,7 @@
         
         UIButton *searchCancelButton = [UIUtil drawButtonInView:_searchView frame:CGRectMake(_searchView.width-52, 0, 52, _searchView.height) text:@"取消" font:[UIFont systemFontOfSize:16] color:[UIColor whiteColor] target:self action:@selector(clickCancel)];
         [searchCancelButton setTitleColor:[UIColor lightGrayColor] forState:UIControlStateHighlighted];
-        
+
         self.textFieldBG = [UIUtil drawLineInView:_searchView frame:CGRectMake(16, (_searchView.height-34)/2, _searchView.width-16-52, 34) color:[UIColor clearColor]];
         self.textFieldBG.layer.cornerRadius = self.textFieldBG.height/2;
         self.textFieldBG.layer.borderWidth = [UIUtil lineWidth];
@@ -45,6 +45,8 @@
         
         self.searchLabel = [UIUtil drawLabelInView:self.textFieldBG frame:CGRectMake(self.textField.left, 0, [UIUtil textWidth:@"搜索" font:[UIFont systemFontOfSize:15]], self.textFieldBG.height) font:[UIFont systemFontOfSize:15] text:@"搜索" isCenter:NO color:[UIColor colorWithRed:192/255.0 green:192/255.0 blue:192/255.0 alpha:1]];
         
+        self.textFieldBG.backgroundColor = [UIColor clearColor];
+        searchCancelButton.backgroundColor = [UIColor clearColor];        
     }
     return _searchView;
 }

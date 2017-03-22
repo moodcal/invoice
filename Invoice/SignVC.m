@@ -20,7 +20,8 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view.
+    self.signinButton.layer.cornerRadius = 20;
+    self.signupButton.layer.cornerRadius = 20;
 }
 
 -(void)viewWillAppear:(BOOL)animated

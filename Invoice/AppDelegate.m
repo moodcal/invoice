@@ -15,7 +15,7 @@
 
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-    // Override point for customization after application launch.
+    [Chameleon setGlobalThemeUsingPrimaryColor:[UIColor mainColor] withSecondaryColor:[UIColor mainColor] andContentStyle:UIContentStyleContrast];
     return YES;
 }
 

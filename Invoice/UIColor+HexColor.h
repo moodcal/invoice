@@ -12,4 +12,6 @@
 
 + (UIColor *) colorWithHex:(uint) hex alpha:(CGFloat)alpha;
 
++ (UIColor *)mainColor;
+
 @end

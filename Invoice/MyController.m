@@ -9,6 +9,7 @@
 #import "MyController.h"
 
 @interface MyController ()
+- (IBAction)signoutAction:(id)sender;
 
 @end
 
@@ -25,5 +26,9 @@
     // Dispose of any resources that can be recreated.
 }
 
+
+- (IBAction)signoutAction:(id)sender {
+    [[SRUserManager sharedInstance] signout];
+}
 
 @end
