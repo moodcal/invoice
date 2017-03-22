@@ -35,7 +35,7 @@
         self.textFieldBG.layer.borderColor = [UIColor blueColor].CGColor;
         self.textFieldBG.userInteractionEnabled = YES;
         
-        [UIUtil drawButtonInView:self.textFieldBG frame:self.textFieldBG.bounds iconName:@"" target:self action:@selector(clickInput)];
+        UIButton *dumbButton = [UIUtil drawButtonInView:self.textFieldBG frame:self.textFieldBG.bounds iconName:@"" target:self action:@selector(clickInput)];
         
         UIImage *image = [UIImage imageNamed:@"search_icon.png"];
 
@@ -47,6 +47,7 @@
         
         self.textFieldBG.backgroundColor = [UIColor clearColor];
         searchCancelButton.backgroundColor = [UIColor clearColor];        
+        dumbButton.backgroundColor = [UIColor clearColor];
     }
     return _searchView;
 }

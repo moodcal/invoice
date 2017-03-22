@@ -194,7 +194,29 @@
             }
             
         }]];
-        [self presentViewController:alert animated:YES completion:nil];
+        
+        [self presentViewController:alert animated:YES completion:^{
+            AFHTTPSessionManager *sessionManager = [[SRApiManager sharedInstance] sessionManager];
+            NSMutableDictionary *params = [NSMutableDictionary dictionary];
+            [params setObject:stringValue forKey:@"invoice"];
+            [params appendInfo];
+            [sessionManager.requestSerializer setValue:params.signature forHTTPHeaderField:@"sign"];
+            [sessionManager POST:ApiMethodUserCode parameters:params progress:nil success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
+                DLog(@"response: %@", responseObject);
+                if ([[responseObject objectForKey:@"success"] boolValue]) {
+                    
+                } else {
+                    if ([[responseObject objectForKey:@"error_code"] integerValue] == 401) {
+                        [[NSNotificationCenter defaultCenter] postNotificationName:@"SRNotificationNeedSignin" object:nil];
+                    }
+                    DLog(@"request error");
+                    [SVProgressHUD showErrorWithStatus:[responseObject objectForKey:@"error_msg"]];
+                }
+            } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
+                DLog(@"error: %@", error);
+            }];
+
+        }];
         
     } else {
         NSLog(@"无扫描信息");

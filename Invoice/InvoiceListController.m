@@ -34,7 +34,7 @@
             self.invoices = [NSArray yy_modelArrayWithClass:[Invoice class] json:[responseObject objectForKey:@"invoices"]];
 //            [self.collectionView reloadData];
         } else {
-            if ([[responseObject objectForKey:@"err_code"] integerValue] == 401) {
+            if ([[responseObject objectForKey:@"error_code"] integerValue] == 401) {
                 [[NSNotificationCenter defaultCenter] postNotificationName:@"SRNotificationNeedSignin" object:nil];
             }
             DLog(@"request error");

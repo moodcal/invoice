@@ -30,6 +30,7 @@
     self.secondLabel.hidden = YES;
     self.signupButton.layer.cornerRadius = 20;
     self.codeButton.layer.cornerRadius = 4;
+    self.secondLabel.layer.cornerRadius = 4;
 }
 
 - (void)viewWillDisappear:(BOOL)animated {
@@ -71,7 +72,7 @@
             [timer setCountDownTime:60];
             [timer start];
         } else {
-            if ([[responseObject objectForKey:@"err_code"] integerValue] == 401) {
+            if ([[responseObject objectForKey:@"error_code"] integerValue] == 401) {
                 [[NSNotificationCenter defaultCenter] postNotificationName:@"SRNotificationNeedSignin" object:nil];
             }
             DLog(@"request error");
