@@ -26,6 +26,7 @@
 		AB330D541E80D0C3002C6FCD /* SignVC.m in Sources */ = {isa = PBXBuildFile; fileRef = AB330D531E80D0C3002C6FCD /* SignVC.m */; };
 		AB330D571E80D0D4002C6FCD /* SignInVC.m in Sources */ = {isa = PBXBuildFile; fileRef = AB330D561E80D0D4002C6FCD /* SignInVC.m */; };
 		AB330D5A1E80D0E0002C6FCD /* SignupVC.m in Sources */ = {isa = PBXBuildFile; fileRef = AB330D591E80D0E0002C6FCD /* SignupVC.m */; };
+		AB330D621E83762F002C6FCD /* DumbTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = AB330D611E83762F002C6FCD /* DumbTabBarController.m */; };
 		C28FB7D31E78EC66009AE91A /* ScanController.m in Sources */ = {isa = PBXBuildFile; fileRef = C28FB7D21E78EC66009AE91A /* ScanController.m */; };
 		C28FB7D81E791035009AE91A /* UIView+Frame.m in Sources */ = {isa = PBXBuildFile; fileRef = C28FB7D71E791035009AE91A /* UIView+Frame.m */; };
 		C28FB7DB1E791057009AE91A /* UIUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = C28FB7DA1E791057009AE91A /* UIUtil.m */; };
@@ -124,6 +125,8 @@
 		AB330D561E80D0D4002C6FCD /* SignInVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SignInVC.m; sourceTree = "<group>"; };
 		AB330D581E80D0E0002C6FCD /* SignupVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SignupVC.h; sourceTree = "<group>"; };
 		AB330D591E80D0E0002C6FCD /* SignupVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SignupVC.m; sourceTree = "<group>"; };
+		AB330D601E83762F002C6FCD /* DumbTabBarController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DumbTabBarController.h; sourceTree = "<group>"; };
+		AB330D611E83762F002C6FCD /* DumbTabBarController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DumbTabBarController.m; sourceTree = "<group>"; };
 		C28FB7D11E78EC66009AE91A /* ScanController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ScanController.h; sourceTree = "<group>"; };
 		C28FB7D21E78EC66009AE91A /* ScanController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ScanController.m; sourceTree = "<group>"; };
 		C28FB7D61E791035009AE91A /* UIView+Frame.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+Frame.h"; sourceTree = "<group>"; };
@@ -340,6 +343,8 @@
 				AB330D511E80D0A1002C6FCD /* Sign */,
 				AB330D221E77CBC7002C6FCD /* CustomTabBarController.h */,
 				AB330D231E77CBC7002C6FCD /* CustomTabBarController.m */,
+				AB330D601E83762F002C6FCD /* DumbTabBarController.h */,
+				AB330D611E83762F002C6FCD /* DumbTabBarController.m */,
 				AB330D0E1E777F9D002C6FCD /* InvoiceListController.h */,
 				AB330D0F1E777F9D002C6FCD /* InvoiceListController.m */,
 				AB330D111E777F9D002C6FCD /* MyController.h */,
@@ -809,6 +814,7 @@
 				C28FB8951E7915A0009AE91A /* UIApplication+MemoryLeak.m in Sources */,
 				C28FB8871E7915A0009AE91A /* UIButton+RITLBlockButton.m in Sources */,
 				AB330D3F1E7F6903002C6FCD /* NSString+MD5.m in Sources */,
+				AB330D621E83762F002C6FCD /* DumbTabBarController.m in Sources */,
 				C28FB8881E7915A0009AE91A /* UIViewController+RITLPhotoAlertController.m in Sources */,
 				AB330D391E7F6813002C6FCD /* SRUserManager.m in Sources */,
 				AB330D541E80D0C3002C6FCD /* SignVC.m in Sources */,
