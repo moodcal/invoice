@@ -987,7 +987,7 @@
 				DEVELOPMENT_TEAM = 25WUPDZ7Y7;
 				GCC_PREFIX_HEADER = Invoice/PrefixHeader.pch;
 				INFOPLIST_FILE = Invoice/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.links.invoice;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -1002,7 +1002,7 @@
 				DEVELOPMENT_TEAM = 25WUPDZ7Y7;
 				GCC_PREFIX_HEADER = Invoice/PrefixHeader.pch;
 				INFOPLIST_FILE = Invoice/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.links.invoice;
 				PRODUCT_NAME = "$(TARGET_NAME)";

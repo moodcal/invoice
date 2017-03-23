@@ -10,12 +10,15 @@
 
 @interface InvoiceListController () <SearchViewDelegate>
 @property (nonatomic, strong) NSArray *invoices;
+@property (weak, nonatomic) IBOutlet HMSegmentedControl *segmentedControl;
+@property (weak, nonatomic) IBOutlet UICollectionView *collectionView;
 @end
 
 @implementation InvoiceListController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    [self configSegmentIndex];
     
     self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"搜索" style:UIBarButtonItemStylePlain target:self action:@selector(clickSearch)];
 
@@ -42,14 +45,23 @@
     } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
         DLog(@"error: %@", error);
     }];
-    
-
 }
 
+- (void)configSegmentIndex {
+    self.segmentedControl.selectionIndicatorHeight = 2.0f;
+    self.segmentedControl.titleTextAttributes = @{NSForegroundColorAttributeName:[UIColor blackColor], NSFontAttributeName: [UIFont systemFontOfSize:16]};
+    self.segmentedControl.selectionIndicatorColor = [UIColor colorWithRed:0.5 green:0.8 blue:1 alpha:1];
+    self.segmentedControl.backgroundColor = [UIColor groupTableViewBackgroundColor];
+    self.segmentedControl.sectionTitles = @[@"验伪成功", @"验伪失败", @"未验证"];
+    self.segmentedControl.selectionStyle = HMSegmentedControlSelectionStyleBox;
+    self.segmentedControl.selectionIndicatorLocation = HMSegmentedControlSelectionIndicatorLocationDown;
+    self.segmentedControl.shouldAnimateUserSelection = YES;
+    self.segmentedControl.layer.cornerRadius = 4.0f;
+    [self.segmentedControl addTarget:self action:@selector(segmentedControlChangedValue:) forControlEvents:UIControlEventValueChanged];
+    self.segmentedControl.selectedSegmentIndex = 0;
+}
 
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+- (void)segmentedControlChangedValue:(HMSegmentedControl *)segmentedControl {
 }
 
 - (void)clickSearch {
