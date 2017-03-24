@@ -27,6 +27,8 @@
 		AB330D571E80D0D4002C6FCD /* SignInVC.m in Sources */ = {isa = PBXBuildFile; fileRef = AB330D561E80D0D4002C6FCD /* SignInVC.m */; };
 		AB330D5A1E80D0E0002C6FCD /* SignupVC.m in Sources */ = {isa = PBXBuildFile; fileRef = AB330D591E80D0E0002C6FCD /* SignupVC.m */; };
 		AB330D621E83762F002C6FCD /* DumbTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = AB330D611E83762F002C6FCD /* DumbTabBarController.m */; };
+		AB330D661E84BCD6002C6FCD /* VerifiedInvoiceCell.m in Sources */ = {isa = PBXBuildFile; fileRef = AB330D651E84BCD6002C6FCD /* VerifiedInvoiceCell.m */; };
+		AB330D691E84BCF3002C6FCD /* InvoiceCell.m in Sources */ = {isa = PBXBuildFile; fileRef = AB330D681E84BCF3002C6FCD /* InvoiceCell.m */; };
 		C28FB7D31E78EC66009AE91A /* ScanController.m in Sources */ = {isa = PBXBuildFile; fileRef = C28FB7D21E78EC66009AE91A /* ScanController.m */; };
 		C28FB7D81E791035009AE91A /* UIView+Frame.m in Sources */ = {isa = PBXBuildFile; fileRef = C28FB7D71E791035009AE91A /* UIView+Frame.m */; };
 		C28FB7DB1E791057009AE91A /* UIUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = C28FB7DA1E791057009AE91A /* UIUtil.m */; };
@@ -127,6 +129,10 @@
 		AB330D591E80D0E0002C6FCD /* SignupVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SignupVC.m; sourceTree = "<group>"; };
 		AB330D601E83762F002C6FCD /* DumbTabBarController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DumbTabBarController.h; sourceTree = "<group>"; };
 		AB330D611E83762F002C6FCD /* DumbTabBarController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DumbTabBarController.m; sourceTree = "<group>"; };
+		AB330D641E84BCD6002C6FCD /* VerifiedInvoiceCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VerifiedInvoiceCell.h; sourceTree = "<group>"; };
+		AB330D651E84BCD6002C6FCD /* VerifiedInvoiceCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VerifiedInvoiceCell.m; sourceTree = "<group>"; };
+		AB330D671E84BCF3002C6FCD /* InvoiceCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = InvoiceCell.h; sourceTree = "<group>"; };
+		AB330D681E84BCF3002C6FCD /* InvoiceCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = InvoiceCell.m; sourceTree = "<group>"; };
 		C28FB7D11E78EC66009AE91A /* ScanController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ScanController.h; sourceTree = "<group>"; };
 		C28FB7D21E78EC66009AE91A /* ScanController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ScanController.m; sourceTree = "<group>"; };
 		C28FB7D61E791035009AE91A /* UIView+Frame.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+Frame.h"; sourceTree = "<group>"; };
@@ -656,6 +662,10 @@
 			children = (
 				C28FB8A21E7FC87C009AE91A /* SearchView.h */,
 				C28FB8A31E7FC87C009AE91A /* SearchView.m */,
+				AB330D641E84BCD6002C6FCD /* VerifiedInvoiceCell.h */,
+				AB330D651E84BCD6002C6FCD /* VerifiedInvoiceCell.m */,
+				AB330D671E84BCF3002C6FCD /* InvoiceCell.h */,
+				AB330D681E84BCF3002C6FCD /* InvoiceCell.m */,
 			);
 			name = View;
 			sourceTree = "<group>";
@@ -841,12 +851,14 @@
 				C28FB8991E7915A0009AE91A /* UITabBarController+MemoryLeak.m in Sources */,
 				C28FB8831E7915A0009AE91A /* PHAsset+RITLPhotoRepresentation.m in Sources */,
 				C28FB89B1E7915A0009AE91A /* UIViewController+MemoryLeak.m in Sources */,
+				AB330D661E84BCD6002C6FCD /* VerifiedInvoiceCell.m in Sources */,
 				AB330D5A1E80D0E0002C6FCD /* SignupVC.m in Sources */,
 				AB330D4C1E7F7941002C6FCD /* Invoice.m in Sources */,
 				C28FB83B1E791541009AE91A /* UIView+Category.m in Sources */,
 				C28FB8971E7915A0009AE91A /* UIPageViewController+MemoryLeak.m in Sources */,
 				AB330D0A1E777F9D002C6FCD /* main.m in Sources */,
 				C28FB8841E7915A0009AE91A /* PHAssetCollection+RITLPhotoRepresentation.m in Sources */,
+				AB330D691E84BCF3002C6FCD /* InvoiceCell.m in Sources */,
 				C28FB8321E791541009AE91A /* RITLPhotosViewController.m in Sources */,
 				C28FB7E31E791211009AE91A /* UIColor+HexColor.m in Sources */,
 				AB330D421E7F6950002C6FCD /* NSMutableDictionary+Signature.m in Sources */,

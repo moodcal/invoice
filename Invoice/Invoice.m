@@ -10,4 +10,9 @@
 
 @implementation Invoice
 
+- (BOOL)modelCustomTransformFromDictionary:(NSDictionary *)dic {
+    _invoice_id = [dic[@"id"] integerValue];
+    return YES;
+}
+
 @end

@@ -10,6 +10,5 @@
 
 @interface InvoiceListController : UIViewController
 
-
 @end
 

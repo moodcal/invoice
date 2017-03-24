@@ -52,7 +52,7 @@
                                     <inset key="sectionInset" minX="0.0" minY="20" maxX="0.0" maxY="20"/>
                                 </collectionViewFlowLayout>
                                 <cells>
-                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="InvoiceCell" id="HIp-Kq-dhh">
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="InvoiceCell" id="HIp-Kq-dhh" customClass="InvoiceCell">
                                         <rect key="frame" x="22" y="20" width="276" height="107"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
@@ -141,8 +141,14 @@
                                             <constraint firstItem="LjZ-cU-2CL" firstAttribute="leading" secondItem="HIp-Kq-dhh" secondAttribute="leading" constant="8" id="Txd-o3-HD3"/>
                                             <constraint firstItem="xsI-qJ-Uq5" firstAttribute="leading" secondItem="LjZ-cU-2CL" secondAttribute="trailing" constant="8" id="vlk-28-b7v"/>
                                         </constraints>
+                                        <connections>
+                                            <outlet property="amountLabel" destination="NAv-pL-jLu" id="utC-ZF-Soz"/>
+                                            <outlet property="dateLabel" destination="zwo-sR-dso" id="hKf-jd-bR2"/>
+                                            <outlet property="invoiceCodeLabel" destination="UFK-6n-l9n" id="0t2-xj-ucN"/>
+                                            <outlet property="invoiceNumberLabel" destination="Fqa-Xq-Lfs" id="fIZ-q9-2QO"/>
+                                        </connections>
                                     </collectionViewCell>
-                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="VerifiedInvoiceCell" id="DKD-n9-F41">
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="VerifiedInvoiceCell" id="DKD-n9-F41" customClass="VerifiedInvoiceCell">
                                         <rect key="frame" x="22" y="137" width="276" height="107"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
@@ -219,8 +225,18 @@
                                             <constraint firstAttribute="bottom" secondItem="Bje-tt-9p8" secondAttribute="bottom" id="Mfi-TK-A8o"/>
                                             <constraint firstItem="Bje-tt-9p8" firstAttribute="top" secondItem="DKD-n9-F41" secondAttribute="top" id="hF7-zC-DLX"/>
                                         </constraints>
+                                        <connections>
+                                            <outlet property="companyNameLabel" destination="ZVi-my-9fV" id="kA1-ta-fyo"/>
+                                            <outlet property="dateLabel" destination="oyK-pw-MlR" id="sGh-wa-sXa"/>
+                                            <outlet property="invoiceCodeLabel" destination="qfh-KU-NzW" id="amp-4O-bzh"/>
+                                            <outlet property="invoiceNumberLabel" destination="vMA-pI-8jK" id="2Lc-3L-sHQ"/>
+                                        </connections>
                                     </collectionViewCell>
                                 </cells>
+                                <connections>
+                                    <outlet property="dataSource" destination="9pv-A4-QxB" id="gHM-rg-gf6"/>
+                                    <outlet property="delegate" destination="9pv-A4-QxB" id="n9I-5H-iEb"/>
+                                </connections>
                             </collectionView>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>

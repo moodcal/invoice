@@ -7,9 +7,11 @@
 //
 
 #import "InvoiceListController.h"
+#import "InvoiceCell.h"
 
-@interface InvoiceListController () <SearchViewDelegate>
+@interface InvoiceListController () <UICollectionViewDelegate, UICollectionViewDataSource, SearchViewDelegate>
 @property (nonatomic, strong) NSArray *invoices;
+@property (nonatomic, strong) NSArray *filteredInvoices;
 @property (weak, nonatomic) IBOutlet HMSegmentedControl *segmentedControl;
 @property (weak, nonatomic) IBOutlet UICollectionView *collectionView;
 @end
@@ -21,7 +23,11 @@
     [self configSegmentIndex];
     
     self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"搜索" style:UIBarButtonItemStylePlain target:self action:@selector(clickSearch)];
+}
 
+- (void)viewWillAppear:(BOOL)animated {
+    [super viewWillAppear:animated];
+    
     if (![[SRUserManager sharedInstance] token]) {
         [[NSNotificationCenter defaultCenter] postNotificationName:@"SRNotificationNeedSignin" object:nil];
         return;
@@ -29,13 +35,15 @@
     
     AFHTTPSessionManager *sessionManager = [[SRApiManager sharedInstance] sessionManager];
     NSMutableDictionary *params = [NSMutableDictionary dictionary];
+    [params setObject:@"1" forKey:@"page"];
+    [params setObject:@"20" forKey:@"page_size"];
     [params appendInfo];
     [sessionManager.requestSerializer setValue:params.signature forHTTPHeaderField:@"sign"];
-    [sessionManager GET:ApiMethodInvoicsList parameters:params progress:nil success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
+    [sessionManager POST:ApiMethodInvoicsList parameters:params progress:nil success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
         DLog(@"response: %@", responseObject);
         if ([[responseObject objectForKey:@"success"] boolValue]) {
             self.invoices = [NSArray yy_modelArrayWithClass:[Invoice class] json:[responseObject objectForKey:@"invoices"]];
-//            [self.collectionView reloadData];
+            [self reloadInvoices];
         } else {
             if ([[responseObject objectForKey:@"error_code"] integerValue] == 401) {
                 [[NSNotificationCenter defaultCenter] postNotificationName:@"SRNotificationNeedSignin" object:nil];
@@ -45,6 +53,18 @@
     } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
         DLog(@"error: %@", error);
     }];
+}
+
+- (void)reloadInvoices {
+    NSInteger status = 0;
+    if (self.segmentedControl.selectedSegmentIndex == 0) {
+        status = 1;
+    } else if (self.segmentedControl.selectedSegmentIndex == 1) {
+        status = 2;
+    }
+    NSPredicate *predicate = [NSPredicate predicateWithFormat:@"%K = %@", @"inspect_status", [NSNumber numberWithInteger:status]];
+    self.filteredInvoices = [self.invoices filteredArrayUsingPredicate:predicate];
+    [self.collectionView reloadData];
 }
 
 - (void)configSegmentIndex {
@@ -62,6 +82,24 @@
 }
 
 - (void)segmentedControlChangedValue:(HMSegmentedControl *)segmentedControl {
+    [self reloadInvoices];
+}
+
+#pragma collection view
+
+- (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section {
+    return [self.filteredInvoices count];
+}
+
+- (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath {
+    Invoice *invoice = [self.filteredInvoices objectAtIndex:indexPath.row];
+    NSString *cellIdentifier = @"InvoiceCell";
+    if (self.segmentedControl.selectedSegmentIndex == 0) {
+        cellIdentifier = @"VerifiedInvoiceCell";
+    }
+    InvoiceCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:cellIdentifier forIndexPath:indexPath];
+    [cell configWithInvoice:invoice];
+    return cell;
 }
 
 - (void)clickSearch {
