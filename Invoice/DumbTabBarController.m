@@ -23,8 +23,8 @@
     [button addTarget:self action:@selector(scanAction:) forControlEvents:UIControlEventTouchUpInside];
     
     button.backgroundColor = [UIColor clearColor];
-    UIImage *buttonImage = [UIImage imageNamed:@"chooser-button-tab"];
-    button.frame = CGRectMake(0.0, 0.0, buttonImage.size.width, buttonImage.size.height);
+    UIImage *buttonImage = [UIImage imageNamed:@"tab-saoyisao"];
+    button.frame = CGRectMake(0.0, 0.0, buttonImage.size.width-6, buttonImage.size.height-6);
     [button setBackgroundImage:buttonImage forState:UIControlStateNormal];
     [button setBackgroundImage:buttonImage forState:UIControlStateHighlighted];
     
