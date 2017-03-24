@@ -29,6 +29,8 @@
 		AB330D621E83762F002C6FCD /* DumbTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = AB330D611E83762F002C6FCD /* DumbTabBarController.m */; };
 		AB330D661E84BCD6002C6FCD /* VerifiedInvoiceCell.m in Sources */ = {isa = PBXBuildFile; fileRef = AB330D651E84BCD6002C6FCD /* VerifiedInvoiceCell.m */; };
 		AB330D691E84BCF3002C6FCD /* InvoiceCell.m in Sources */ = {isa = PBXBuildFile; fileRef = AB330D681E84BCF3002C6FCD /* InvoiceCell.m */; };
+		AB330D6D1E850613002C6FCD /* ExportController.m in Sources */ = {isa = PBXBuildFile; fileRef = AB330D6C1E850613002C6FCD /* ExportController.m */; };
+		AB330D701E85062D002C6FCD /* ChangePhoneController.m in Sources */ = {isa = PBXBuildFile; fileRef = AB330D6F1E85062D002C6FCD /* ChangePhoneController.m */; };
 		C28FB7D31E78EC66009AE91A /* ScanController.m in Sources */ = {isa = PBXBuildFile; fileRef = C28FB7D21E78EC66009AE91A /* ScanController.m */; };
 		C28FB7D81E791035009AE91A /* UIView+Frame.m in Sources */ = {isa = PBXBuildFile; fileRef = C28FB7D71E791035009AE91A /* UIView+Frame.m */; };
 		C28FB7DB1E791057009AE91A /* UIUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = C28FB7DA1E791057009AE91A /* UIUtil.m */; };
@@ -133,6 +135,10 @@
 		AB330D651E84BCD6002C6FCD /* VerifiedInvoiceCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VerifiedInvoiceCell.m; sourceTree = "<group>"; };
 		AB330D671E84BCF3002C6FCD /* InvoiceCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = InvoiceCell.h; sourceTree = "<group>"; };
 		AB330D681E84BCF3002C6FCD /* InvoiceCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = InvoiceCell.m; sourceTree = "<group>"; };
+		AB330D6B1E850613002C6FCD /* ExportController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ExportController.h; sourceTree = "<group>"; };
+		AB330D6C1E850613002C6FCD /* ExportController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ExportController.m; sourceTree = "<group>"; };
+		AB330D6E1E85062D002C6FCD /* ChangePhoneController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChangePhoneController.h; sourceTree = "<group>"; };
+		AB330D6F1E85062D002C6FCD /* ChangePhoneController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ChangePhoneController.m; sourceTree = "<group>"; };
 		C28FB7D11E78EC66009AE91A /* ScanController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ScanController.h; sourceTree = "<group>"; };
 		C28FB7D21E78EC66009AE91A /* ScanController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ScanController.m; sourceTree = "<group>"; };
 		C28FB7D61E791035009AE91A /* UIView+Frame.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+Frame.h"; sourceTree = "<group>"; };
@@ -346,6 +352,7 @@
 		AB330D321E7F67F3002C6FCD /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				AB330D6A1E8505F8002C6FCD /* My */,
 				AB330D511E80D0A1002C6FCD /* Sign */,
 				AB330D221E77CBC7002C6FCD /* CustomTabBarController.h */,
 				AB330D231E77CBC7002C6FCD /* CustomTabBarController.m */,
@@ -353,8 +360,6 @@
 				AB330D611E83762F002C6FCD /* DumbTabBarController.m */,
 				AB330D0E1E777F9D002C6FCD /* InvoiceListController.h */,
 				AB330D0F1E777F9D002C6FCD /* InvoiceListController.m */,
-				AB330D111E777F9D002C6FCD /* MyController.h */,
-				AB330D121E777F9D002C6FCD /* MyController.m */,
 				C28FB7D11E78EC66009AE91A /* ScanController.h */,
 				C28FB7D21E78EC66009AE91A /* ScanController.m */,
 			);
@@ -396,6 +401,19 @@
 				AB330D591E80D0E0002C6FCD /* SignupVC.m */,
 			);
 			name = Sign;
+			sourceTree = "<group>";
+		};
+		AB330D6A1E8505F8002C6FCD /* My */ = {
+			isa = PBXGroup;
+			children = (
+				AB330D111E777F9D002C6FCD /* MyController.h */,
+				AB330D121E777F9D002C6FCD /* MyController.m */,
+				AB330D6B1E850613002C6FCD /* ExportController.h */,
+				AB330D6C1E850613002C6FCD /* ExportController.m */,
+				AB330D6E1E85062D002C6FCD /* ChangePhoneController.h */,
+				AB330D6F1E85062D002C6FCD /* ChangePhoneController.m */,
+			);
+			name = My;
 			sourceTree = "<group>";
 		};
 		C28FB7D41E790FE4009AE91A /* Common */ = {
@@ -833,6 +851,7 @@
 				C28FB82B1E791541009AE91A /* RITLPhotoNavigationViewModel.m in Sources */,
 				C28FB8381E791541009AE91A /* PHObject+SupportCategory.m in Sources */,
 				C28FB8911E7915A0009AE91A /* NSLayoutConstraint+MASDebugAdditions.m in Sources */,
+				AB330D701E85062D002C6FCD /* ChangePhoneController.m in Sources */,
 				C28FB8311E791541009AE91A /* RITLPhotosCell.m in Sources */,
 				C28FB8251E791541009AE91A /* RITLPhotoBrowseController.m in Sources */,
 				C28FB82A1E791541009AE91A /* RITLPhotoNavigationViewController.m in Sources */,
@@ -841,6 +860,7 @@
 				C28FB8281E791541009AE91A /* RITLPhotoGroupViewController.m in Sources */,
 				C28FB82D1E791541009AE91A /* RITLPhotoCacheManager.mm in Sources */,
 				C28FB88B1E7915A0009AE91A /* MASConstraint.m in Sources */,
+				AB330D6D1E850613002C6FCD /* ExportController.m in Sources */,
 				C28FB8861E7915A0009AE91A /* PHImageRequestOptions+RITLPhotoRepresentation.m in Sources */,
 				C28FB8371E791541009AE91A /* RITLPhotoStoreConfiguraion.m in Sources */,
 				AB330D381E7F6813002C6FCD /* SRApiManager.m in Sources */,
