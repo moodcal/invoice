@@ -14,6 +14,7 @@
 @property (weak, nonatomic) IBOutlet UILabel *invoiceNumberLabel;
 @property (weak, nonatomic) IBOutlet UILabel *amountLabel;
 @property (weak, nonatomic) IBOutlet UILabel *invoiceCodeLabel;
+@property (weak, nonatomic) IBOutlet UIView *bgView;
 
 - (void)configWithInvoice:(Invoice *)invoice;
 

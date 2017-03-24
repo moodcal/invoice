@@ -87,15 +87,25 @@
 
 #pragma collection view
 
+- (CGSize)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout *)collectionViewLayout sizeForItemAtIndexPath:(NSIndexPath *)indexPath {
+    CGFloat height = 100;
+    if (self.segmentedControl.selectedSegmentIndex == 0) {
+        height = 100;
+    }
+    return CGSizeMake(collectionView.size.width-40, height);
+}
+
 - (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section {
     return [self.filteredInvoices count];
 }
 
 - (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath {
     Invoice *invoice = [self.filteredInvoices objectAtIndex:indexPath.row];
-    NSString *cellIdentifier = @"InvoiceCell";
+    NSString *cellIdentifier = @"InvoiceSelectionCell";
     if (self.segmentedControl.selectedSegmentIndex == 0) {
         cellIdentifier = @"VerifiedInvoiceCell";
+    } else if (self.segmentedControl.selectedSegmentIndex == 1) {
+        cellIdentifier = @"InvoiceCell";
     }
     InvoiceCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:cellIdentifier forIndexPath:indexPath];
     [cell configWithInvoice:invoice];

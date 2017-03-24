@@ -10,6 +10,11 @@
 
 @implementation InvoiceCell
 
+- (void)awakeFromNib {
+    [super awakeFromNib];
+    self.bgView.layer.cornerRadius = 10;
+}
+
 - (void)configWithInvoice:(Invoice *)invoice {
     self.dateLabel.text = invoice.invoice_date;
     self.amountLabel.text = [NSString stringWithFormat:@"%@", invoice.money];

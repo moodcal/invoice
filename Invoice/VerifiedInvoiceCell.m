@@ -10,6 +10,11 @@
 
 @implementation VerifiedInvoiceCell
 
+- (void)awakeFromNib {
+    [super awakeFromNib];
+    self.bgView.layer.cornerRadius = 10;
+}
+
 - (void)configWithInvoice:(Invoice *)invoice {
     self.dateLabel.text = invoice.invoice_date;
     self.companyNameLabel.text = invoice.purchaser_name;
