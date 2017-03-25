@@ -42,7 +42,9 @@
 
 - (void)scanAction:(id)sender {
     ScanController *controller = [ScanController new];
-    [self presentViewController:controller animated:YES completion:nil];
+    UINavigationController *navigationController = [[UINavigationController alloc] initWithRootViewController:controller];
+    navigationController.navigationBar.hidden = YES;
+    [self presentViewController:navigationController animated:YES completion:nil];
 }
 
 - (void)presentSignVC:(NSNotification *)notification {

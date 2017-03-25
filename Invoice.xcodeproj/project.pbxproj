@@ -31,6 +31,10 @@
 		AB330D691E84BCF3002C6FCD /* InvoiceCell.m in Sources */ = {isa = PBXBuildFile; fileRef = AB330D681E84BCF3002C6FCD /* InvoiceCell.m */; };
 		AB330D6D1E850613002C6FCD /* ExportController.m in Sources */ = {isa = PBXBuildFile; fileRef = AB330D6C1E850613002C6FCD /* ExportController.m */; };
 		AB330D701E85062D002C6FCD /* ChangePhoneController.m in Sources */ = {isa = PBXBuildFile; fileRef = AB330D6F1E85062D002C6FCD /* ChangePhoneController.m */; };
+		C28A028F1E8656EE00C8C4A4 /* BlackLoadingView.m in Sources */ = {isa = PBXBuildFile; fileRef = C28A028C1E8656EE00C8C4A4 /* BlackLoadingView.m */; };
+		C28A02901E8656EE00C8C4A4 /* MBProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = C28A028E1E8656EE00C8C4A4 /* MBProgressHUD.m */; };
+		C28A02931E86571300C8C4A4 /* InvoiceDetailController.m in Sources */ = {isa = PBXBuildFile; fileRef = C28A02921E86571300C8C4A4 /* InvoiceDetailController.m */; };
+		C28A02961E8657AB00C8C4A4 /* UIView+BFSToastInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = C28A02951E8657AB00C8C4A4 /* UIView+BFSToastInfo.m */; };
 		C28FB7D31E78EC66009AE91A /* ScanController.m in Sources */ = {isa = PBXBuildFile; fileRef = C28FB7D21E78EC66009AE91A /* ScanController.m */; };
 		C28FB7D81E791035009AE91A /* UIView+Frame.m in Sources */ = {isa = PBXBuildFile; fileRef = C28FB7D71E791035009AE91A /* UIView+Frame.m */; };
 		C28FB7DB1E791057009AE91A /* UIUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = C28FB7DA1E791057009AE91A /* UIUtil.m */; };
@@ -139,6 +143,14 @@
 		AB330D6C1E850613002C6FCD /* ExportController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ExportController.m; sourceTree = "<group>"; };
 		AB330D6E1E85062D002C6FCD /* ChangePhoneController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChangePhoneController.h; sourceTree = "<group>"; };
 		AB330D6F1E85062D002C6FCD /* ChangePhoneController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ChangePhoneController.m; sourceTree = "<group>"; };
+		C28A028B1E8656EE00C8C4A4 /* BlackLoadingView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BlackLoadingView.h; sourceTree = "<group>"; };
+		C28A028C1E8656EE00C8C4A4 /* BlackLoadingView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BlackLoadingView.m; sourceTree = "<group>"; };
+		C28A028D1E8656EE00C8C4A4 /* MBProgressHUD.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MBProgressHUD.h; sourceTree = "<group>"; };
+		C28A028E1E8656EE00C8C4A4 /* MBProgressHUD.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MBProgressHUD.m; sourceTree = "<group>"; };
+		C28A02911E86571300C8C4A4 /* InvoiceDetailController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = InvoiceDetailController.h; sourceTree = "<group>"; };
+		C28A02921E86571300C8C4A4 /* InvoiceDetailController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = InvoiceDetailController.m; sourceTree = "<group>"; };
+		C28A02941E8657AB00C8C4A4 /* UIView+BFSToastInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+BFSToastInfo.h"; sourceTree = "<group>"; };
+		C28A02951E8657AB00C8C4A4 /* UIView+BFSToastInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+BFSToastInfo.m"; sourceTree = "<group>"; };
 		C28FB7D11E78EC66009AE91A /* ScanController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ScanController.h; sourceTree = "<group>"; };
 		C28FB7D21E78EC66009AE91A /* ScanController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ScanController.m; sourceTree = "<group>"; };
 		C28FB7D61E791035009AE91A /* UIView+Frame.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+Frame.h"; sourceTree = "<group>"; };
@@ -362,6 +374,8 @@
 				AB330D0F1E777F9D002C6FCD /* InvoiceListController.m */,
 				C28FB7D11E78EC66009AE91A /* ScanController.h */,
 				C28FB7D21E78EC66009AE91A /* ScanController.m */,
+				C28A02911E86571300C8C4A4 /* InvoiceDetailController.h */,
+				C28A02921E86571300C8C4A4 /* InvoiceDetailController.m */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -430,6 +444,8 @@
 		C28FB7D51E791001009AE91A /* Category */ = {
 			isa = PBXGroup;
 			children = (
+				C28A02941E8657AB00C8C4A4 /* UIView+BFSToastInfo.h */,
+				C28A02951E8657AB00C8C4A4 /* UIView+BFSToastInfo.m */,
 				AB330D401E7F6950002C6FCD /* NSMutableDictionary+Signature.h */,
 				AB330D411E7F6950002C6FCD /* NSMutableDictionary+Signature.m */,
 				AB330D3D1E7F6903002C6FCD /* NSString+MD5.h */,
@@ -678,6 +694,10 @@
 		C28FB8A11E7FC86B009AE91A /* View */ = {
 			isa = PBXGroup;
 			children = (
+				C28A028B1E8656EE00C8C4A4 /* BlackLoadingView.h */,
+				C28A028C1E8656EE00C8C4A4 /* BlackLoadingView.m */,
+				C28A028D1E8656EE00C8C4A4 /* MBProgressHUD.h */,
+				C28A028E1E8656EE00C8C4A4 /* MBProgressHUD.m */,
 				C28FB8A21E7FC87C009AE91A /* SearchView.h */,
 				C28FB8A31E7FC87C009AE91A /* SearchView.m */,
 				AB330D641E84BCD6002C6FCD /* VerifiedInvoiceCell.h */,
@@ -822,13 +842,16 @@
 				C28FB88A1E7915A0009AE91A /* MASCompositeConstraint.m in Sources */,
 				C28FB88C1E7915A0009AE91A /* MASConstraintMaker.m in Sources */,
 				C28FB88E1E7915A0009AE91A /* MASViewAttribute.m in Sources */,
+				C28A02901E8656EE00C8C4A4 /* MBProgressHUD.m in Sources */,
 				C28FB89A1E7915A0009AE91A /* UIView+MemoryLeak.m in Sources */,
 				C28FB8241E791541009AE91A /* RITLPhotoBrowseCell.m in Sources */,
+				C28A028F1E8656EE00C8C4A4 /* BlackLoadingView.m in Sources */,
 				C28FB8941E7915A0009AE91A /* NSObject+MemoryLeak.m in Sources */,
 				C28FB88F1E7915A0009AE91A /* MASViewConstraint.m in Sources */,
 				C28FB82C1E791541009AE91A /* RITLPhotoBridgeManager.m in Sources */,
 				C28FB7D81E791035009AE91A /* UIView+Frame.m in Sources */,
 				C28FB8291E791541009AE91A /* RITLPhotoGroupViewModel.m in Sources */,
+				C28A02961E8657AB00C8C4A4 /* UIView+BFSToastInfo.m in Sources */,
 				AB330D241E77CBC7002C6FCD /* CustomTabBarController.m in Sources */,
 				C28FB8271E791541009AE91A /* RITLPhotoGroupCell.m in Sources */,
 				C28FB8921E7915A0009AE91A /* View+MASAdditions.m in Sources */,
@@ -845,6 +868,7 @@
 				AB330D621E83762F002C6FCD /* DumbTabBarController.m in Sources */,
 				C28FB8881E7915A0009AE91A /* UIViewController+RITLPhotoAlertController.m in Sources */,
 				AB330D391E7F6813002C6FCD /* SRUserManager.m in Sources */,
+				C28A02931E86571300C8C4A4 /* InvoiceDetailController.m in Sources */,
 				AB330D541E80D0C3002C6FCD /* SignVC.m in Sources */,
 				AB330D571E80D0D4002C6FCD /* SignInVC.m in Sources */,
 				C28FB8351E791541009AE91A /* RITLPhotoRequestStore.m in Sources */,

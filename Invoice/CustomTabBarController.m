@@ -155,7 +155,8 @@
     
     if (itemButtonIndex == 0) {
         ScanController *controller = [ScanController new];
-        [self presentViewController:controller animated:YES completion:nil];
+        UINavigationController *navigationController = [[UINavigationController alloc] initWithRootViewController:controller];
+        [self presentViewController:navigationController animated:YES completion:nil];
     } else {
         RITLPhotoNavigationViewModel * viewModel = [RITLPhotoNavigationViewModel new];
         
