@@ -7,7 +7,6 @@
 //
 
 #import "SignupVC.h"
-#import "MZTimerLabel/MZTimerLabel.h"
 
 @interface SignupVC ()<MZTimerLabelDelegate>
 @property (weak, nonatomic) IBOutlet UIButton *codeButton;

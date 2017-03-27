@@ -10,6 +10,9 @@
 
 @interface MyController ()
 - (IBAction)signoutAction:(id)sender;
+@property (weak, nonatomic) IBOutlet UILabel *companyNameLabel;
+@property (weak, nonatomic) IBOutlet UILabel *emailLabel;
+@property (weak, nonatomic) IBOutlet UILabel *phoneLabel;
 
 @end
 

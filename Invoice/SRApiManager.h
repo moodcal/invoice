@@ -29,6 +29,7 @@
 #define ApiMethodUserGetProfile (ApiHost @"/users/get_profile")
 #define ApiMethodUserPassword (ApiHost @"/users/password")
 #define ApiMethodUserCode (ApiHost @"/users/code")
+#define ApiMethodChangePhone (ApiHost @"/users/modifyPhone")
 
 #define ApiMethodPhotosUpload (ApiHost @"/photos/upload")
 
