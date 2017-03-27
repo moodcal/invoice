@@ -385,10 +385,13 @@
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BHM-HE-blq">
                                 <rect key="frame" x="22.5" y="340" width="121.5" height="40"/>
+                                <color key="backgroundColor" red="0.0" green="0.70281225439999995" blue="0.97108451520000005" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="40" id="fDh-cy-zue"/>
                                 </constraints>
-                                <state key="normal" title="注册"/>
+                                <state key="normal" title="注册">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
                                 <connections>
                                     <action selector="signupAction:" destination="cNh-Co-TYT" eventType="touchUpInside" id="Jd0-3u-V0d"/>
                                     <segue destination="9Jm-TC-v4f" kind="show" id="1la-6H-6kl"/>
@@ -396,10 +399,13 @@
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LdD-iY-KS3">
                                 <rect key="frame" x="176" y="340" width="121.5" height="40"/>
+                                <color key="backgroundColor" red="0.0" green="0.70281225439999995" blue="0.97108451520000005" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="40" id="jsh-FF-VJI"/>
                                 </constraints>
-                                <state key="normal" title="登陆"/>
+                                <state key="normal" title="登陆">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
                                 <connections>
                                     <action selector="signinAction:" destination="cNh-Co-TYT" eventType="touchUpInside" id="ur8-zm-TBS"/>
                                     <segue destination="IW7-80-zhK" kind="show" id="qav-T9-Tkx"/>
@@ -485,18 +491,23 @@
                                 <constraints>
                                     <constraint firstAttribute="height" constant="40" id="D9F-WV-zEK"/>
                                 </constraints>
-                                <state key="normal" title="注册"/>
+                                <state key="normal" title="注册">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
                                 <connections>
                                     <action selector="signupAction:" destination="9Jm-TC-v4f" eventType="touchUpInside" id="xR6-LI-zF8"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hwG-HA-tKa" userLabel="code">
                                 <rect key="frame" x="226" y="95" width="74" height="28"/>
+                                <color key="backgroundColor" red="0.0" green="0.70281225439999995" blue="0.97108451520000005" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="74" id="LKT-iL-rsG"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="13"/>
-                                <state key="normal" title="获取验证码"/>
+                                <state key="normal" title="获取验证码">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
                                 <connections>
                                     <action selector="codeAction:" destination="9Jm-TC-v4f" eventType="touchUpInside" id="n20-ou-l7e"/>
                                 </connections>
@@ -598,10 +609,13 @@
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Qwm-ax-Pdz">
                                 <rect key="frame" x="40" y="199" width="240" height="40"/>
+                                <color key="backgroundColor" red="0.0" green="0.70281225439999995" blue="0.97108451520000005" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="40" id="IF9-3c-oVy"/>
                                 </constraints>
-                                <state key="normal" title="登陆"/>
+                                <state key="normal" title="登陆">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
                                 <connections>
                                     <action selector="signinAction:" destination="IW7-80-zhK" eventType="touchUpInside" id="BiW-6e-kM5"/>
                                     <action selector="signupAction:" destination="9Jm-TC-v4f" eventType="touchUpInside" id="5Cg-D0-VRf"/>
@@ -681,10 +695,13 @@
                             </view>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AP1-Bs-Udh">
                                 <rect key="frame" x="40" y="234" width="240" height="40"/>
+                                <color key="backgroundColor" red="0.0" green="0.70281225439999995" blue="0.97108451520000005" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="40" id="Cca-mI-XZb"/>
                                 </constraints>
-                                <state key="normal" title="确认"/>
+                                <state key="normal" title="确认">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
                                 <connections>
                                     <action selector="comfirmAction:" destination="pge-e5-NtQ" eventType="touchUpInside" id="HkC-DY-zRa"/>
                                     <action selector="signupAction:" destination="9Jm-TC-v4f" eventType="touchUpInside" id="QZR-WA-5bq"/>
@@ -1048,11 +1065,14 @@
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xPs-5D-fP9" userLabel="code">
                                 <rect key="frame" x="233" y="90" width="74" height="28"/>
+                                <color key="backgroundColor" red="0.0" green="0.70281225439999995" blue="0.97108451520000005" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="74" id="ceW-Uy-KPH"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="13"/>
-                                <state key="normal" title="获取验证码"/>
+                                <state key="normal" title="获取验证码">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
                                 <connections>
                                     <action selector="codeAction:" destination="9Jm-TC-v4f" eventType="touchUpInside" id="kBm-S7-dCf"/>
                                     <action selector="codeAction:" destination="hkB-WZ-l3m" eventType="touchUpInside" id="vc4-oU-UA9"/>
@@ -1103,10 +1123,13 @@
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="as1-zS-pwb">
                                 <rect key="frame" x="40" y="240" width="240" height="40"/>
+                                <color key="backgroundColor" red="0.0" green="0.70281225439999995" blue="0.97108451520000005" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="40" id="caE-pU-Og3"/>
                                 </constraints>
-                                <state key="normal" title="确认"/>
+                                <state key="normal" title="确认">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
                                 <connections>
                                     <action selector="comfirmAction:" destination="hkB-WZ-l3m" eventType="touchUpInside" id="MjK-QQ-wND"/>
                                     <action selector="signupAction:" destination="9Jm-TC-v4f" eventType="touchUpInside" id="h5l-sX-Eo9"/>

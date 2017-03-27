@@ -28,6 +28,7 @@
     [self.navigationController setNavigationBarHidden:NO animated:NO];
     self.secondLabel.hidden = YES;
     self.signupButton.layer.cornerRadius = 20;
+    self.signupButton.backgroundColor = [UIColor mainColor];
     self.codeButton.layer.cornerRadius = 4;
     self.secondLabel.layer.cornerRadius = 4;
 }

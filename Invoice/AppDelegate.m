@@ -15,7 +15,13 @@
 
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-    [Chameleon setGlobalThemeUsingPrimaryColor:[UIColor mainColor] withSecondaryColor:[UIColor mainColor] andContentStyle:UIContentStyleContrast];
+    [[UINavigationBar appearance] setBarTintColor:[UIColor mainColor]];
+    [[UINavigationBar appearance] setTintColor:[UIColor whiteColor]];
+    [[UINavigationBar appearance] setTitleTextAttributes:@{NSForegroundColorAttributeName : [UIColor whiteColor]}];
+
+    [self.window setTintColor:[UIColor mainColor]];
+
+    //[Chameleon setGlobalThemeUsingPrimaryColor:[UIColor mainColor] withSecondaryColor:[UIColor mainColor] andContentStyle:UIContentStyleContrast];
     return YES;
 }
 

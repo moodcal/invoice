@@ -22,6 +22,7 @@
     [super viewDidLoad];
     [self.navigationController setNavigationBarHidden:NO animated:NO];
     self.signinButton.layer.cornerRadius = 20;
+    self.signinButton.backgroundColor = [UIColor mainColor];
 }
 
 - (IBAction)signinAction:(id)sender {

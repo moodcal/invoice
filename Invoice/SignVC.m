@@ -22,6 +22,8 @@
     [super viewDidLoad];
     self.signinButton.layer.cornerRadius = 20;
     self.signupButton.layer.cornerRadius = 20;
+    self.signinButton.backgroundColor = [UIColor mainColor];
+    self.signupButton.backgroundColor = [UIColor mainColor];
 }
 
 -(void)viewWillAppear:(BOOL)animated
