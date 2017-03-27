@@ -35,6 +35,7 @@
 		C28A02901E8656EE00C8C4A4 /* MBProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = C28A028E1E8656EE00C8C4A4 /* MBProgressHUD.m */; };
 		C28A02931E86571300C8C4A4 /* InvoiceDetailController.m in Sources */ = {isa = PBXBuildFile; fileRef = C28A02921E86571300C8C4A4 /* InvoiceDetailController.m */; };
 		C28A02961E8657AB00C8C4A4 /* UIView+BFSToastInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = C28A02951E8657AB00C8C4A4 /* UIView+BFSToastInfo.m */; };
+		ABBB94691E88A49E001431ED /* UserProfileController.m in Sources */ = {isa = PBXBuildFile; fileRef = ABBB94681E88A49E001431ED /* UserProfileController.m */; };
 		C28FB7D31E78EC66009AE91A /* ScanController.m in Sources */ = {isa = PBXBuildFile; fileRef = C28FB7D21E78EC66009AE91A /* ScanController.m */; };
 		C28FB7D81E791035009AE91A /* UIView+Frame.m in Sources */ = {isa = PBXBuildFile; fileRef = C28FB7D71E791035009AE91A /* UIView+Frame.m */; };
 		C28FB7DB1E791057009AE91A /* UIUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = C28FB7DA1E791057009AE91A /* UIUtil.m */; };
@@ -151,6 +152,8 @@
 		C28A02921E86571300C8C4A4 /* InvoiceDetailController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = InvoiceDetailController.m; sourceTree = "<group>"; };
 		C28A02941E8657AB00C8C4A4 /* UIView+BFSToastInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+BFSToastInfo.h"; sourceTree = "<group>"; };
 		C28A02951E8657AB00C8C4A4 /* UIView+BFSToastInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+BFSToastInfo.m"; sourceTree = "<group>"; };
+		ABBB94671E88A49E001431ED /* UserProfileController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UserProfileController.h; sourceTree = "<group>"; };
+		ABBB94681E88A49E001431ED /* UserProfileController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UserProfileController.m; sourceTree = "<group>"; };
 		C28FB7D11E78EC66009AE91A /* ScanController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ScanController.h; sourceTree = "<group>"; };
 		C28FB7D21E78EC66009AE91A /* ScanController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ScanController.m; sourceTree = "<group>"; };
 		C28FB7D61E791035009AE91A /* UIView+Frame.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+Frame.h"; sourceTree = "<group>"; };
@@ -413,6 +416,8 @@
 				AB330D561E80D0D4002C6FCD /* SignInVC.m */,
 				AB330D581E80D0E0002C6FCD /* SignupVC.h */,
 				AB330D591E80D0E0002C6FCD /* SignupVC.m */,
+				ABBB94671E88A49E001431ED /* UserProfileController.h */,
+				ABBB94681E88A49E001431ED /* UserProfileController.m */,
 			);
 			name = Sign;
 			sourceTree = "<group>";
@@ -864,6 +869,7 @@
 				C28FB8961E7915A0009AE91A /* UINavigationController+MemoryLeak.m in Sources */,
 				C28FB8951E7915A0009AE91A /* UIApplication+MemoryLeak.m in Sources */,
 				C28FB8871E7915A0009AE91A /* UIButton+RITLBlockButton.m in Sources */,
+				ABBB94691E88A49E001431ED /* UserProfileController.m in Sources */,
 				AB330D3F1E7F6903002C6FCD /* NSString+MD5.m in Sources */,
 				AB330D621E83762F002C6FCD /* DumbTabBarController.m in Sources */,
 				C28FB8881E7915A0009AE91A /* UIViewController+RITLPhotoAlertController.m in Sources */,

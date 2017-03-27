@@ -72,6 +72,30 @@
     }];
 }
 
+- (void)completeUserProfile:(NSString *)email company:(NSString *)company code:(NSString *)code success:(void (^)())success fail:(void (^)(NSString *))fail {    
+    AFHTTPSessionManager *sessionManager = [[SRApiManager sharedInstance] sessionManager];
+    NSMutableDictionary *params = [NSMutableDictionary dictionary];
+    [params setObject:email forKey:@"email"];
+    [params setObject:code forKey:@"company_code"];
+    [params setObject:company forKey:@"company_name"];
+    [params appendInfo];
+    [sessionManager.requestSerializer setValue:params.signature forHTTPHeaderField:@"sign"];
+    
+    [sessionManager POST:ApiMethodUserProfile parameters:params progress:nil success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
+        DLog(@"response: %@", responseObject);
+        if ([[responseObject objectForKey:@"success"] boolValue] == YES) {
+            success();
+        } else {
+            NSString *errMsg = [responseObject objectForKey:@"error_msg"];
+            DLog(@"signin error: %@", errMsg);
+            fail(errMsg);
+        }
+    } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
+        DLog(@"error: %@", error);
+        fail(@"网络错误");
+    }];
+}
+
 - (void)signinWithName:(NSString *)name password:(NSString *)password success:(void (^)())success fail:(void (^)(NSString *))fail {
 //    NSString *encrypedPassword = [RSA encryptString:password publicKey:SRRSAPublicKey];
     AFHTTPSessionManager *sessionManager = [[SRApiManager sharedInstance] sessionManager];

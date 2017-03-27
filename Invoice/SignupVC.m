@@ -39,6 +39,8 @@
 }
 
 - (IBAction)signupAction:(id)sender {
+    self.code = @"123";
+    
     if (self.code.length == 0) {
         return;
     }
@@ -48,7 +50,7 @@
     }
 
     [[SRUserManager sharedInstance] signupWithName:self.phoneTextField.text password:self.passwordTextField.text code:self.code success:^{
-        [self dismissViewControllerAnimated:YES completion:nil];
+        [self performSegueWithIdentifier:@"CompleteProfileSegue" sender:self];
     } fail:^(NSString *message) {
         [SVProgressHUD showErrorWithStatus:message];
     }];    
