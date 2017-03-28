@@ -20,6 +20,8 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    self.title = @"";
+    
     self.signinButton.layer.cornerRadius = 20;
     self.signupButton.layer.cornerRadius = 20;
     self.signinButton.backgroundColor = [UIColor mainColor];
