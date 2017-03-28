@@ -10,6 +10,8 @@
 #import "InvoiceCell.h"
 #import "SearchResultController.h"
 
+#define INVOICE_PAGE_SIZE @15
+
 @interface InvoiceListController () <UICollectionViewDelegate, UICollectionViewDataSource, SearchViewDelegate>
 @property (nonatomic, strong) NSArray *invoices;
 @property (nonatomic, strong) NSArray *filteredInvoices;
@@ -17,7 +19,8 @@
 @property (weak, nonatomic) IBOutlet NSLayoutConstraint *indexHeightConstraint;
 @property (weak, nonatomic) IBOutlet UICollectionView *collectionView;
 @property (nonatomic, strong) NSString *keyword;
-
+@property (nonatomic, assign) BOOL noMoreData;
+@property (nonatomic, assign) NSUInteger pageIndex;
 @end
 
 @implementation InvoiceListController
@@ -25,29 +28,39 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     [self configSegmentIndex];
-
+    self.invoices = [NSMutableArray array];
+    
     self.indexHeightConstraint.constant = 0;
     self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"搜索" style:UIBarButtonItemStylePlain target:self action:@selector(clickSearch)];
 }
 
 - (void)viewWillAppear:(BOOL)animated {
     [super viewWillAppear:animated];
-    
+    self.pageIndex = 0;
+    [self requestData];
+}
+
+- (void)requestData {
+    if (self.noMoreData && self.pageIndex > 0) return;
+        
     if (![[SRUserManager sharedInstance] token]) {
         [[NSNotificationCenter defaultCenter] postNotificationName:@"SRNotificationNeedSignin" object:nil];
         return;
     }
     
+    self.pageIndex += 1;
     AFHTTPSessionManager *sessionManager = [[SRApiManager sharedInstance] sessionManager];
     NSMutableDictionary *params = [NSMutableDictionary dictionary];
-    [params setObject:@"1" forKey:@"page"];
-    [params setObject:@"20" forKey:@"page_size"];
+    [params setObject:[NSString stringWithFormat:@"%ld", self.pageIndex] forKey:@"page"];
+    [params setObject:INVOICE_PAGE_SIZE forKey:@"page_size"];
     [params appendInfo];
     [sessionManager.requestSerializer setValue:params.signature forHTTPHeaderField:@"sign"];
     [sessionManager GET:ApiMethodInvoicsList parameters:params progress:nil success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
         DLog(@"response: %@", responseObject);
         if ([[responseObject objectForKey:@"success"] boolValue]) {
-            self.invoices = [NSArray yy_modelArrayWithClass:[Invoice class] json:[responseObject objectForKey:@"invoices"]];
+            NSArray *pagedInvoices = [NSArray yy_modelArrayWithClass:[Invoice class] json:[responseObject objectForKey:@"invoices"]];
+            if (pagedInvoices.count < INVOICE_PAGE_SIZE.integerValue) self.noMoreData = YES;
+            self.invoices = [self.invoices arrayByAddingObjectsFromArray:pagedInvoices];
             [self reloadInvoices];
         } else {
             if ([[responseObject objectForKey:@"error_code"] integerValue] == 401) {
@@ -57,7 +70,7 @@
         }
     } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
         DLog(@"error: %@", error);
-    }];
+    }];    
 }
 
 - (void)reloadInvoices {
@@ -91,6 +104,13 @@
 }
 
 #pragma collection view
+- (void)scrollViewDidEndDecelerating:(UIScrollView *)scrollView
+{
+    float bottomEdge = scrollView.contentOffset.y + scrollView.frame.size.height;
+    if (bottomEdge >= scrollView.contentSize.height) {
+        [self requestData];
+    }
+}
 
 - (CGSize)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout *)collectionViewLayout sizeForItemAtIndexPath:(NSIndexPath *)indexPath {
     CGFloat height = 100;

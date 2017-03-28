@@ -44,13 +44,13 @@
     
 //    self.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc] initWithImage:[UIImage imageNamed:@"index-Back"] style:UIBarButtonItemStylePlain target:self action:@selector(clickBack)];
     
-    UILabel *label = [UIUtil drawLabelInView:self.view frame:CGRectMake(20, 64+20, self.width-20, 18) font:[UIFont systemFontOfSize:18] text:[NSString stringWithFormat:@"发票号码：%@",self.invoice.ticket_no] isCenter:NO color:[UIColor colorWithHex:0x333333 alpha:1]];
+    UILabel *label = [UIUtil drawLabelInView:self.view frame:CGRectMake(20, 64+20, self.width-20, 18) font:[UIFont systemFontOfSize:15] text:[NSString stringWithFormat:@"发票号码：%@",self.invoice.ticket_no] isCenter:NO color:[UIColor colorWithHex:0x333333 alpha:1]];
     
-    label = [UIUtil drawLabelInView:self.view frame:CGRectMake(20, label.bottom+15, self.width-20, 18) font:[UIFont systemFontOfSize:18] text:[NSString stringWithFormat:@"发票代码：%@",self.invoice.ticket_code] isCenter:NO color:[UIColor colorWithHex:0x333333 alpha:1]];
+    label = [UIUtil drawLabelInView:self.view frame:CGRectMake(20, label.bottom+15, self.width-20, 18) font:[UIFont systemFontOfSize:15] text:[NSString stringWithFormat:@"发票代码：%@",self.invoice.ticket_code] isCenter:NO color:[UIColor colorWithHex:0x333333 alpha:1]];
     
-    label = [UIUtil drawLabelInView:self.view frame:CGRectMake(20, label.bottom+15, self.width-20, 18) font:[UIFont systemFontOfSize:18] text:[NSString stringWithFormat:@"开票日期：%@",self.invoice.invoice_date] isCenter:NO color:[UIColor colorWithHex:0x333333 alpha:1]];
+    label = [UIUtil drawLabelInView:self.view frame:CGRectMake(20, label.bottom+15, self.width-20, 18) font:[UIFont systemFontOfSize:15] text:[NSString stringWithFormat:@"开票日期：%@",self.invoice.invoice_date] isCenter:NO color:[UIColor colorWithHex:0x333333 alpha:1]];
     
-    label = [UIUtil drawLabelInView:self.view frame:CGRectMake(20, label.bottom+15, self.width-20, 18) font:[UIFont systemFontOfSize:18] text:[NSString stringWithFormat:@"金        额：%@",self.invoice.money] isCenter:NO color:[UIColor colorWithHex:0x333333 alpha:1]];
+    label = [UIUtil drawLabelInView:self.view frame:CGRectMake(20, label.bottom+15, self.width-20, 18) font:[UIFont systemFontOfSize:15] text:[NSString stringWithFormat:@"金        额：%@",self.invoice.money] isCenter:NO color:[UIColor colorWithHex:0x333333 alpha:1]];
     
     if ([self.invoice.image_url length] > 0) {
         

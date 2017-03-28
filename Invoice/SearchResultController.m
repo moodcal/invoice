@@ -37,7 +37,7 @@
     AFHTTPSessionManager *sessionManager = [[SRApiManager sharedInstance] sessionManager];
     NSMutableDictionary *params = [NSMutableDictionary dictionary];
     [params setObject:@"1" forKey:@"page"];
-    [params setObject:@"20" forKey:@"page_size"];
+    [params setObject:@"100" forKey:@"page_size"];
     [params setObject:self.keyword forKey:@"keyword"];
     [params appendInfo];
     [sessionManager.requestSerializer setValue:params.signature forHTTPHeaderField:@"sign"];
