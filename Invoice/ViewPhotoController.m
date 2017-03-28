@@ -119,6 +119,8 @@
 {
     [super viewWillAppear:animated];
 //    [MobClick beginLogPageView:[self.class description]];
+    self.navigationController.navigationBar.hidden = YES;
+
 }
 
 - (void)viewWillDisappear:(BOOL)animated
@@ -132,6 +134,7 @@
     [UIView animateWithDuration:0.3 animations:^(void){
         self.view.alpha = 0;
     } completion:^(BOOL finished){
+        self.navigationController.navigationBar.hidden = NO;
         [self.view removeFromSuperview];
         [self removeFromParentViewController];
     }];

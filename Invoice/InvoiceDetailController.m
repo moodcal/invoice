@@ -43,14 +43,6 @@
     
     self.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc] initWithImage:[UIImage imageNamed:@"index-Back"] style:UIBarButtonItemStylePlain target:self action:@selector(clickBack)];
     
-//    self.mutableDictionary = @{
-//                        @"ticket_code":@"3100162320",
-//                        @"ticket_no":@"80893920",
-//                        @"invoice_date":@"2017-02-02",
-//                        @"money":@"236.75",
-//                        @"image_url":@"",
-//                        };
-    
     UILabel *label = [UIUtil drawLabelInView:self.view frame:CGRectMake(20, 64+20, self.width-20, 18) font:[UIFont systemFontOfSize:18] text:[NSString stringWithFormat:@"发票号码：%@",self.invoice.ticket_no] isCenter:NO color:[UIColor colorWithHex:0x333333 alpha:1]];
     
     label = [UIUtil drawLabelInView:self.view frame:CGRectMake(20, label.bottom+15, self.width-20, 18) font:[UIFont systemFontOfSize:18] text:[NSString stringWithFormat:@"发票代码：%@",self.invoice.ticket_code] isCenter:NO color:[UIColor colorWithHex:0x333333 alpha:1]];
@@ -107,6 +99,13 @@
         button.backgroundColor = [UIColor clearColor];
     }
 
+}
+
+- (void)viewWillAppear:(BOOL)animated
+{
+    [super viewWillAppear:animated];
+    
+    self.navigationController.navigationBar.hidden = NO;
 }
 
 - (void)clickBack
