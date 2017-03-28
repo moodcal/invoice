@@ -9,7 +9,9 @@
 #import "DumbTabBarController.h"
 #import "ScanController.h"
 
-@interface DumbTabBarController ()
+@interface DumbTabBarController () {
+    UIButton *scanButton;
+}
 
 @end
 
@@ -19,25 +21,21 @@
     [super viewDidLoad];
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(presentSignVC:) name:@"SRNotificationNeedSignin" object:nil];
     
-    UIButton *button = [UIButton buttonWithType:UIButtonTypeCustom];
-    [button addTarget:self action:@selector(scanAction:) forControlEvents:UIControlEventTouchUpInside];
+    UIImage *addButtonImage = [UIImage imageNamed:@"tab-saoyisao"];
+    [self addCenterButtonWithImage:addButtonImage highlightImage:addButtonImage inTab:self];
+}
+
+-(void) addCenterButtonWithImage:(UIImage*)buttonImage highlightImage:(UIImage*)highlightImage inTab:(UITabBarController *)tabController
+{
+    scanButton = [UIButton buttonWithType:UIButtonTypeCustom];
+    scanButton.userInteractionEnabled = NO;
+    scanButton.autoresizingMask = UIViewAutoresizingFlexibleRightMargin | UIViewAutoresizingFlexibleLeftMargin | UIViewAutoresizingFlexibleBottomMargin | UIViewAutoresizingFlexibleTopMargin;
+    scanButton.frame = CGRectMake(0.0, 0.0, 34, 34);
+    [scanButton setBackgroundImage:buttonImage forState:UIControlStateNormal];
+    [scanButton setBackgroundImage:highlightImage forState:UIControlStateHighlighted];
     
-    button.backgroundColor = [UIColor clearColor];
-    UIImage *buttonImage = [UIImage imageNamed:@"tab-saoyisao"];
-    button.frame = CGRectMake(0.0, 0.0, buttonImage.size.width-6, buttonImage.size.height-6);
-    [button setBackgroundImage:buttonImage forState:UIControlStateNormal];
-    [button setBackgroundImage:buttonImage forState:UIControlStateHighlighted];
-    
-    CGFloat heightDifference = buttonImage.size.height - self.tabBar.frame.size.height;
-    if (heightDifference < 0) {
-        button.center = self.tabBar.center;
-    } else {
-        CGPoint center = self.tabBar.center;
-        center.y = center.y - heightDifference/2.0;
-        button.center = center;
-    }
-    
-    [self.view addSubview:button];
+    scanButton.center = CGPointMake(tabController.tabBar.frame.size.width/2, tabController.tabBar.frame.size.height/2);
+    [tabController.tabBar addSubview:scanButton];
 }
 
 - (void)scanAction:(id)sender {
