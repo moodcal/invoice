@@ -10,7 +10,6 @@
 
 @interface ChangePhoneController ()<MZTimerLabelDelegate>
 @property (weak, nonatomic) IBOutlet UITextField *phoneField;
-@property (weak, nonatomic) IBOutlet UITextField *phoneField2;
 @property (weak, nonatomic) IBOutlet UILabel *secondLabel;
 @property (weak, nonatomic) IBOutlet UIButton *comfirmButton;
 - (IBAction)comfirmAction:(id)sender;
@@ -26,7 +25,9 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view.
+    self.secondLabel.hidden = YES;
+    self.codeButton.layer.cornerRadius = 4;
+    self.secondLabel.layer.cornerRadius = 4;
 }
 
 - (void)viewWillDisappear:(BOOL)animated {
@@ -39,10 +40,9 @@
     NSMutableDictionary *params = [NSMutableDictionary dictionary];
     [params setObject:self.phoneField.text forKey:@"phone"];
     [params setObject:self.codeField.text forKey:@"code"];
-    [params setObject:self.phoneField2.text forKey:@"new_phone"];
     [params appendInfo];
     [sessionManager.requestSerializer setValue:params.signature forHTTPHeaderField:@"sign"];
-    [sessionManager POST:ApiMethodUserCode parameters:params progress:nil success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
+    [sessionManager POST:ApiMethodChangePhone parameters:params progress:nil success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
         DLog(@"response: %@", responseObject);
         if ([[responseObject objectForKey:@"success"] boolValue]) {
         } else {
@@ -60,7 +60,7 @@
 - (IBAction)codeAction:(id)sender {
     AFHTTPSessionManager *sessionManager = [[SRApiManager sharedInstance] sessionManager];
     NSMutableDictionary *params = [NSMutableDictionary dictionary];
-    [params setObject:self.phoneField2.text forKey:@"phone"];
+    [params setObject:self.phoneField.text forKey:@"phone"];
     [params appendInfo];
     [sessionManager.requestSerializer setValue:params.signature forHTTPHeaderField:@"sign"];
     [sessionManager POST:ApiMethodUserCode parameters:params progress:nil success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {

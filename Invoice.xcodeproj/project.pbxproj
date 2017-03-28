@@ -31,11 +31,12 @@
 		AB330D691E84BCF3002C6FCD /* InvoiceCell.m in Sources */ = {isa = PBXBuildFile; fileRef = AB330D681E84BCF3002C6FCD /* InvoiceCell.m */; };
 		AB330D6D1E850613002C6FCD /* ExportController.m in Sources */ = {isa = PBXBuildFile; fileRef = AB330D6C1E850613002C6FCD /* ExportController.m */; };
 		AB330D701E85062D002C6FCD /* ChangePhoneController.m in Sources */ = {isa = PBXBuildFile; fileRef = AB330D6F1E85062D002C6FCD /* ChangePhoneController.m */; };
+		ABBB94691E88A49E001431ED /* UserProfileController.m in Sources */ = {isa = PBXBuildFile; fileRef = ABBB94681E88A49E001431ED /* UserProfileController.m */; };
+		ABBB946E1E89EFA3001431ED /* Company.m in Sources */ = {isa = PBXBuildFile; fileRef = ABBB946D1E89EFA3001431ED /* Company.m */; };
 		C28A028F1E8656EE00C8C4A4 /* BlackLoadingView.m in Sources */ = {isa = PBXBuildFile; fileRef = C28A028C1E8656EE00C8C4A4 /* BlackLoadingView.m */; };
 		C28A02901E8656EE00C8C4A4 /* MBProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = C28A028E1E8656EE00C8C4A4 /* MBProgressHUD.m */; };
 		C28A02931E86571300C8C4A4 /* InvoiceDetailController.m in Sources */ = {isa = PBXBuildFile; fileRef = C28A02921E86571300C8C4A4 /* InvoiceDetailController.m */; };
 		C28A02961E8657AB00C8C4A4 /* UIView+BFSToastInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = C28A02951E8657AB00C8C4A4 /* UIView+BFSToastInfo.m */; };
-		ABBB94691E88A49E001431ED /* UserProfileController.m in Sources */ = {isa = PBXBuildFile; fileRef = ABBB94681E88A49E001431ED /* UserProfileController.m */; };
 		C28FB7D31E78EC66009AE91A /* ScanController.m in Sources */ = {isa = PBXBuildFile; fileRef = C28FB7D21E78EC66009AE91A /* ScanController.m */; };
 		C28FB7D81E791035009AE91A /* UIView+Frame.m in Sources */ = {isa = PBXBuildFile; fileRef = C28FB7D71E791035009AE91A /* UIView+Frame.m */; };
 		C28FB7DB1E791057009AE91A /* UIUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = C28FB7DA1E791057009AE91A /* UIUtil.m */; };
@@ -144,6 +145,10 @@
 		AB330D6C1E850613002C6FCD /* ExportController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ExportController.m; sourceTree = "<group>"; };
 		AB330D6E1E85062D002C6FCD /* ChangePhoneController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChangePhoneController.h; sourceTree = "<group>"; };
 		AB330D6F1E85062D002C6FCD /* ChangePhoneController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ChangePhoneController.m; sourceTree = "<group>"; };
+		ABBB94671E88A49E001431ED /* UserProfileController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UserProfileController.h; sourceTree = "<group>"; };
+		ABBB94681E88A49E001431ED /* UserProfileController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UserProfileController.m; sourceTree = "<group>"; };
+		ABBB946C1E89EFA3001431ED /* Company.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Company.h; sourceTree = "<group>"; };
+		ABBB946D1E89EFA3001431ED /* Company.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Company.m; sourceTree = "<group>"; };
 		C28A028B1E8656EE00C8C4A4 /* BlackLoadingView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BlackLoadingView.h; sourceTree = "<group>"; };
 		C28A028C1E8656EE00C8C4A4 /* BlackLoadingView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BlackLoadingView.m; sourceTree = "<group>"; };
 		C28A028D1E8656EE00C8C4A4 /* MBProgressHUD.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MBProgressHUD.h; sourceTree = "<group>"; };
@@ -152,8 +157,6 @@
 		C28A02921E86571300C8C4A4 /* InvoiceDetailController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = InvoiceDetailController.m; sourceTree = "<group>"; };
 		C28A02941E8657AB00C8C4A4 /* UIView+BFSToastInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+BFSToastInfo.h"; sourceTree = "<group>"; };
 		C28A02951E8657AB00C8C4A4 /* UIView+BFSToastInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+BFSToastInfo.m"; sourceTree = "<group>"; };
-		ABBB94671E88A49E001431ED /* UserProfileController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UserProfileController.h; sourceTree = "<group>"; };
-		ABBB94681E88A49E001431ED /* UserProfileController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UserProfileController.m; sourceTree = "<group>"; };
 		C28FB7D11E78EC66009AE91A /* ScanController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ScanController.h; sourceTree = "<group>"; };
 		C28FB7D21E78EC66009AE91A /* ScanController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ScanController.m; sourceTree = "<group>"; };
 		C28FB7D61E791035009AE91A /* UIView+Frame.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+Frame.h"; sourceTree = "<group>"; };
@@ -403,6 +406,8 @@
 				AB330D4B1E7F7941002C6FCD /* Invoice.m */,
 				AB330D4D1E7F7957002C6FCD /* Profile.h */,
 				AB330D4E1E7F7957002C6FCD /* Profile.m */,
+				ABBB946C1E89EFA3001431ED /* Company.h */,
+				ABBB946D1E89EFA3001431ED /* Company.m */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -899,6 +904,7 @@
 				C28FB8931E7915A0009AE91A /* ViewController+MASAdditions.m in Sources */,
 				C28FB8361E791541009AE91A /* RITLPhotoStore.m in Sources */,
 				C28FB8991E7915A0009AE91A /* UITabBarController+MemoryLeak.m in Sources */,
+				ABBB946E1E89EFA3001431ED /* Company.m in Sources */,
 				C28FB8831E7915A0009AE91A /* PHAsset+RITLPhotoRepresentation.m in Sources */,
 				C28FB89B1E7915A0009AE91A /* UIViewController+MemoryLeak.m in Sources */,
 				AB330D661E84BCD6002C6FCD /* VerifiedInvoiceCell.m in Sources */,
