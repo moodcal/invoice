@@ -28,14 +28,14 @@
 -(void) addCenterButtonWithImage:(UIImage*)buttonImage highlightImage:(UIImage*)highlightImage inTab:(UITabBarController *)tabController
 {
     scanButton = [UIButton buttonWithType:UIButtonTypeCustom];
-    scanButton.userInteractionEnabled = NO;
     scanButton.autoresizingMask = UIViewAutoresizingFlexibleRightMargin | UIViewAutoresizingFlexibleLeftMargin | UIViewAutoresizingFlexibleBottomMargin | UIViewAutoresizingFlexibleTopMargin;
     scanButton.frame = CGRectMake(0.0, 0.0, 34, 34);
     [scanButton setBackgroundImage:buttonImage forState:UIControlStateNormal];
     [scanButton setBackgroundImage:highlightImage forState:UIControlStateHighlighted];
     
     scanButton.center = CGPointMake(tabController.tabBar.frame.size.width/2, tabController.tabBar.frame.size.height/2);
-    [tabController.tabBar addSubview:scanButton];
+    [scanButton addTarget:self action:@selector(scanAction:) forControlEvents:UIControlEventTouchUpInside];
+    [self.tabBar addSubview:scanButton];
 }
 
 - (void)scanAction:(id)sender {
