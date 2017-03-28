@@ -118,8 +118,9 @@
 
     InvoiceDetailController *controller = [[InvoiceDetailController alloc] init];
     controller.invoice = [self.filteredInvoices objectAtIndex:indexPath.row];
+    controller.hidesBottomBarWhenPushed = YES;
     self.navigationController.navigationBar.hidden = NO;
-    [self.navigationController pushViewController:controller animated:NO];
+    [self.navigationController pushViewController:controller animated:YES];
     
 }
 
