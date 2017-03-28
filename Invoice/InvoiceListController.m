@@ -13,6 +13,7 @@
 @property (nonatomic, strong) NSArray *invoices;
 @property (nonatomic, strong) NSArray *filteredInvoices;
 @property (weak, nonatomic) IBOutlet HMSegmentedControl *segmentedControl;
+@property (weak, nonatomic) IBOutlet NSLayoutConstraint *indexHeightConstraint;
 @property (weak, nonatomic) IBOutlet UICollectionView *collectionView;
 @end
 
@@ -21,7 +22,8 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     [self configSegmentIndex];
-    
+
+    self.indexHeightConstraint.constant = 0;
     self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"搜索" style:UIBarButtonItemStylePlain target:self action:@selector(clickSearch)];
 }
 
@@ -78,7 +80,7 @@
     self.segmentedControl.shouldAnimateUserSelection = YES;
     self.segmentedControl.layer.cornerRadius = 4.0f;
     [self.segmentedControl addTarget:self action:@selector(segmentedControlChangedValue:) forControlEvents:UIControlEventValueChanged];
-    self.segmentedControl.selectedSegmentIndex = 0;
+    self.segmentedControl.selectedSegmentIndex = 2;
 }
 
 - (void)segmentedControlChangedValue:(HMSegmentedControl *)segmentedControl {
@@ -101,12 +103,14 @@
 
 - (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath {
     Invoice *invoice = [self.filteredInvoices objectAtIndex:indexPath.row];
-    NSString *cellIdentifier = @"InvoiceSelectionCell";
-    if (self.segmentedControl.selectedSegmentIndex == 0) {
-        cellIdentifier = @"VerifiedInvoiceCell";
-    } else if (self.segmentedControl.selectedSegmentIndex == 1) {
-        cellIdentifier = @"InvoiceCell";
-    }
+    NSString *cellIdentifier = @"InvoiceCell";
+//    if (self.segmentedControl.selectedSegmentIndex == 0) {
+//        cellIdentifier = @"VerifiedInvoiceCell";
+//    } else if (self.segmentedControl.selectedSegmentIndex == 1) {
+//        cellIdentifier = @"InvoiceCell";
+//    } else {
+//        cellIdentifier = @"InvoiceSelectionCell";
+//    }
     InvoiceCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:cellIdentifier forIndexPath:indexPath];
     [cell configWithInvoice:invoice];
     return cell;
