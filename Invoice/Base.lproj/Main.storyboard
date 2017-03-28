@@ -1022,7 +1022,7 @@
                                             </constraints>
                                         </tableViewCellContentView>
                                         <connections>
-                                            <segue destination="w4o-Ee-zq4" kind="show" id="uTW-fq-0dN"/>
+                                            <segue destination="w4o-Ee-zq4" kind="show" identifier="ExportSegue" id="uTW-fq-0dN"/>
                                         </connections>
                                     </tableViewCell>
                                 </cells>
@@ -1187,65 +1187,69 @@
                                 <constraints>
                                     <constraint firstAttribute="height" constant="50" id="dBM-9u-FhC"/>
                                 </constraints>
-                                <state key="normal" title="发送到：abc@haipingx.com">
+                                <state key="normal" title="导出报告到：abc@haipingx.com">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                                 <connections>
                                     <action selector="sendAction:" destination="w4o-Ee-zq4" eventType="touchUpInside" id="O0E-Il-lRy"/>
                                 </connections>
                             </button>
-                            <stackView opaque="NO" contentMode="scaleToFill" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="WV7-xL-Wzu">
-                                <rect key="frame" x="82.5" y="84" width="155.5" height="30"/>
-                                <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="开始日期" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1tM-oS-1I8">
-                                        <rect key="frame" x="0.0" y="0.0" width="57.5" height="30"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                        <nil key="textColor"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="e22-AB-DaA">
-                                        <rect key="frame" x="72.5" y="0.0" width="83" height="30"/>
-                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        <state key="normal" title="2017-02-02">
-                                            <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
-                                        </state>
-                                        <connections>
-                                            <action selector="startAction:" destination="w4o-Ee-zq4" eventType="touchUpInside" id="DL0-7j-gDr"/>
-                                        </connections>
-                                    </button>
-                                </subviews>
-                            </stackView>
-                            <stackView opaque="NO" contentMode="scaleToFill" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="q80-TA-iVM">
-                                <rect key="frame" x="82.5" y="122" width="156.5" height="30"/>
-                                <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="结束日期" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Dm7-on-gOV">
-                                        <rect key="frame" x="0.0" y="0.0" width="57.5" height="30"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                        <nil key="textColor"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ldz-ys-JnK">
-                                        <rect key="frame" x="72.5" y="0.0" width="84" height="30"/>
-                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        <state key="normal" title="2017-03-02">
-                                            <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
-                                        </state>
-                                        <connections>
-                                            <action selector="endAction:" destination="w4o-Ee-zq4" eventType="touchUpInside" id="MSG-dG-aYw"/>
-                                        </connections>
-                                    </button>
-                                </subviews>
-                            </stackView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="开始日期" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1tM-oS-1I8">
+                                <rect key="frame" x="22" y="92" width="57.5" height="17"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="e22-AB-DaA">
+                                <rect key="frame" x="94.5" y="85.5" width="140" height="30"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="140" id="Xie-3h-cc2"/>
+                                    <constraint firstAttribute="height" constant="30" id="kff-cl-Y0d"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <state key="normal" title="2017-02-02">
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="startAction:" destination="w4o-Ee-zq4" eventType="touchUpInside" id="DL0-7j-gDr"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="结束日期" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Dm7-on-gOV">
+                                <rect key="frame" x="22" y="134" width="57.5" height="17"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ldz-ys-JnK">
+                                <rect key="frame" x="94.5" y="127.5" width="140" height="30"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="Fee-Hi-cZ7"/>
+                                    <constraint firstAttribute="width" constant="140" id="HrM-d6-m3U"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <state key="normal" title="2017-03-02">
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="endAction:" destination="w4o-Ee-zq4" eventType="touchUpInside" id="MSG-dG-aYw"/>
+                                </connections>
+                            </button>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="WV7-xL-Wzu" firstAttribute="top" secondItem="5b0-wZ-wis" secondAttribute="bottom" constant="20" id="9k4-po-Up6"/>
+                            <constraint firstItem="1tM-oS-1I8" firstAttribute="leading" secondItem="bix-Zy-UAv" secondAttribute="leadingMargin" constant="6" id="2ly-Vl-igd"/>
+                            <constraint firstItem="ldz-ys-JnK" firstAttribute="leading" secondItem="Dm7-on-gOV" secondAttribute="trailing" constant="15" id="8el-L0-kBt"/>
                             <constraint firstAttribute="trailing" secondItem="SEf-eQ-FIe" secondAttribute="trailing" id="LNP-80-lmZ"/>
-                            <constraint firstItem="q80-TA-iVM" firstAttribute="leading" secondItem="WV7-xL-Wzu" secondAttribute="leading" id="hbM-bf-N5m"/>
+                            <constraint firstItem="1tM-oS-1I8" firstAttribute="top" secondItem="5b0-wZ-wis" secondAttribute="bottom" constant="28" id="MPU-VY-aXn"/>
+                            <constraint firstItem="e22-AB-DaA" firstAttribute="centerY" secondItem="1tM-oS-1I8" secondAttribute="centerY" id="bLL-9e-R6h"/>
+                            <constraint firstItem="Dm7-on-gOV" firstAttribute="top" secondItem="1tM-oS-1I8" secondAttribute="bottom" constant="25" id="hy6-k9-Dtk"/>
                             <constraint firstItem="SEf-eQ-FIe" firstAttribute="leading" secondItem="bix-Zy-UAv" secondAttribute="leading" id="jcs-3Q-awV"/>
-                            <constraint firstItem="q80-TA-iVM" firstAttribute="top" secondItem="WV7-xL-Wzu" secondAttribute="bottom" constant="8" id="nfU-ET-IlK"/>
-                            <constraint firstItem="WV7-xL-Wzu" firstAttribute="centerX" secondItem="bix-Zy-UAv" secondAttribute="centerX" id="vVc-tu-nDQ"/>
+                            <constraint firstItem="e22-AB-DaA" firstAttribute="leading" secondItem="1tM-oS-1I8" secondAttribute="trailing" constant="15" id="nfe-kd-EUZ"/>
+                            <constraint firstItem="ldz-ys-JnK" firstAttribute="centerY" secondItem="Dm7-on-gOV" secondAttribute="centerY" id="pOr-7n-uLt"/>
                             <constraint firstAttribute="bottom" secondItem="SEf-eQ-FIe" secondAttribute="bottom" id="vmM-L8-qMN"/>
+                            <constraint firstItem="Dm7-on-gOV" firstAttribute="leading" secondItem="1tM-oS-1I8" secondAttribute="leading" id="xkc-U4-Lj6"/>
                         </constraints>
                     </view>
                     <connections>

@@ -1,4 +1,4 @@
-source 'git@git.oschina.net:opencartcn/CocoaPodsSpecs.git'
+#source 'git@git.oschina.net:opencartcn/CocoaPodsSpecs.git'
 # Uncomment the next line to define a global platform for your project
 platform :ios, '8.0'
 
@@ -23,5 +23,6 @@ target 'Invoice' do
   pod 'MZTimerLabel'
   pod 'SVProgressHUD'
   pod 'SDWebImage', '~>3.8'
-
+  pod 'IQKeyboardManager'
+  pod 'ActionSheetPicker-3.0'
 end

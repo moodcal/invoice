@@ -42,6 +42,8 @@
 #import "UIImageUtil.h"
 #import "GTMBase64.h"
 #import "ViewPhotoController.h"
+#import "IQKeyboardManager.h"
+#import "ActionSheetDatePicker.h"
 #import "SDWebImageManager.h"
 
 // model

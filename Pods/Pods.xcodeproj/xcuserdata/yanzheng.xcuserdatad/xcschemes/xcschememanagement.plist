@@ -9,6 +9,11 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
+		<key>ActionSheetPicker-3.0.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 		<key>CYLTabBarController.xcscheme</key>
 		<dict>
 			<key>isShown</key>
@@ -25,6 +30,11 @@
 			<false/>
 		</dict>
 		<key>HMSegmentedControl.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>IQKeyboardManager.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
@@ -49,6 +59,11 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
+		<key>SDWebImage.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 		<key>SVProgressHUD.xcscheme</key>
 		<dict>
 			<key>isShown</key>
@@ -67,12 +82,12 @@
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>204B7578E612E5354A645FC433C3E86C</key>
+		<key>58FE0486E83AA749B9E8C1300B64E2A2</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>58FE0486E83AA749B9E8C1300B64E2A2</key>
+		<key>71E838DACAB1A66F4AE41AE6D9761BAC</key>
 		<dict>
 			<key>primary</key>
 			<true/>
@@ -92,7 +107,32 @@
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>C9CD985BA34C9A143DD8C0A383B09969</key>
+		<key>965699190112DDBD9B7864D091660DBC</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>97BD420B9A8FD57E848C065C03EA0C4B</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>BA56E64A6B82250A3F1D2E42CF084C17</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>BAA72528D70D7E0D3D74D6D156E0E6F6</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>C36CB2CB977A4E7D954935096D00A1ED</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>C75AD8DEF89BCF5C35FB12815E3F4E6C</key>
 		<dict>
 			<key>primary</key>
 			<true/>
@@ -102,17 +142,7 @@
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>DD7A40A37680D35D4B98141A875215AD</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>DE6F2C0D74C3189BB37B5BDC2965F0E1</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>FD73AAB9A3803C611E842958ACABB734</key>
+		<key>EA93DABFD4B19F72E6FB5A74F71F8E25</key>
 		<dict>
 			<key>primary</key>
 			<true/>

@@ -10,4 +10,6 @@
 
 @interface ExportController : UIViewController
 
+@property (nonatomic, strong) NSString *email;
+
 @end

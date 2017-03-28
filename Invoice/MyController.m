@@ -8,6 +8,7 @@
 
 #import "MyController.h"
 #import "Profile.h"
+#import "ExportController.h"
 
 @interface MyController ()
 - (IBAction)signoutAction:(id)sender;
@@ -56,6 +57,13 @@
 
 - (IBAction)signoutAction:(id)sender {
     [[SRUserManager sharedInstance] signout];
+}
+
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+    if ([segue.identifier isEqualToString:@"ExportSegue"]) {
+        ExportController *exporter = [segue destinationViewController];
+        exporter.email = self.profile.email;
+    }
 }
 
 @end
