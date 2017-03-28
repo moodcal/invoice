@@ -211,10 +211,10 @@
         stringValue = metadataObject.stringValue;
         DLog(@"扫描结果：%@",stringValue);//01,04,3100162320,80893920,236.75,20170125,54877368153269129828,5F49,
         
-        InvoiceDetailController *controller = [[InvoiceDetailController alloc] init];
-        self.navigationController.navigationBar.hidden = NO;
-        [self.navigationController pushViewController:controller animated:NO];
-        return;
+//        InvoiceDetailController *controller = [[InvoiceDetailController alloc] init];
+//        self.navigationController.navigationBar.hidden = NO;
+//        [self.navigationController pushViewController:controller animated:NO];
+//        return;
         
         NSArray *array = [stringValue componentsSeparatedByString:@","];
         
@@ -233,7 +233,6 @@
         [sessionManager POST:ApiMethodInvoicsCreate parameters:params progress:nil success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
             
             NSData *jsonData = [NSJSONSerialization dataWithJSONObject:responseObject options:NSJSONWritingPrettyPrinted error:nil];
-            // NSData转为NSString
             NSString *jsonStr = [[NSString alloc] initWithData:jsonData encoding:NSUTF8StringEncoding];
             NSLog(@"response: %@", jsonStr);
             
@@ -241,6 +240,7 @@
             
             if ([[responseObject objectForKey:@"success"] boolValue]) {
                 InvoiceDetailController *controller = [[InvoiceDetailController alloc] init];
+                controller.invoice = [Invoice yy_modelWithDictionary:[responseObject objectForKey:@"invoice"]];
                 self.navigationController.navigationBar.hidden = NO;
                 [self.navigationController pushViewController:controller animated:NO];
                 

@@ -37,6 +37,11 @@
 		C28A02901E8656EE00C8C4A4 /* MBProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = C28A028E1E8656EE00C8C4A4 /* MBProgressHUD.m */; };
 		C28A02931E86571300C8C4A4 /* InvoiceDetailController.m in Sources */ = {isa = PBXBuildFile; fileRef = C28A02921E86571300C8C4A4 /* InvoiceDetailController.m */; };
 		C28A02961E8657AB00C8C4A4 /* UIView+BFSToastInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = C28A02951E8657AB00C8C4A4 /* UIView+BFSToastInfo.m */; };
+		C28A029A1E88DFB800C8C4A4 /* LKActionSheet.m in Sources */ = {isa = PBXBuildFile; fileRef = C28A02991E88DFB800C8C4A4 /* LKActionSheet.m */; };
+		C28A029D1E88ED4F00C8C4A4 /* UIImageUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = C28A029C1E88ED4F00C8C4A4 /* UIImageUtil.m */; };
+		C28A02A21E89062400C8C4A4 /* GTMBase64.m in Sources */ = {isa = PBXBuildFile; fileRef = C28A02A01E89062400C8C4A4 /* GTMBase64.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		C28A02A51E89EF2A00C8C4A4 /* ViewPhotoController.m in Sources */ = {isa = PBXBuildFile; fileRef = C28A02A41E89EF2A00C8C4A4 /* ViewPhotoController.m */; };
+		C28A02A81E89EFD700C8C4A4 /* ImageScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = C28A02A71E89EFD700C8C4A4 /* ImageScrollView.m */; };
 		C28FB7D31E78EC66009AE91A /* ScanController.m in Sources */ = {isa = PBXBuildFile; fileRef = C28FB7D21E78EC66009AE91A /* ScanController.m */; };
 		C28FB7D81E791035009AE91A /* UIView+Frame.m in Sources */ = {isa = PBXBuildFile; fileRef = C28FB7D71E791035009AE91A /* UIView+Frame.m */; };
 		C28FB7DB1E791057009AE91A /* UIUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = C28FB7DA1E791057009AE91A /* UIUtil.m */; };
@@ -157,6 +162,17 @@
 		C28A02921E86571300C8C4A4 /* InvoiceDetailController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = InvoiceDetailController.m; sourceTree = "<group>"; };
 		C28A02941E8657AB00C8C4A4 /* UIView+BFSToastInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+BFSToastInfo.h"; sourceTree = "<group>"; };
 		C28A02951E8657AB00C8C4A4 /* UIView+BFSToastInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+BFSToastInfo.m"; sourceTree = "<group>"; };
+		C28A02981E88DFB800C8C4A4 /* LKActionSheet.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LKActionSheet.h; sourceTree = "<group>"; };
+		C28A02991E88DFB800C8C4A4 /* LKActionSheet.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LKActionSheet.m; sourceTree = "<group>"; };
+		C28A029B1E88ED4F00C8C4A4 /* UIImageUtil.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UIImageUtil.h; sourceTree = "<group>"; };
+		C28A029C1E88ED4F00C8C4A4 /* UIImageUtil.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UIImageUtil.m; sourceTree = "<group>"; };
+		C28A029F1E89062400C8C4A4 /* GTMBase64.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GTMBase64.h; sourceTree = "<group>"; };
+		C28A02A01E89062400C8C4A4 /* GTMBase64.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GTMBase64.m; sourceTree = "<group>"; };
+		C28A02A11E89062400C8C4A4 /* GTMDefines.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GTMDefines.h; sourceTree = "<group>"; };
+		C28A02A31E89EF2A00C8C4A4 /* ViewPhotoController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ViewPhotoController.h; sourceTree = "<group>"; };
+		C28A02A41E89EF2A00C8C4A4 /* ViewPhotoController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ViewPhotoController.m; sourceTree = "<group>"; };
+		C28A02A61E89EFD700C8C4A4 /* ImageScrollView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ImageScrollView.h; sourceTree = "<group>"; };
+		C28A02A71E89EFD700C8C4A4 /* ImageScrollView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ImageScrollView.m; sourceTree = "<group>"; };
 		C28FB7D11E78EC66009AE91A /* ScanController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ScanController.h; sourceTree = "<group>"; };
 		C28FB7D21E78EC66009AE91A /* ScanController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ScanController.m; sourceTree = "<group>"; };
 		C28FB7D61E791035009AE91A /* UIView+Frame.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+Frame.h"; sourceTree = "<group>"; };
@@ -372,6 +388,8 @@
 			children = (
 				AB330D6A1E8505F8002C6FCD /* My */,
 				AB330D511E80D0A1002C6FCD /* Sign */,
+				C28A02A31E89EF2A00C8C4A4 /* ViewPhotoController.h */,
+				C28A02A41E89EF2A00C8C4A4 /* ViewPhotoController.m */,
 				AB330D221E77CBC7002C6FCD /* CustomTabBarController.h */,
 				AB330D231E77CBC7002C6FCD /* CustomTabBarController.m */,
 				AB330D601E83762F002C6FCD /* DumbTabBarController.h */,
@@ -440,9 +458,21 @@
 			name = My;
 			sourceTree = "<group>";
 		};
+		C28A029E1E89062400C8C4A4 /* GTMBase64 */ = {
+			isa = PBXGroup;
+			children = (
+				C28A029F1E89062400C8C4A4 /* GTMBase64.h */,
+				C28A02A01E89062400C8C4A4 /* GTMBase64.m */,
+				C28A02A11E89062400C8C4A4 /* GTMDefines.h */,
+			);
+			path = GTMBase64;
+			sourceTree = "<group>";
+		};
 		C28FB7D41E790FE4009AE91A /* Common */ = {
 			isa = PBXGroup;
 			children = (
+				C28A029B1E88ED4F00C8C4A4 /* UIImageUtil.h */,
+				C28A029C1E88ED4F00C8C4A4 /* UIImageUtil.m */,
 				C28FB7DC1E7910B8009AE91A /* YHButton.h */,
 				C28FB7DD1E7910B8009AE91A /* YHButton.m */,
 				C28FB7D91E791057009AE91A /* UIUtil.h */,
@@ -471,6 +501,7 @@
 		C28FB7E41E791515009AE91A /* Third */ = {
 			isa = PBXGroup;
 			children = (
+				C28A029E1E89062400C8C4A4 /* GTMBase64 */,
 				C28FB83F1E7915A0009AE91A /* Tool */,
 				C28FB7E51E791541009AE91A /* PhotosFiles */,
 			);
@@ -704,6 +735,10 @@
 		C28FB8A11E7FC86B009AE91A /* View */ = {
 			isa = PBXGroup;
 			children = (
+				C28A02A61E89EFD700C8C4A4 /* ImageScrollView.h */,
+				C28A02A71E89EFD700C8C4A4 /* ImageScrollView.m */,
+				C28A02981E88DFB800C8C4A4 /* LKActionSheet.h */,
+				C28A02991E88DFB800C8C4A4 /* LKActionSheet.m */,
 				C28A028B1E8656EE00C8C4A4 /* BlackLoadingView.h */,
 				C28A028C1E8656EE00C8C4A4 /* BlackLoadingView.m */,
 				C28A028D1E8656EE00C8C4A4 /* MBProgressHUD.h */,
@@ -852,6 +887,7 @@
 				C28FB88A1E7915A0009AE91A /* MASCompositeConstraint.m in Sources */,
 				C28FB88C1E7915A0009AE91A /* MASConstraintMaker.m in Sources */,
 				C28FB88E1E7915A0009AE91A /* MASViewAttribute.m in Sources */,
+				C28A029D1E88ED4F00C8C4A4 /* UIImageUtil.m in Sources */,
 				C28A02901E8656EE00C8C4A4 /* MBProgressHUD.m in Sources */,
 				C28FB89A1E7915A0009AE91A /* UIView+MemoryLeak.m in Sources */,
 				C28FB8241E791541009AE91A /* RITLPhotoBrowseCell.m in Sources */,
@@ -869,6 +905,7 @@
 				C28FB83C1E791541009AE91A /* UIViewController+Frame.m in Sources */,
 				C28FB8301E791541009AE91A /* RITLPhotoPreviewController.m in Sources */,
 				C28FB8331E791541009AE91A /* RITLPhotosViewModel.m in Sources */,
+				C28A02A21E89062400C8C4A4 /* GTMBase64.m in Sources */,
 				C28FB8261E791541009AE91A /* RITLPhotoBrowseViewModel.m in Sources */,
 				AB330D4F1E7F7957002C6FCD /* Profile.m in Sources */,
 				C28FB8961E7915A0009AE91A /* UINavigationController+MemoryLeak.m in Sources */,
@@ -894,11 +931,13 @@
 				AB330D3C1E7F685F002C6FCD /* RSA.m in Sources */,
 				C28FB8281E791541009AE91A /* RITLPhotoGroupViewController.m in Sources */,
 				C28FB82D1E791541009AE91A /* RITLPhotoCacheManager.mm in Sources */,
+				C28A02A81E89EFD700C8C4A4 /* ImageScrollView.m in Sources */,
 				C28FB88B1E7915A0009AE91A /* MASConstraint.m in Sources */,
 				AB330D6D1E850613002C6FCD /* ExportController.m in Sources */,
 				C28FB8861E7915A0009AE91A /* PHImageRequestOptions+RITLPhotoRepresentation.m in Sources */,
 				C28FB8371E791541009AE91A /* RITLPhotoStoreConfiguraion.m in Sources */,
 				AB330D381E7F6813002C6FCD /* SRApiManager.m in Sources */,
+				C28A02A51E89EF2A00C8C4A4 /* ViewPhotoController.m in Sources */,
 				C28FB83A1E791541009AE91A /* UIKit+YPPhotoDemo.m in Sources */,
 				C28FB8851E7915A0009AE91A /* PHFetchResult+RITLPhotoRepresentation.m in Sources */,
 				C28FB8931E7915A0009AE91A /* ViewController+MASAdditions.m in Sources */,
@@ -910,6 +949,7 @@
 				AB330D661E84BCD6002C6FCD /* VerifiedInvoiceCell.m in Sources */,
 				AB330D5A1E80D0E0002C6FCD /* SignupVC.m in Sources */,
 				AB330D4C1E7F7941002C6FCD /* Invoice.m in Sources */,
+				C28A029A1E88DFB800C8C4A4 /* LKActionSheet.m in Sources */,
 				C28FB83B1E791541009AE91A /* UIView+Category.m in Sources */,
 				C28FB8971E7915A0009AE91A /* UIPageViewController+MemoryLeak.m in Sources */,
 				AB330D0A1E777F9D002C6FCD /* main.m in Sources */,

@@ -21,7 +21,6 @@
 
     [self.window setTintColor:[UIColor mainColor]];
 
-    //[Chameleon setGlobalThemeUsingPrimaryColor:[UIColor mainColor] withSecondaryColor:[UIColor mainColor] andContentStyle:UIContentStyleContrast];
     return YES;
 }
 

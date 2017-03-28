@@ -31,7 +31,7 @@
 #define ApiMethodUserCode (ApiHost @"/users/code")
 #define ApiMethodChangePhone (ApiHost @"/users/modifyPhone")
 
-#define ApiMethodPhotosUpload (ApiHost @"/photos/upload")
+#define ApiMethodInvoicesUpload (ApiHost @"/invoices/upload")
 
 
 #import <Foundation/Foundation.h>

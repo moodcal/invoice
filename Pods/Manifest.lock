@@ -23,6 +23,9 @@ PODS:
   - MZTimerLabel (0.5.4)
   - PureLayout (3.0.2)
   - SAMKeychain (1.5.2)
+  - SDWebImage (3.8.2):
+    - SDWebImage/Core (= 3.8.2)
+  - SDWebImage/Core (3.8.2)
   - SVProgressHUD (2.1.2)
   - YYModel (1.0.4)
 
@@ -35,6 +38,7 @@ DEPENDENCIES:
   - MZTimerLabel
   - PureLayout
   - SAMKeychain
+  - SDWebImage (~> 3.8)
   - SVProgressHUD
   - YYModel
 
@@ -47,9 +51,10 @@ SPEC CHECKSUMS:
   MZTimerLabel: cd9bfb9304540ef2a9e163384fca9c978f0dbf83
   PureLayout: 4d550abe49a94f24c2808b9b95db9131685fe4cd
   SAMKeychain: 1865333198217411f35327e8da61b43de79b635b
+  SDWebImage: '098e97e6176540799c27e804c96653ee0833d13c'
   SVProgressHUD: c404a55d78acbeb7ebb78b76d3faf986475a6994
   YYModel: 2a7fdd96aaa4b86a824e26d0c517de8928c04b30
 
-PODFILE CHECKSUM: 80851f65b8c9a1df6a106690e5b70ee4e04ae48a
+PODFILE CHECKSUM: faab6e6cfa9bec4e839e5a7a8007a8a0a305efeb
 
 COCOAPODS: 1.2.0

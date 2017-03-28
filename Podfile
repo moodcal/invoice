@@ -22,5 +22,6 @@ target 'Invoice' do
   pod 'DCPathButton', '~> 2.1.3'
   pod 'MZTimerLabel'
   pod 'SVProgressHUD'
-  
+  pod 'SDWebImage', '~>3.8'
+
 end

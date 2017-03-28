@@ -112,6 +112,17 @@
     return cell;
 }
 
+- (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath
+{
+    [collectionView deselectItemAtIndexPath:indexPath animated:YES];
+
+    InvoiceDetailController *controller = [[InvoiceDetailController alloc] init];
+    controller.invoice = [self.filteredInvoices objectAtIndex:indexPath.row];
+    self.navigationController.navigationBar.hidden = NO;
+    [self.navigationController pushViewController:controller animated:NO];
+    
+}
+
 - (void)clickSearch {
     UIWindow *window = ((AppDelegate *)[UIApplication sharedApplication].delegate).window;
     SearchView *searchView = [[SearchView alloc] initWithFrame:window.bounds];
