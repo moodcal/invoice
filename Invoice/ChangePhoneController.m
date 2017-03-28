@@ -28,6 +28,7 @@
     self.secondLabel.hidden = YES;
     self.codeButton.layer.cornerRadius = 4;
     self.secondLabel.layer.cornerRadius = 4;
+    self.comfirmButton.layer.cornerRadius = 6;
 }
 
 - (void)viewWillDisappear:(BOOL)animated {

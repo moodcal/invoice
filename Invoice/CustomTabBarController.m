@@ -31,7 +31,7 @@
 }
 
 - (void)tabBarController:(UITabBarController *)tabBarController didSelectViewController:(UIViewController *)viewController {
-    UIViewController *vc = viewController.childViewControllers.firstObject;
+//    UIViewController *vc = viewController.childViewControllers.firstObject;
 //    if ([vc class] == [IndexLibVC class]) {
 //        [(IndexLibVC *)vc requestRates];
 //    } else if ([vc class] == [ProjectLibVC class]) {

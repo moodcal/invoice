@@ -1,33 +1,29 @@
 //
-//  FirstViewController.m
+//  SearchResultController.m
 //  Invoice
 //
-//  Created by yanzheng on 2017/3/14.
+//  Created by yanzheng on 2017/3/28.
 //  Copyright © 2017年 links. All rights reserved.
 //
 
-#import "InvoiceListController.h"
-#import "InvoiceCell.h"
 #import "SearchResultController.h"
+#import "InvoiceCell.h"
 
-@interface InvoiceListController () <UICollectionViewDelegate, UICollectionViewDataSource, SearchViewDelegate>
+@interface SearchResultController () <UICollectionViewDelegate, UICollectionViewDataSource>
 @property (nonatomic, strong) NSArray *invoices;
 @property (nonatomic, strong) NSArray *filteredInvoices;
 @property (weak, nonatomic) IBOutlet HMSegmentedControl *segmentedControl;
 @property (weak, nonatomic) IBOutlet NSLayoutConstraint *indexHeightConstraint;
 @property (weak, nonatomic) IBOutlet UICollectionView *collectionView;
-@property (nonatomic, strong) NSString *keyword;
-
 @end
 
-@implementation InvoiceListController
+@implementation SearchResultController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
     [self configSegmentIndex];
-
+    
     self.indexHeightConstraint.constant = 0;
-    self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"搜索" style:UIBarButtonItemStylePlain target:self action:@selector(clickSearch)];
 }
 
 - (void)viewWillAppear:(BOOL)animated {
@@ -42,9 +38,10 @@
     NSMutableDictionary *params = [NSMutableDictionary dictionary];
     [params setObject:@"1" forKey:@"page"];
     [params setObject:@"20" forKey:@"page_size"];
+    [params setObject:self.keyword forKey:@"keyword"];
     [params appendInfo];
     [sessionManager.requestSerializer setValue:params.signature forHTTPHeaderField:@"sign"];
-    [sessionManager GET:ApiMethodInvoicsList parameters:params progress:nil success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
+    [sessionManager POST:ApiMethodInvoicsSearch parameters:params progress:nil success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
         DLog(@"response: %@", responseObject);
         if ([[responseObject objectForKey:@"success"] boolValue]) {
             self.invoices = [NSArray yy_modelArrayWithClass:[Invoice class] json:[responseObject objectForKey:@"invoices"]];
@@ -107,13 +104,13 @@
 - (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath {
     Invoice *invoice = [self.filteredInvoices objectAtIndex:indexPath.row];
     NSString *cellIdentifier = @"InvoiceCell";
-//    if (self.segmentedControl.selectedSegmentIndex == 0) {
-//        cellIdentifier = @"VerifiedInvoiceCell";
-//    } else if (self.segmentedControl.selectedSegmentIndex == 1) {
-//        cellIdentifier = @"InvoiceCell";
-//    } else {
-//        cellIdentifier = @"InvoiceSelectionCell";
-//    }
+    //    if (self.segmentedControl.selectedSegmentIndex == 0) {
+    //        cellIdentifier = @"VerifiedInvoiceCell";
+    //    } else if (self.segmentedControl.selectedSegmentIndex == 1) {
+    //        cellIdentifier = @"InvoiceCell";
+    //    } else {
+    //        cellIdentifier = @"InvoiceSelectionCell";
+    //    }
     InvoiceCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:cellIdentifier forIndexPath:indexPath];
     [cell configWithInvoice:invoice];
     return cell;
@@ -122,33 +119,13 @@
 - (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath
 {
     [collectionView deselectItemAtIndexPath:indexPath animated:YES];
-
+    
     InvoiceDetailController *controller = [[InvoiceDetailController alloc] init];
     controller.invoice = [self.filteredInvoices objectAtIndex:indexPath.row];
     controller.hidesBottomBarWhenPushed = YES;
     self.navigationController.navigationBar.hidden = NO;
     [self.navigationController pushViewController:controller animated:YES];
     
-}
-
-- (void)clickSearch {
-    UIWindow *window = ((AppDelegate *)[UIApplication sharedApplication].delegate).window;
-    SearchView *searchView = [[SearchView alloc] initWithFrame:window.bounds];
-    searchView.delegate = self;
-    [window addSubview:searchView];
-}
-
-#pragma mark - SearchViewDelegate
-- (void)searchWithKeyword:(NSString *)keyword {
-    self.keyword = keyword;
-    [self performSegueWithIdentifier:@"SearchSegue" sender:self];
-}
-
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    if ([segue.identifier isEqualToString:@"SearchSegue"]) {
-        SearchResultController *resultController = segue.destinationViewController;
-        resultController.keyword = self.keyword;
-    }
 }
 
 @end

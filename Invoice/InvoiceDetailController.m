@@ -40,8 +40,9 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     self.view.backgroundColor = [UIColor whiteColor];
+    self.title = @"发票详情";
     
-    self.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc] initWithImage:[UIImage imageNamed:@"index-Back"] style:UIBarButtonItemStylePlain target:self action:@selector(clickBack)];
+//    self.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc] initWithImage:[UIImage imageNamed:@"index-Back"] style:UIBarButtonItemStylePlain target:self action:@selector(clickBack)];
     
     UILabel *label = [UIUtil drawLabelInView:self.view frame:CGRectMake(20, 64+20, self.width-20, 18) font:[UIFont systemFontOfSize:18] text:[NSString stringWithFormat:@"发票号码：%@",self.invoice.ticket_no] isCenter:NO color:[UIColor colorWithHex:0x333333 alpha:1]];
     

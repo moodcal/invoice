@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		54A1D054E8CAB2589DB0D721 /* Pods_Invoice.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 909D58A3E8F08A0A7A02A7A3 /* Pods_Invoice.framework */; };
+		AB2AC3271E8A379600277720 /* SearchResultController.m in Sources */ = {isa = PBXBuildFile; fileRef = AB2AC3261E8A379600277720 /* SearchResultController.m */; };
 		AB330D0A1E777F9D002C6FCD /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = AB330D091E777F9D002C6FCD /* main.m */; };
 		AB330D0D1E777F9D002C6FCD /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = AB330D0C1E777F9D002C6FCD /* AppDelegate.m */; };
 		AB330D101E777F9D002C6FCD /* InvoiceListController.m in Sources */ = {isa = PBXBuildFile; fileRef = AB330D0F1E777F9D002C6FCD /* InvoiceListController.m */; };
@@ -106,6 +107,8 @@
 		38BEFDBA9A6FFF61D7CA802B /* Pods-Invoice.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Invoice.release.xcconfig"; path = "Pods/Target Support Files/Pods-Invoice/Pods-Invoice.release.xcconfig"; sourceTree = "<group>"; };
 		49C48B28024DBDC3EA99FC4B /* Pods-Invoice.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Invoice.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Invoice/Pods-Invoice.debug.xcconfig"; sourceTree = "<group>"; };
 		909D58A3E8F08A0A7A02A7A3 /* Pods_Invoice.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Invoice.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		AB2AC3251E8A379600277720 /* SearchResultController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SearchResultController.h; sourceTree = "<group>"; };
+		AB2AC3261E8A379600277720 /* SearchResultController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SearchResultController.m; sourceTree = "<group>"; };
 		AB330D051E777F9D002C6FCD /* Invoice.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Invoice.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AB330D091E777F9D002C6FCD /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		AB330D0B1E777F9D002C6FCD /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -396,6 +399,8 @@
 				AB330D611E83762F002C6FCD /* DumbTabBarController.m */,
 				AB330D0E1E777F9D002C6FCD /* InvoiceListController.h */,
 				AB330D0F1E777F9D002C6FCD /* InvoiceListController.m */,
+				AB2AC3251E8A379600277720 /* SearchResultController.h */,
+				AB2AC3261E8A379600277720 /* SearchResultController.m */,
 				C28FB7D11E78EC66009AE91A /* ScanController.h */,
 				C28FB7D21E78EC66009AE91A /* ScanController.m */,
 				C28A02911E86571300C8C4A4 /* InvoiceDetailController.h */,
@@ -912,6 +917,7 @@
 				C28FB8951E7915A0009AE91A /* UIApplication+MemoryLeak.m in Sources */,
 				C28FB8871E7915A0009AE91A /* UIButton+RITLBlockButton.m in Sources */,
 				ABBB94691E88A49E001431ED /* UserProfileController.m in Sources */,
+				AB2AC3271E8A379600277720 /* SearchResultController.m in Sources */,
 				AB330D3F1E7F6903002C6FCD /* NSString+MD5.m in Sources */,
 				AB330D621E83762F002C6FCD /* DumbTabBarController.m in Sources */,
 				C28FB8881E7915A0009AE91A /* UIViewController+RITLPhotoAlertController.m in Sources */,
