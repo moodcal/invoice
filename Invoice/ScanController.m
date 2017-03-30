@@ -39,6 +39,11 @@
 
 @implementation ScanController
 
+- (void)dealloc
+{
+    DLog(@"-------------------dealloc");
+}
+
 - (UIView *)blackLoadingView
 {
     if (!_blackLoadingView) {
@@ -279,8 +284,8 @@
         [timer invalidate];//不能放到dealloc里面，会导致dealloc不执行
         timer = nil;
     }
-    
-    [self.parentViewController dismissViewControllerAnimated:YES completion:nil];
+
+    [self dismissViewControllerAnimated:YES completion:nil];
 }
 
 
