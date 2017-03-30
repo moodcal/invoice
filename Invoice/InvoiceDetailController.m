@@ -54,11 +54,11 @@
     
     if ([self.invoice.image_url length] > 0) {
         
-        UIImage *image = [UIImage imageNamed:@"tab-saoyisao"];
+        UIImage *image = [UIImage imageNamed:@"Group"];
         float width = self.view.width-20*2;
         float height = image.size.height*width/image.size.width;
         
-        UIImageView *imageView = [UIUtil drawCustomImgViewInView:self.view frame:CGRectMake(20, label.bottom+20, width, height) imageName:@"tab-saoyisao"];
+        UIImageView *imageView = [UIUtil drawCustomImgViewInView:self.view frame:CGRectMake(20, label.bottom+20, width, height) imageName:@"Group"];
         self.imageView = imageView;
         imageView.userInteractionEnabled = YES;
         imageView.contentMode = UIViewContentModeScaleAspectFill;
@@ -83,11 +83,11 @@
         
         
     } else {
-        UIImage *image = [UIImage imageNamed:@"tab-saoyisao"];
+        UIImage *image = [UIImage imageNamed:@"Group"];
         float width = self.view.width-20*2;
         float height = image.size.height*width/image.size.width;
         
-        UIImageView *imageView = [UIUtil drawCustomImgViewInView:self.view frame:CGRectMake(20, label.bottom+20, width, height) imageName:@"tab-saoyisao"];
+        UIImageView *imageView = [UIUtil drawCustomImgViewInView:self.view frame:CGRectMake(20, label.bottom+20, width, height) imageName:@"Group"];
         self.imageView = imageView;
         imageView.userInteractionEnabled = YES;
         [UIUtil drawLineInView:imageView frame:imageView.bounds color:[UIColor colorWithHex:0x000000 alpha:0.3]];
@@ -169,11 +169,11 @@
                         [self.imageView removeFromSuperview];
                         self.imageView = nil;
                         
-                        UIImage *image = [UIImage imageNamed:@"tab-saoyisao"];
+                        UIImage *image = [UIImage imageNamed:@"Group"];
                         float width = self.view.width-20*2;
                         float height = image.size.height*width/image.size.width;
                         
-                        UIImageView *imageView = [UIUtil drawCustomImgViewInView:self.view frame:CGRectMake(20, top, width, height) imageName:@"tab-saoyisao"];
+                        UIImageView *imageView = [UIUtil drawCustomImgViewInView:self.view frame:CGRectMake(20, top, width, height) imageName:@"Group"];
                         imageView.userInteractionEnabled = YES;
                         imageView.image = dataImage;
                         imageView.contentMode = UIViewContentModeScaleAspectFill;
