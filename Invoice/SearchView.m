@@ -26,24 +26,24 @@
         _searchView = [[UIView alloc] initWithFrame:CGRectMake(0, 20, self.width, 44)];
         _searchView.backgroundColor = [UIColor clearColor];
         
-        UIButton *searchCancelButton = [UIUtil drawButtonInView:_searchView frame:CGRectMake(_searchView.width-52, 0, 52, _searchView.height) text:@"取消" font:[UIFont systemFontOfSize:16] color:[UIColor whiteColor] target:self action:@selector(clickCancel)];
+        UIButton *searchCancelButton = [UIUtil drawButtonInView:_searchView frame:CGRectMake(_searchView.width-52, 0, 52, _searchView.height) text:@"取消" font:[UIFont systemFontOfSize:16] color:[UIColor colorWithRed:220/255.0 green:220/255.0 blue:220/255.0 alpha:1] target:self action:@selector(clickCancel)];
         [searchCancelButton setTitleColor:[UIColor lightGrayColor] forState:UIControlStateHighlighted];
 
         self.textFieldBG = [UIUtil drawLineInView:_searchView frame:CGRectMake(16, (_searchView.height-34)/2, _searchView.width-16-52, 34) color:[UIColor clearColor]];
         self.textFieldBG.layer.cornerRadius = self.textFieldBG.height/2;
         self.textFieldBG.layer.borderWidth = [UIUtil lineWidth];
-        self.textFieldBG.layer.borderColor = [UIColor blueColor].CGColor;
+        self.textFieldBG.layer.borderColor = [UIColor colorWithRed:44/255.0 green:158/255.0 blue:218/255.0 alpha:1].CGColor;
         self.textFieldBG.userInteractionEnabled = YES;
         
         UIButton *dumbButton = [UIUtil drawButtonInView:self.textFieldBG frame:self.textFieldBG.bounds iconName:@"" target:self action:@selector(clickInput)];
         
-        UIImage *image = [UIImage imageNamed:@"search_icon.png"];
+        UIImage *image = [UIImage imageNamed:@"index-seach-hl"];
 
-        [UIUtil drawCustomImgViewInView:self.textFieldBG frame:CGRectMake(10, (self.textFieldBG.height-image.size.height)/2, image.size.width, image.size.height) imageName:@"search_icon.png"];
+        [UIUtil drawCustomImgViewInView:self.textFieldBG frame:CGRectMake(10, (self.textFieldBG.height-image.size.height)/2, image.size.width, image.size.height) imageName:@"index-seach-hl"];
         
         [self.textFieldBG addSubview:self.textField];
         
-        self.searchLabel = [UIUtil drawLabelInView:self.textFieldBG frame:CGRectMake(self.textField.left, 0, [UIUtil textWidth:@"搜索" font:[UIFont systemFontOfSize:15]], self.textFieldBG.height) font:[UIFont systemFontOfSize:15] text:@"搜索" isCenter:NO color:[UIColor colorWithRed:192/255.0 green:192/255.0 blue:192/255.0 alpha:1]];
+        self.searchLabel = [UIUtil drawLabelInView:self.textFieldBG frame:CGRectMake(35, 0, [UIUtil textWidth:@"搜索" font:[UIFont systemFontOfSize:15]], self.textFieldBG.height) font:[UIFont systemFontOfSize:15] text:@"搜索" isCenter:NO color:[UIColor colorWithRed:44/255.0 green:158/255.0 blue:218/255.0 alpha:1]];
         
         self.textFieldBG.backgroundColor = [UIColor clearColor];
         searchCancelButton.backgroundColor = [UIColor clearColor];        
@@ -55,14 +55,13 @@
 - (UITextField *)textField
 {
     if (!_textField) {
-        UIImage *image = [UIImage imageNamed:@"search_icon.png"];
-        _textField = [[UITextField alloc] initWithFrame:CGRectMake(10+image.size.width+5, (self.textFieldBG.height-20)/2, self.textFieldBG.width-(10+image.size.width+5)-10, 20)];
+        _textField = [[UITextField alloc] initWithFrame:CGRectMake(35, (self.textFieldBG.height-20)/2, self.textFieldBG.width-35-10, 20)];
         _textField.autocorrectionType = UITextAutocorrectionTypeNo;
         _textField.clearButtonMode = UITextFieldViewModeWhileEditing;
         _textField.font = [UIFont systemFontOfSize:15];
         _textField.returnKeyType = UIReturnKeySearch;
         _textField.autocapitalizationType = UITextAutocapitalizationTypeNone;
-        _textField.textColor = [UIColor whiteColor];
+        _textField.textColor = [UIColor colorWithRed:220/255.0 green:220/255.0 blue:220/255.0 alpha:1];
         [_textField addTarget:self action:@selector(textFieldDidChange:) forControlEvents:UIControlEventEditingChanged];
         _textField.delegate = self;
     }
@@ -154,33 +153,33 @@
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     
     UITableViewCell *cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:nil];
-    cell.contentView.backgroundColor = [UIColor colorWithHex:0x000000 alpha:0.9];
+    cell.backgroundColor = [UIColor clearColor];
     cell.selectionStyle = UITableViewCellSelectionStyleNone;
     
     if (self.dataArray.count > 0) {
         
         if (indexPath.row == 0) {
             
-            [UIUtil drawLabelInView:cell.contentView frame:CGRectMake(0, 0, tableView.width, 44) font:[UIFont systemFontOfSize:14] text:@"最近搜索" isCenter:NO color:[UIColor whiteColor]];
+            [UIUtil drawLabelInView:cell.contentView frame:CGRectMake(0, 0, tableView.width, 44) font:[UIFont systemFontOfSize:14] text:@"最近搜索" isCenter:NO color:[UIColor colorWithRed:220/255.0 green:220/255.0 blue:220/255.0 alpha:1]];
             
         } else {
             NSString *keyword = self.dataArray[indexPath.row-1];
             
-            [UIUtil drawLabelInView:cell.contentView frame:CGRectMake(0, 0, tableView.width, 44) font:[UIFont systemFontOfSize:14] text:keyword isCenter:NO color:[UIColor whiteColor]];
+            [UIUtil drawLabelInView:cell.contentView frame:CGRectMake(0, 0, tableView.width, 44) font:[UIFont systemFontOfSize:14] text:keyword isCenter:NO color:[UIColor colorWithRed:220/255.0 green:220/255.0 blue:220/255.0 alpha:1]];
 
         }
         
     } else {
         if (indexPath.row == 0) {
-            [UIUtil drawLabelInView:cell.contentView frame:CGRectMake(0, 0, tableView.width, 44) font:[UIFont systemFontOfSize:14] text:@"最近搜索" isCenter:NO color:[UIColor whiteColor]];
+            [UIUtil drawLabelInView:cell.contentView frame:CGRectMake(0, 0, tableView.width, 44) font:[UIFont systemFontOfSize:14] text:@"最近搜索" isCenter:NO color:[UIColor colorWithRed:220/255.0 green:220/255.0 blue:220/255.0 alpha:1]];
 
         } else {
-            [UIUtil drawLabelInView:cell.contentView frame:CGRectMake(0, 0, tableView.width, 44) font:[UIFont systemFontOfSize:14] text:@"暂无搜索历史" isCenter:YES color:[UIColor whiteColor]];
+            [UIUtil drawLabelInView:cell.contentView frame:CGRectMake(0, 0, tableView.width, 44) font:[UIFont systemFontOfSize:14] text:@"暂无搜索历史" isCenter:YES color:[UIColor colorWithRed:220/255.0 green:220/255.0 blue:220/255.0 alpha:1]];
 
         }
     }
     
-    [UIUtil drawLineInView:cell.contentView frame:CGRectMake(0, 44-[UIUtil lineWidth], tableView.width, [UIUtil lineWidth]) color:[UIColor grayColor]];
+    [UIUtil drawLineInView:cell.contentView frame:CGRectMake(0, 44-[UIUtil lineWidth], tableView.width, [UIUtil lineWidth]) color:[UIColor colorWithRed:116/255.0 green:124/255.0 blue:132/255.0 alpha:1]];
     
     return cell;
     

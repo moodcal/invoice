@@ -31,7 +31,16 @@
     self.invoices = [NSMutableArray array];
     
     self.indexHeightConstraint.constant = 0;
-    self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"搜索" style:UIBarButtonItemStylePlain target:self action:@selector(clickSearch)];
+        
+    UIImage *image = [UIImage imageNamed:@"index-seach"];
+    float width = [UIUtil textWidth:@"搜索" font:[UIFont systemFontOfSize:15]];
+    UIView *view = [[UIView alloc] initWithFrame:CGRectMake(0, 0, image.size.width+5+width, image.size.height)];
+    view.userInteractionEnabled = YES;
+    [UIUtil drawCustomImgViewInView:view frame:CGRectMake(0, (view.height-image.size.height)/2, image.size.width, image.size.height) imageName:@"index-seach"];
+    [UIUtil drawLabelInView:view frame:CGRectMake(image.size.width+5, 0, width, view.height) font:[UIFont systemFontOfSize:15] text:@"搜索" isCenter:NO color:[UIColor whiteColor]];
+    [UIUtil drawButtonInView:view frame:view.bounds iconName:@"" target:self action:@selector(clickSearch)];
+    
+    self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithCustomView:view];
 }
 
 - (void)viewWillAppear:(BOOL)animated {
