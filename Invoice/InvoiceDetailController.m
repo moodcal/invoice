@@ -59,6 +59,7 @@
         float height = image.size.height*width/image.size.width;
         
         UIImageView *imageView = [UIUtil drawCustomImgViewInView:self.view frame:CGRectMake(20, label.bottom+20, width, height) imageName:@"tab-saoyisao"];
+        self.imageView = imageView;
         imageView.userInteractionEnabled = YES;
         imageView.contentMode = UIViewContentModeScaleAspectFill;
         imageView.clipsToBounds = YES;
@@ -166,6 +167,7 @@
                         
                         float top = self.imageView.top;
                         [self.imageView removeFromSuperview];
+                        self.imageView = nil;
                         
                         UIImage *image = [UIImage imageNamed:@"tab-saoyisao"];
                         float width = self.view.width-20*2;
