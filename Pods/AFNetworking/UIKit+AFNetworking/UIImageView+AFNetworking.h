@@ -31,7 +31,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 @class AFImageDownloader;
 
-/*
+/**
  This category adds methods to the UIKit framework's `UIImageView` class. The methods in this category provide support for loading remote images asynchronously from a URL.
  */
 @interface UIImageView (AFNetworking)
@@ -40,14 +40,14 @@ NS_ASSUME_NONNULL_BEGIN
 /// @name Accessing the Image Downloader
 ///------------------------------------
 
-/*
+/**
  Set the shared image downloader used to download images.
 
  @param imageDownloader The shared image downloader used to download images.
  */
 + (void)setSharedImageDownloader:(AFImageDownloader *)imageDownloader;
 
-/*
+/**
  The shared image downloader used to download images.
  */
 + (AFImageDownloader *)sharedImageDownloader;
@@ -56,7 +56,7 @@ NS_ASSUME_NONNULL_BEGIN
 /// @name Setting Image
 ///--------------------
 
-/*
+/**
  Asynchronously downloads an image from the specified URL, and sets it once the request is finished. Any previous image request for the receiver will be cancelled.
 
  If the image is cached locally, the image is set immediately, otherwise the specified placeholder image will be set immediately, and then the remote image will be set once the request is finished.
@@ -67,7 +67,7 @@ NS_ASSUME_NONNULL_BEGIN
  */
 - (void)setImageWithURL:(NSURL *)url;
 
-/*
+/**
  Asynchronously downloads an image from the specified URL, and sets it once the request is finished. Any previous image request for the receiver will be cancelled.
 
  If the image is cached locally, the image is set immediately, otherwise the specified placeholder image will be set immediately, and then the remote image will be set once the request is finished.
@@ -80,7 +80,7 @@ NS_ASSUME_NONNULL_BEGIN
 - (void)setImageWithURL:(NSURL *)url
        placeholderImage:(nullable UIImage *)placeholderImage;
 
-/*
+/**
  Asynchronously downloads an image from the specified URL request, and sets it once the request is finished. Any previous image request for the receiver will be cancelled.
 
  If the image is cached locally, the image is set immediately, otherwise the specified placeholder image will be set immediately, and then the remote image will be set once the request is finished.
@@ -97,7 +97,7 @@ NS_ASSUME_NONNULL_BEGIN
                        success:(nullable void (^)(NSURLRequest *request, NSHTTPURLResponse * _Nullable response, UIImage *image))success
                        failure:(nullable void (^)(NSURLRequest *request, NSHTTPURLResponse * _Nullable response, NSError *error))failure;
 
-/*
+/**
  Cancels any executing image operation for the receiver, if one exists.
  */
 - (void)cancelImageDownloadTask;

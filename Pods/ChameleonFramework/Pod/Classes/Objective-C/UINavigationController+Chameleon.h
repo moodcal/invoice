@@ -11,7 +11,7 @@
 
 @interface UINavigationController (Chameleon)
 
-/*
+/**
  *  Sets the status bar style for the specified @c UINavigationController and all its child controllers.
  *
  *  @param statusBarStyle The style of the device's status bar.
@@ -22,7 +22,7 @@
  */
 - (void)setStatusBarStyle:(UIStatusBarStyle)statusBarStyle;
 
-/*
+/**
  *  Hides the hairline view at the bottom of a navigation bar. The default value is @c NO.
  *
  *  @since 2.0.3

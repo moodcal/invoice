@@ -14,48 +14,48 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-/*
+/**
  Error code specific to SAMKeychain that can be returned in NSError objects.
  For codes returned by the operating system, refer to SecBase.h for your
  platform.
  */
 typedef NS_ENUM(OSStatus, SAMKeychainErrorCode) {
-	/* Some of the arguments were invalid. */
+	/** Some of the arguments were invalid. */
 	SAMKeychainErrorBadArguments = -1001,
 };
 
-/* SAMKeychain error domain */
+/** SAMKeychain error domain */
 extern NSString *const kSAMKeychainErrorDomain;
 
-/* Account name. */
+/** Account name. */
 extern NSString *const kSAMKeychainAccountKey;
 
-/*
+/**
  Time the item was created.
 
  The value will be a string.
  */
 extern NSString *const kSAMKeychainCreatedAtKey;
 
-/* Item class. */
+/** Item class. */
 extern NSString *const kSAMKeychainClassKey;
 
-/* Item description. */
+/** Item description. */
 extern NSString *const kSAMKeychainDescriptionKey;
 
-/* Item label. */
+/** Item label. */
 extern NSString *const kSAMKeychainLabelKey;
 
-/* Time the item was last modified.
+/** Time the item was last modified.
 
  The value will be a string.
  */
 extern NSString *const kSAMKeychainLastModifiedKey;
 
-/* Where the item was created. */
+/** Where the item was created. */
 extern NSString *const kSAMKeychainWhereKey;
 
-/*
+/**
  Simple wrapper for accessing accounts, getting passwords, setting passwords, and deleting passwords using the system
  Keychain on Mac OS X and iOS.
 
@@ -66,7 +66,7 @@ extern NSString *const kSAMKeychainWhereKey;
 
 #pragma mark - Classic methods
 
-/*
+/**
  Returns a string containing the password for a given account and service, or `nil` if the Keychain doesn't have a
  password for the given parameters.
 
@@ -80,7 +80,7 @@ extern NSString *const kSAMKeychainWhereKey;
 + (nullable NSString *)passwordForService:(NSString *)serviceName account:(NSString *)account;
 + (nullable NSString *)passwordForService:(NSString *)serviceName account:(NSString *)account error:(NSError **)error __attribute__((swift_error(none)));
 
-/*
+/**
  Returns a nsdata containing the password for a given account and service, or `nil` if the Keychain doesn't have a
  password for the given parameters.
 
@@ -95,7 +95,7 @@ extern NSString *const kSAMKeychainWhereKey;
 + (nullable NSData *)passwordDataForService:(NSString *)serviceName account:(NSString *)account error:(NSError **)error __attribute__((swift_error(none)));
 
 
-/*
+/**
  Deletes a password from the Keychain.
 
  @param serviceName The service for which to delete the corresponding password.
@@ -108,7 +108,7 @@ extern NSString *const kSAMKeychainWhereKey;
 + (BOOL)deletePasswordForService:(NSString *)serviceName account:(NSString *)account error:(NSError **)error __attribute__((swift_error(none)));
 
 
-/*
+/**
  Sets a password in the Keychain.
 
  @param password The password to store in the Keychain.
@@ -122,7 +122,7 @@ extern NSString *const kSAMKeychainWhereKey;
 + (BOOL)setPassword:(NSString *)password forService:(NSString *)serviceName account:(NSString *)account;
 + (BOOL)setPassword:(NSString *)password forService:(NSString *)serviceName account:(NSString *)account error:(NSError **)error __attribute__((swift_error(none)));
 
-/*
+/**
  Sets a password in the Keychain.
 
  @param password The password to store in the Keychain.
@@ -136,7 +136,7 @@ extern NSString *const kSAMKeychainWhereKey;
 + (BOOL)setPasswordData:(NSData *)password forService:(NSString *)serviceName account:(NSString *)account;
 + (BOOL)setPasswordData:(NSData *)password forService:(NSString *)serviceName account:(NSString *)account error:(NSError **)error __attribute__((swift_error(none)));
 
-/*
+/**
  Returns an array containing the Keychain's accounts, or `nil` if the Keychain has no accounts.
 
  See the `NSString` constants declared in SAMKeychain.h for a list of keys that can be used when accessing the
@@ -149,7 +149,7 @@ extern NSString *const kSAMKeychainWhereKey;
 + (nullable NSArray<NSDictionary<NSString *, id> *> *)allAccounts:(NSError *__autoreleasing *)error __attribute__((swift_error(none)));
 
 
-/*
+/**
  Returns an array containing the Keychain's accounts for a given service, or `nil` if the Keychain doesn't have any
  accounts for the given service.
 
@@ -168,7 +168,7 @@ extern NSString *const kSAMKeychainWhereKey;
 #pragma mark - Configuration
 
 #if __IPHONE_4_0 && TARGET_OS_IPHONE
-/*
+/**
  Returns the accessibility type for all future passwords saved to the Keychain.
 
  @return Returns the accessibility type.
@@ -180,7 +180,7 @@ extern NSString *const kSAMKeychainWhereKey;
  */
 + (CFTypeRef)accessibilityType;
 
-/*
+/**
  Sets the accessibility type for all future passwords saved to the Keychain.
 
  @param accessibilityType One of the "Keychain Item Accessibility Constants"

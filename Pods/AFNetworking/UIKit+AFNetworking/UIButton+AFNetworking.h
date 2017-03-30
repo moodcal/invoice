@@ -31,7 +31,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 @class AFImageDownloader;
 
-/*
+/**
  This category adds methods to the UIKit framework's `UIButton` class. The methods in this category provide support for loading remote images and background images asynchronously from a URL.
 
  @warning Compound values for control `state` (such as `UIControlStateHighlighted | UIControlStateDisabled`) are unsupported.
@@ -42,14 +42,14 @@ NS_ASSUME_NONNULL_BEGIN
 /// @name Accessing the Image Downloader
 ///------------------------------------
 
-/*
+/**
  Set the shared image downloader used to download images.
 
  @param imageDownloader The shared image downloader used to download images.
 */
 + (void)setSharedImageDownloader:(AFImageDownloader *)imageDownloader;
 
-/*
+/**
  The shared image downloader used to download images.
  */
 + (AFImageDownloader *)sharedImageDownloader;
@@ -58,7 +58,7 @@ NS_ASSUME_NONNULL_BEGIN
 /// @name Setting Image
 ///--------------------
 
-/*
+/**
  Asynchronously downloads an image from the specified URL, and sets it as the image for the specified state once the request is finished. Any previous image request for the receiver will be cancelled.
 
   If the image is cached locally, the image is set immediately, otherwise the specified placeholder image will be set immediately, and then the remote image will be set once the request is finished.
@@ -69,7 +69,7 @@ NS_ASSUME_NONNULL_BEGIN
 - (void)setImageForState:(UIControlState)state
                  withURL:(NSURL *)url;
 
-/*
+/**
  Asynchronously downloads an image from the specified URL, and sets it as the image for the specified state once the request is finished. Any previous image request for the receiver will be cancelled.
 
  If the image is cached locally, the image is set immediately, otherwise the specified placeholder image will be set immediately, and then the remote image will be set once the request is finished.
@@ -82,7 +82,7 @@ NS_ASSUME_NONNULL_BEGIN
                  withURL:(NSURL *)url
         placeholderImage:(nullable UIImage *)placeholderImage;
 
-/*
+/**
  Asynchronously downloads an image from the specified URL request, and sets it as the image for the specified state once the request is finished. Any previous image request for the receiver will be cancelled.
 
  If the image is cached locally, the image is set immediately, otherwise the specified placeholder image will be set immediately, and then the remote image will be set once the request is finished.
@@ -106,7 +106,7 @@ NS_ASSUME_NONNULL_BEGIN
 /// @name Setting Background Image
 ///-------------------------------
 
-/*
+/**
  Asynchronously downloads an image from the specified URL, and sets it as the background image for the specified state once the request is finished. Any previous background image request for the receiver will be cancelled.
 
  If the background image is cached locally, the background image is set immediately, otherwise the specified placeholder background image will be set immediately, and then the remote background image will be set once the request is finished.
@@ -117,7 +117,7 @@ NS_ASSUME_NONNULL_BEGIN
 - (void)setBackgroundImageForState:(UIControlState)state
                            withURL:(NSURL *)url;
 
-/*
+/**
  Asynchronously downloads an image from the specified URL, and sets it as the background image for the specified state once the request is finished. Any previous image request for the receiver will be cancelled.
 
  If the image is cached locally, the image is set immediately, otherwise the specified placeholder image will be set immediately, and then the remote image will be set once the request is finished.
@@ -130,7 +130,7 @@ NS_ASSUME_NONNULL_BEGIN
                            withURL:(NSURL *)url
                   placeholderImage:(nullable UIImage *)placeholderImage;
 
-/*
+/**
  Asynchronously downloads an image from the specified URL request, and sets it as the image for the specified state once the request is finished. Any previous image request for the receiver will be cancelled.
 
  If the image is cached locally, the image is set immediately, otherwise the specified placeholder image will be set immediately, and then the remote image will be set once the request is finished.
@@ -154,14 +154,14 @@ NS_ASSUME_NONNULL_BEGIN
 /// @name Canceling Image Loading
 ///------------------------------
 
-/*
+/**
  Cancels any executing image task for the specified control state of the receiver, if one exists.
 
  @param state The control state.
  */
 - (void)cancelImageDownloadTaskForState:(UIControlState)state;
 
-/*
+/**
  Cancels any executing background image task for the specified control state of the receiver, if one exists.
 
  @param state The control state.

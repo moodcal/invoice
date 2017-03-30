@@ -14,7 +14,7 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-/*
+/**
  Type encoding's type.
  */
 typedef NS_OPTIONS(NSUInteger, YYEncodingType) {
@@ -63,7 +63,7 @@ typedef NS_OPTIONS(NSUInteger, YYEncodingType) {
     YYEncodingTypePropertyDynamic      = 1 << 23, ///< @dynamic
 };
 
-/*
+/**
  Get the type from a Type-Encoding string.
  
  @discussion See also:
@@ -76,7 +76,7 @@ typedef NS_OPTIONS(NSUInteger, YYEncodingType) {
 YYEncodingType YYEncodingGetType(const char *typeEncoding);
 
 
-/*
+/**
  Instance variable information.
  */
 @interface YYClassIvarInfo : NSObject
@@ -86,7 +86,7 @@ YYEncodingType YYEncodingGetType(const char *typeEncoding);
 @property (nonatomic, strong, readonly) NSString *typeEncoding; ///< Ivar's type encoding
 @property (nonatomic, assign, readonly) YYEncodingType type;    ///< Ivar's type
 
-/*
+/**
  Creates and returns an ivar info object.
  
  @param ivar ivar opaque struct
@@ -96,7 +96,7 @@ YYEncodingType YYEncodingGetType(const char *typeEncoding);
 @end
 
 
-/*
+/**
  Method information.
  */
 @interface YYClassMethodInfo : NSObject
@@ -108,7 +108,7 @@ YYEncodingType YYEncodingGetType(const char *typeEncoding);
 @property (nonatomic, strong, readonly) NSString *returnTypeEncoding;   ///< return value's type
 @property (nullable, nonatomic, strong, readonly) NSArray<NSString *> *argumentTypeEncodings; ///< array of arguments' type
 
-/*
+/**
  Creates and returns a method info object.
  
  @param method method opaque struct
@@ -118,7 +118,7 @@ YYEncodingType YYEncodingGetType(const char *typeEncoding);
 @end
 
 
-/*
+/**
  Property information.
  */
 @interface YYClassPropertyInfo : NSObject
@@ -132,7 +132,7 @@ YYEncodingType YYEncodingGetType(const char *typeEncoding);
 @property (nonatomic, assign, readonly) SEL getter;               ///< getter (nonnull)
 @property (nonatomic, assign, readonly) SEL setter;               ///< setter (nonnull)
 
-/*
+/**
  Creates and returns a property info object.
  
  @param property property opaque struct
@@ -142,7 +142,7 @@ YYEncodingType YYEncodingGetType(const char *typeEncoding);
 @end
 
 
-/*
+/**
  Class information for a class.
  */
 @interface YYClassInfo : NSObject
@@ -156,7 +156,7 @@ YYEncodingType YYEncodingGetType(const char *typeEncoding);
 @property (nullable, nonatomic, strong, readonly) NSDictionary<NSString *, YYClassMethodInfo *> *methodInfos; ///< methods
 @property (nullable, nonatomic, strong, readonly) NSDictionary<NSString *, YYClassPropertyInfo *> *propertyInfos; ///< properties
 
-/*
+/**
  If the class is changed (for example: you add a method to this class with
  'class_addMethod()'), you should call this method to refresh the class info cache.
  
@@ -165,7 +165,7 @@ YYEncodingType YYEncodingGetType(const char *typeEncoding);
  */
 - (void)setNeedUpdate;
 
-/*
+/**
  If this method returns `YES`, you should stop using this instance and call
  `classInfoWithClass` or `classInfoWithClassName` to get the updated class info.
  
@@ -173,7 +173,7 @@ YYEncodingType YYEncodingGetType(const char *typeEncoding);
  */
 - (BOOL)needUpdate;
 
-/*
+/**
  Get the class info of a specified Class.
  
  @discussion This method will cache the class info and super-class info
@@ -184,7 +184,7 @@ YYEncodingType YYEncodingGetType(const char *typeEncoding);
  */
 + (nullable instancetype)classInfoWithClass:(Class)cls;
 
-/*
+/**
  Get the class info of a specified Class.
  
  @discussion This method will cache the class info and super-class info

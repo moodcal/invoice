@@ -8,46 +8,36 @@
 		<dict>
 			<key>isShown</key>
 			<false/>
-			<key>orderHint</key>
-			<integer>1</integer>
 		</dict>
 		<key>ActionSheetPicker-3.0.xcscheme</key>
 		<dict>
-			<key>orderHint</key>
-			<integer>11</integer>
+			<key>isShown</key>
+			<false/>
 		</dict>
 		<key>CYLTabBarController.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
-			<key>orderHint</key>
-			<integer>3</integer>
 		</dict>
 		<key>ChameleonFramework.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
-			<key>orderHint</key>
-			<integer>2</integer>
 		</dict>
 		<key>DCPathButton.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
-			<key>orderHint</key>
-			<integer>4</integer>
 		</dict>
 		<key>HMSegmentedControl.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
-			<key>orderHint</key>
-			<integer>5</integer>
 		</dict>
 		<key>IQKeyboardManager.xcscheme</key>
 		<dict>
-			<key>orderHint</key>
-			<integer>12</integer>
+			<key>isShown</key>
+			<false/>
 		</dict>
 		<key>MZTimerLabel.xcscheme</key>
 		<dict>
@@ -58,58 +48,36 @@
 		<dict>
 			<key>isShown</key>
 			<false/>
-			<key>orderHint</key>
-			<integer>6</integer>
 		</dict>
 		<key>PureLayout.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
-			<key>orderHint</key>
-			<integer>7</integer>
 		</dict>
 		<key>SAMKeychain.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
-			<key>orderHint</key>
-			<integer>8</integer>
 		</dict>
 		<key>SDWebImage.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
-			<key>orderHint</key>
-			<integer>13</integer>
 		</dict>
 		<key>SVProgressHUD.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
-			<key>orderHint</key>
-			<integer>9</integer>
 		</dict>
 		<key>YYModel.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
-			<key>orderHint</key>
-			<integer>10</integer>
 		</dict>
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
 		<key>0A2E50C24B03143F1418B06D739A8001</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>1B95504051F5938BD504A24F785B2A3A</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>4F1DA61C3FAB68348E055009EE5BF3CC</key>
 		<dict>
 			<key>primary</key>
 			<true/>
@@ -159,17 +127,7 @@
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>C15E5A9821676946EB4A3EE1D57FB9AA</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
 		<key>C36CB2CB977A4E7D954935096D00A1ED</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>C446458868E65D647C0E03E03A13997F</key>
 		<dict>
 			<key>primary</key>
 			<true/>
@@ -184,17 +142,7 @@
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>D427DBF99A44392D0F4E8ED67209DA41</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
 		<key>EA93DABFD4B19F72E6FB5A74F71F8E25</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>EDD8369C9AEF292C8EEF8AD9F6116F81</key>
 		<dict>
 			<key>primary</key>
 			<true/>

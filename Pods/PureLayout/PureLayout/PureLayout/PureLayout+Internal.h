@@ -33,12 +33,12 @@
 
 PL__ASSUME_NONNULL_BEGIN
 
-/* A constant that represents the smallest valid positive value for the multiplier of a constraint,
+/** A constant that represents the smallest valid positive value for the multiplier of a constraint,
     since a value of 0 will cause the second item to be lost in the internal auto layout engine. */
 static const CGFloat kMULTIPLIER_MIN_VALUE = (CGFloat)0.00001; // very small floating point numbers (e.g. CGFLOAT_MIN) can cause problems
 
 
-/*
+/**
  A category that exposes the internal (private) helper methods of the ALView+PureLayout category.
  */
 @interface ALView (PureLayoutInternal)
@@ -50,7 +50,7 @@ static const CGFloat kMULTIPLIER_MIN_VALUE = (CGFloat)0.00001; // very small flo
 @end
 
 
-/*
+/**
  A category that exposes the internal (private) helper methods of the NSArray+PureLayout category.
  */
 @interface NSArray (PureLayoutInternal)
@@ -62,7 +62,7 @@ static const CGFloat kMULTIPLIER_MIN_VALUE = (CGFloat)0.00001; // very small flo
 @end
 
 
-/*
+/**
  A category that exposes the internal (private) helper methods of the NSLayoutConstraint+PureLayout category.
  */
 @interface NSLayoutConstraint (PureLayoutInternal)

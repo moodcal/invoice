@@ -351,7 +351,7 @@ didFinishDownloadingToURL:(NSURL *)location
 
 #pragma mark -
 
-/*
+/**
  *  A workaround for issues related to key-value observing the `state` of an `NSURLSessionTask`.
  *
  *  See:
@@ -380,13 +380,13 @@ static NSString * const AFNSURLSessionTaskDidSuspendNotification = @"com.alamofi
 @implementation _AFURLSessionTaskSwizzling
 
 + (void)load {
-    /*
+    /**
      WARNING: Trouble Ahead
      https://github.com/AFNetworking/AFNetworking/pull/2702
      */
 
     if (NSClassFromString(@"NSURLSessionTask")) {
-        /*
+        /**
          iOS 7 and iOS 8 differ in NSURLSessionTask implementation, which makes the next bit of code a bit tricky.
          Many Unit Tests have been built to validate as much of this behavior has possible.
          Here is what we know:

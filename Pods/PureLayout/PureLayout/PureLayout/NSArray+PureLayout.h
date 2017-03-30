@@ -33,7 +33,7 @@ PL__ASSUME_NONNULL_BEGIN
 
 #pragma mark NSArray+PureLayout
 
-/*
+/**
  A category on NSArray that provides a simple yet powerful interface to:
     - Manage an array of Auto Layout constraints
     - Apply constraints to an array of views
@@ -43,15 +43,15 @@ PL__ASSUME_NONNULL_BEGIN
 
 #pragma mark Array of Constraints
 
-/* Activates the constraints in this array. */
+/** Activates the constraints in this array. */
 - (void)autoInstallConstraints;
 
-/* Deactivates the constraints in this array. */
+/** Deactivates the constraints in this array. */
 - (void)autoRemoveConstraints;
 
 #if PL__PureLayout_MinBaseSDK_iOS_8_0 || PL__PureLayout_MinBaseSDK_OSX_10_10
 
-/* Sets the string as the identifier for the constraints in this array. Available in iOS 7.0 and OS X 10.9 and later. */
+/** Sets the string as the identifier for the constraints in this array. Available in iOS 7.0 and OS X 10.9 and later. */
 - (instancetype)autoIdentifyConstraints:(NSString *)identifier;
 
 #endif /* PL__PureLayout_MinBaseSDK_iOS_8_0 || PL__PureLayout_MinBaseSDK_OSX_10_10 */
@@ -59,36 +59,36 @@ PL__ASSUME_NONNULL_BEGIN
 
 #pragma mark Array of Views
 
-/* Aligns views in this array to one another along a given edge. */
+/** Aligns views in this array to one another along a given edge. */
 - (PL__NSArray_of(NSLayoutConstraint *) *)autoAlignViewsToEdge:(ALEdge)edge;
 
-/* Aligns views in this array to one another along a given axis. */
+/** Aligns views in this array to one another along a given axis. */
 - (PL__NSArray_of(NSLayoutConstraint *) *)autoAlignViewsToAxis:(ALAxis)axis;
 
-/* Matches a given dimension of all the views in this array. */
+/** Matches a given dimension of all the views in this array. */
 - (PL__NSArray_of(NSLayoutConstraint *) *)autoMatchViewsDimension:(ALDimension)dimension;
 
-/* Sets the given dimension of all the views in this array to a given size. */
+/** Sets the given dimension of all the views in this array to a given size. */
 - (PL__NSArray_of(NSLayoutConstraint *) *)autoSetViewsDimension:(ALDimension)dimension toSize:(CGFloat)size;
 
-/* Sets all of the views in this array to a given size. */
+/** Sets all of the views in this array to a given size. */
 - (PL__NSArray_of(NSLayoutConstraint *) *)autoSetViewsDimensionsToSize:(CGSize)size;
 
 
-/* Distributes the views in this array equally along the selected axis in their superview.
+/** Distributes the views in this array equally along the selected axis in their superview.
     Views will be the same size (variable) in the dimension along the axis and will have spacing (fixed) between them. */
 - (PL__NSArray_of(NSLayoutConstraint *) *)autoDistributeViewsAlongAxis:(ALAxis)axis
                                                         alignedTo:(ALAttribute)alignment
                                                  withFixedSpacing:(CGFloat)spacing;
 
-/* Distributes the views in this array equally along the selected axis in their superview.
+/** Distributes the views in this array equally along the selected axis in their superview.
     Views will be the same size (variable) in the dimension along the axis and will have spacing (fixed) between them, with optional insets from the first and last views to their superview. */
 - (PL__NSArray_of(NSLayoutConstraint *) *)autoDistributeViewsAlongAxis:(ALAxis)axis
                                                         alignedTo:(ALAttribute)alignment
                                                  withFixedSpacing:(CGFloat)spacing
                                                      insetSpacing:(BOOL)shouldSpaceInsets;
 
-/* Distributes the views in this array equally along the selected axis in their superview.
+/** Distributes the views in this array equally along the selected axis in their superview.
     Views will have spacing (fixed) between them, with optional insets from the first and last views to their superview, and optionally constrained to the same size in the dimension along the axis. */
 - (PL__NSArray_of(NSLayoutConstraint *) *)autoDistributeViewsAlongAxis:(ALAxis)axis
                                                         alignedTo:(ALAttribute)alignment
@@ -97,13 +97,13 @@ PL__ASSUME_NONNULL_BEGIN
                                                      matchedSizes:(BOOL)shouldMatchSizes;
 
 
-/* Distributes the views in this array equally along the selected axis in their superview.
+/** Distributes the views in this array equally along the selected axis in their superview.
     Views will be the same size (fixed) in the dimension along the axis and will have spacing (variable) between them. */
 - (PL__NSArray_of(NSLayoutConstraint *) *)autoDistributeViewsAlongAxis:(ALAxis)axis
                                                         alignedTo:(ALAttribute)alignment
                                                     withFixedSize:(CGFloat)size;
 
-/* Distributes the views in this array equally along the selected axis in their superview.
+/** Distributes the views in this array equally along the selected axis in their superview.
     Views will be the same size (fixed) in the dimension along the axis and will have spacing (variable) between them, with optional insets from the first and last views to their superview. */
 - (PL__NSArray_of(NSLayoutConstraint *) *)autoDistributeViewsAlongAxis:(ALAxis)axis
                                                         alignedTo:(ALAttribute)alignment

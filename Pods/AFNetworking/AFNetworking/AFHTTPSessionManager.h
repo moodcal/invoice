@@ -33,7 +33,7 @@
 
 #import "AFURLSessionManager.h"
 
-/*
+/**
  `AFHTTPSessionManager` is a subclass of `AFURLSessionManager` with convenience methods for making HTTP requests. When a `baseURL` is provided, requests made with the `GET` / `POST` / et al. convenience methods can be made with relative paths.
 
  ## Subclassing Notes
@@ -75,19 +75,19 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface AFHTTPSessionManager : AFURLSessionManager <NSSecureCoding, NSCopying>
 
-/*
+/**
  The URL used to construct requests from relative paths in methods like `requestWithMethod:URLString:parameters:`, and the `GET` / `POST` / et al. convenience methods.
  */
 @property (readonly, nonatomic, strong, nullable) NSURL *baseURL;
 
-/*
+/**
  Requests created with `requestWithMethod:URLString:parameters:` & `multipartFormRequestWithMethod:URLString:parameters:constructingBodyWithBlock:` are constructed with a set of default headers using a parameter serialization specified by this property. By default, this is set to an instance of `AFHTTPRequestSerializer`, which serializes query string parameters for `GET`, `HEAD`, and `DELETE` requests, or otherwise URL-form-encodes HTTP message bodies.
 
  @warning `requestSerializer` must not be `nil`.
  */
 @property (nonatomic, strong) AFHTTPRequestSerializer <AFURLRequestSerialization> * requestSerializer;
 
-/*
+/**
  Responses sent from the server in data tasks created with `dataTaskWithRequest:success:failure:` and run using the `GET` / `POST` / et al. convenience methods are automatically validated and serialized by the response serializer. By default, this property is set to an instance of `AFJSONResponseSerializer`.
 
  @warning `responseSerializer` must not be `nil`.
@@ -98,12 +98,12 @@ NS_ASSUME_NONNULL_BEGIN
 /// @name Initialization
 ///---------------------
 
-/*
+/**
  Creates and returns an `AFHTTPSessionManager` object.
  */
 + (instancetype)manager;
 
-/*
+/**
  Initializes an `AFHTTPSessionManager` object with the specified base URL.
 
  @param url The base URL for the HTTP client.
@@ -112,7 +112,7 @@ NS_ASSUME_NONNULL_BEGIN
  */
 - (instancetype)initWithBaseURL:(nullable NSURL *)url;
 
-/*
+/**
  Initializes an `AFHTTPSessionManager` object with the specified base URL.
 
  This is the designated initializer.
@@ -129,7 +129,7 @@ NS_ASSUME_NONNULL_BEGIN
 /// @name Making HTTP Requests
 ///---------------------------
 
-/*
+/**
  Creates and runs an `NSURLSessionDataTask` with a `GET` request.
 
  @param URLString The URL string used to create the request URL.
@@ -145,7 +145,7 @@ NS_ASSUME_NONNULL_BEGIN
                       failure:(nullable void (^)(NSURLSessionDataTask * _Nullable task, NSError *error))failure DEPRECATED_ATTRIBUTE;
 
 
-/*
+/**
  Creates and runs an `NSURLSessionDataTask` with a `GET` request.
 
  @param URLString The URL string used to create the request URL.
@@ -162,7 +162,7 @@ NS_ASSUME_NONNULL_BEGIN
                                success:(nullable void (^)(NSURLSessionDataTask *task, id _Nullable responseObject))success
                                failure:(nullable void (^)(NSURLSessionDataTask * _Nullable task, NSError *error))failure;
 
-/*
+/**
  Creates and runs an `NSURLSessionDataTask` with a `HEAD` request.
 
  @param URLString The URL string used to create the request URL.
@@ -177,7 +177,7 @@ NS_ASSUME_NONNULL_BEGIN
                        success:(nullable void (^)(NSURLSessionDataTask *task))success
                        failure:(nullable void (^)(NSURLSessionDataTask * _Nullable task, NSError *error))failure;
 
-/*
+/**
  Creates and runs an `NSURLSessionDataTask` with a `POST` request.
 
  @param URLString The URL string used to create the request URL.
@@ -192,7 +192,7 @@ NS_ASSUME_NONNULL_BEGIN
                        success:(nullable void (^)(NSURLSessionDataTask *task, id _Nullable responseObject))success
                        failure:(nullable void (^)(NSURLSessionDataTask * _Nullable task, NSError *error))failure DEPRECATED_ATTRIBUTE;
 
-/*
+/**
  Creates and runs an `NSURLSessionDataTask` with a `POST` request.
 
  @param URLString The URL string used to create the request URL.
@@ -209,7 +209,7 @@ NS_ASSUME_NONNULL_BEGIN
                                 success:(nullable void (^)(NSURLSessionDataTask *task, id _Nullable responseObject))success
                                 failure:(nullable void (^)(NSURLSessionDataTask * _Nullable task, NSError *error))failure;
 
-/*
+/**
  Creates and runs an `NSURLSessionDataTask` with a multipart `POST` request.
 
  @param URLString The URL string used to create the request URL.
@@ -226,7 +226,7 @@ NS_ASSUME_NONNULL_BEGIN
                        success:(nullable void (^)(NSURLSessionDataTask *task, id _Nullable responseObject))success
                        failure:(nullable void (^)(NSURLSessionDataTask * _Nullable task, NSError *error))failure DEPRECATED_ATTRIBUTE;
 
-/*
+/**
  Creates and runs an `NSURLSessionDataTask` with a multipart `POST` request.
 
  @param URLString The URL string used to create the request URL.
@@ -245,7 +245,7 @@ NS_ASSUME_NONNULL_BEGIN
                                 success:(nullable void (^)(NSURLSessionDataTask *task, id _Nullable responseObject))success
                                 failure:(nullable void (^)(NSURLSessionDataTask * _Nullable task, NSError *error))failure;
 
-/*
+/**
  Creates and runs an `NSURLSessionDataTask` with a `PUT` request.
 
  @param URLString The URL string used to create the request URL.
@@ -260,7 +260,7 @@ NS_ASSUME_NONNULL_BEGIN
                       success:(nullable void (^)(NSURLSessionDataTask *task, id _Nullable responseObject))success
                       failure:(nullable void (^)(NSURLSessionDataTask * _Nullable task, NSError *error))failure;
 
-/*
+/**
  Creates and runs an `NSURLSessionDataTask` with a `PATCH` request.
 
  @param URLString The URL string used to create the request URL.
@@ -275,7 +275,7 @@ NS_ASSUME_NONNULL_BEGIN
                         success:(nullable void (^)(NSURLSessionDataTask *task, id _Nullable responseObject))success
                         failure:(nullable void (^)(NSURLSessionDataTask * _Nullable task, NSError *error))failure;
 
-/*
+/**
  Creates and runs an `NSURLSessionDataTask` with a `DELETE` request.
 
  @param URLString The URL string used to create the request URL.

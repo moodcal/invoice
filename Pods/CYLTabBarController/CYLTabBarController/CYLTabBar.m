@@ -2,7 +2,7 @@
 //  CYLTabBar.m
 //  CYLTabBarController
 //
-//  v1.8.0 Created by 微博@iOS程序犭袁 ( http://weibo.com/luohanchenyilong/ ) on 10/20/15.
+//  v1.10.0 Created by 微博@iOS程序犭袁 ( http://weibo.com/luohanchenyilong/ ) on 10/20/15.
 //  Copyright © 2015 https://github.com/ChenYilong . All rights reserved.
 //
 
@@ -14,7 +14,7 @@ static void *const CYLTabBarContext = (void*)&CYLTabBarContext;
 
 @interface CYLTabBar ()
 
-/* 发布按钮 */
+/** 发布按钮 */
 @property (nonatomic, strong) UIButton<CYLPlusButtonSubclassing> *plusButton;
 @property (nonatomic, assign) CGFloat tabBarItemWidth;
 @property (nonatomic, copy) NSArray *tabBarButtonArray;
@@ -53,7 +53,7 @@ static void *const CYLTabBarContext = (void*)&CYLTabBarContext;
     return self;
 }
 
-/*
+/**
  *  lazy load tabBarButtonArray
  *
  *  @return NSArray

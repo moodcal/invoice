@@ -9,7 +9,7 @@
 #import <Foundation/Foundation.h>
 #import <UIKit/UIKit.h>
 
-/*
+/**
  *  A contrasting status bar, intended for use on any backgrounds.
  *
  *  @since 2.0
