@@ -386,7 +386,7 @@
                                 <rect key="frame" x="0.0" y="64" width="320" height="416"/>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BHM-HE-blq">
-                                <rect key="frame" x="19.5" y="340" width="131" height="40"/>
+                                <rect key="frame" x="20" y="340" width="131" height="40"/>
                                 <color key="backgroundColor" red="0.0" green="0.70281225439999995" blue="0.97108451520000005" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="40" id="fDh-cy-zue"/>
@@ -400,7 +400,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LdD-iY-KS3">
-                                <rect key="frame" x="169.5" y="340" width="131" height="40"/>
+                                <rect key="frame" x="170" y="340" width="131" height="40"/>
                                 <color key="backgroundColor" red="0.0" green="0.70281225439999995" blue="0.97108451520000005" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="40" id="jsh-FF-VJI"/>
@@ -1634,7 +1634,7 @@
         <image name="index-export" width="19" height="19"/>
         <image name="index-mail" width="19" height="19"/>
         <image name="index-phone" width="19" height="19"/>
-        <image name="sign_bg" width="180" height="320"/>
+        <image name="sign_bg" width="720" height="1280"/>
         <image name="tab-fapiaojia" width="22" height="22"/>
         <image name="tab-wode" width="24" height="24"/>
     </resources>
