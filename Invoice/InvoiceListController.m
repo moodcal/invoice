@@ -13,7 +13,7 @@
 #define INVOICE_PAGE_SIZE @15
 
 @interface InvoiceListController () <UICollectionViewDelegate, UICollectionViewDataSource, SearchViewDelegate>
-@property (nonatomic, strong) NSArray *invoices;
+@property (nonatomic, strong) NSMutableArray *invoices;
 @property (nonatomic, strong) NSArray *filteredInvoices;
 @property (weak, nonatomic) IBOutlet HMSegmentedControl *segmentedControl;
 @property (weak, nonatomic) IBOutlet NSLayoutConstraint *indexHeightConstraint;
@@ -46,6 +46,7 @@
 - (void)viewWillAppear:(BOOL)animated {
     [super viewWillAppear:animated];
     self.pageIndex = 0;
+    [self.invoices removeAllObjects];
     [self requestData];
 }
 
@@ -69,7 +70,7 @@
         if ([[responseObject objectForKey:@"success"] boolValue]) {
             NSArray *pagedInvoices = [NSArray yy_modelArrayWithClass:[Invoice class] json:[responseObject objectForKey:@"invoices"]];
             if (pagedInvoices.count < INVOICE_PAGE_SIZE.integerValue) self.noMoreData = YES;
-            self.invoices = [self.invoices arrayByAddingObjectsFromArray:pagedInvoices];
+            self.invoices = [[self.invoices arrayByAddingObjectsFromArray:pagedInvoices] mutableCopy];
             [self reloadInvoices];
         } else {
             if ([[responseObject objectForKey:@"error_code"] integerValue] == 401) {
