@@ -2,7 +2,7 @@
 //  CYLTabBarController.m
 //  CYLTabBarController
 //
-//  v1.10.0 Created by 微博@iOS程序犭袁 ( http://weibo.com/luohanchenyilong/ ) on 10/20/15.
+//  v1.8.0 Created by 微博@iOS程序犭袁 ( http://weibo.com/luohanchenyilong/ ) on 10/20/15.
 //  Copyright © 2015 https://github.com/ChenYilong . All rights reserved.
 //
 
@@ -170,20 +170,20 @@ static void * const CYLSwappableImageViewDefaultOffsetContext = (void*)&CYLSwapp
         NSUInteger idx = 0;
         for (UIViewController *viewController in _viewControllers) {
             NSString *title = nil;
-            id normalImageInfo = nil;
-            id selectedImageInfo = nil;
+            NSString *normalImageName = nil;
+            NSString *selectedImageName = nil;
             if (viewController != CYLPlusChildViewController) {
                 title = _tabBarItemsAttributes[idx][CYLTabBarItemTitle];
-                normalImageInfo = _tabBarItemsAttributes[idx][CYLTabBarItemImage];
-                selectedImageInfo = _tabBarItemsAttributes[idx][CYLTabBarItemSelectedImage];
+                normalImageName = _tabBarItemsAttributes[idx][CYLTabBarItemImage];
+                selectedImageName = _tabBarItemsAttributes[idx][CYLTabBarItemSelectedImage];
             } else {
                 idx--;
             }
             
             [self addOneChildViewController:viewController
                                   WithTitle:title
-                            normalImageInfo:normalImageInfo
-                          selectedImageInfo:selectedImageInfo];
+                            normalImageName:normalImageName
+                          selectedImageName:selectedImageName];
             [viewController cyl_setTabBarController:self];
             idx++;
         }
@@ -200,21 +200,21 @@ static void * const CYLSwappableImageViewDefaultOffsetContext = (void*)&CYLSwapp
  *
  *  @param viewController    控制器
  *  @param title             标题
- *  @param normalImageInfo   图片
- *  @param selectedImageInfo 选中图片
+ *  @param normalImageName   图片
+ *  @param selectedImageName 选中图片
  */
 - (void)addOneChildViewController:(UIViewController *)viewController
                         WithTitle:(NSString *)title
-                  normalImageInfo:(id)normalImageInfo
-                selectedImageInfo:(id)selectedImageInfo {
+                  normalImageName:(NSString *)normalImageName
+                selectedImageName:(NSString *)selectedImageName {
     viewController.tabBarItem.title = title;
-    if (normalImageInfo) {
-        UIImage *normalImage = [self getImageFromImageInfo:normalImageInfo];
+    if (normalImageName) {
+        UIImage *normalImage = [UIImage imageNamed:normalImageName];
         normalImage = [normalImage imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
         viewController.tabBarItem.image = normalImage;
     }
-    if (selectedImageInfo) {
-        UIImage *selectedImage = [self getImageFromImageInfo:selectedImageInfo];
+    if (selectedImageName) {
+        UIImage *selectedImage = [UIImage imageNamed:selectedImageName];
         selectedImage = [selectedImage imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
         viewController.tabBarItem.selectedImage = selectedImage;
     }
@@ -225,16 +225,6 @@ static void * const CYLSwappableImageViewDefaultOffsetContext = (void*)&CYLSwapp
         viewController.tabBarItem.titlePositionAdjustment = self.titlePositionAdjustment;
     }
     [self addChildViewController:viewController];
-}
-
-- (UIImage *)getImageFromImageInfo:(id)imageInfo {
-    UIImage *image = nil;
-    if ([imageInfo isKindOfClass:[NSString class]]) {
-        image = [UIImage imageNamed:imageInfo];
-    } else if ([imageInfo isKindOfClass:[UIImage class]]) {
-        image = (UIImage *)imageInfo;
-    }
-    return image;
 }
 
 - (BOOL)shouldCustomizeImageInsets {

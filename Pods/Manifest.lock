@@ -18,7 +18,7 @@ PODS:
   - ChameleonFramework (2.1.0):
     - ChameleonFramework/Default (= 2.1.0)
   - ChameleonFramework/Default (2.1.0)
-  - CYLTabBarController (1.10.0)
+  - CYLTabBarController (1.8.0)
   - DCPathButton (2.1.4)
   - HMSegmentedControl (1.5.3)
   - IQKeyboardManager (4.0.8)
@@ -50,17 +50,17 @@ SPEC CHECKSUMS:
   ActionSheetPicker-3.0: d11a4c12c6aaf704b8a3f56d179198c99f3e41e6
   AFNetworking: 5e0e199f73d8626b11e79750991f5d173d1f8b67
   ChameleonFramework: d21a3cc247abfe5e37609a283a8238b03575cf64
-  CYLTabBarController: 2de9a4c26f50d33574398becf8e7b0aaed794240
+  CYLTabBarController: 3b6befc12bccc2fd29a4d69e3ad7f9c4aaaf4506
   DCPathButton: 99c8211ef3eafc3b438c917a4c7b4502fa77eee7
   HMSegmentedControl: 7c6145afb50f26cec5f3243082f6f12b9f41318f
   IQKeyboardManager: 1a8189fa153bf09044355ee0ad36826f6767e7f7
   MZTimerLabel: cd9bfb9304540ef2a9e163384fca9c978f0dbf83
   PureLayout: 4d550abe49a94f24c2808b9b95db9131685fe4cd
   SAMKeychain: 1865333198217411f35327e8da61b43de79b635b
-  SDWebImage: '098e97e6176540799c27e804c96653ee0833d13c'
+  SDWebImage: 098e97e6176540799c27e804c96653ee0833d13c
   SVProgressHUD: c404a55d78acbeb7ebb78b76d3faf986475a6994
   YYModel: 2a7fdd96aaa4b86a824e26d0c517de8928c04b30
 
-PODFILE CHECKSUM: a73ace4f5cf474eaa209e58a22b9e084b0196deb
+PODFILE CHECKSUM: 066e5775acb5d5908da01ac6840ffd7db120b031
 
-COCOAPODS: 1.2.0
+COCOAPODS: 1.1.1

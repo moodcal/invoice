@@ -33,6 +33,11 @@
     self.secondLabel.layer.cornerRadius = 4;
 }
 
+- (void)viewWillAppear:(BOOL)animated {
+    [super viewWillAppear:animated];
+    self.navigationItem.title = @"注册";
+}
+
 - (void)viewWillDisappear:(BOOL)animated {
     [super viewWillDisappear:animated];
     [self.secondLabel removeFromSuperview];

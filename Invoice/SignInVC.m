@@ -25,6 +25,11 @@
     self.signinButton.backgroundColor = [UIColor mainColor];
 }
 
+- (void)viewWillAppear:(BOOL)animated {
+    [super viewWillAppear:animated];
+    self.navigationItem.title = @"登陆";
+}
+
 - (IBAction)signinAction:(id)sender {
     [[SRUserManager sharedInstance] signinWithName:self.phoneTextField.text password:self.passwordTextField.text success:^{
         [self dismissViewControllerAnimated:YES completion:nil];

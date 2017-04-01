@@ -2,7 +2,7 @@
 //  UIViewController+CYLTabBarControllerExtention.m
 //  CYLTabBarController
 //
-//  v1.10.0 Created by 微博@iOS程序犭袁 ( http://weibo.com/luohanchenyilong/ ) on 16/2/26.
+//  v1.8.0 Created by 微博@iOS程序犭袁 ( http://weibo.com/luohanchenyilong/ ) on 16/2/26.
 //  Copyright © 2016年 https://github.com/ChenYilong .All rights reserved.
 //
 
@@ -84,16 +84,8 @@
     callback(otherSameClassTypeViewControllersInCurrentNavigationControllerStack, completionHandler);
 }
 
-- (void)cyl_pushViewController:(UIViewController *)viewController animated:(BOOL)animated {
-    UIViewController *fromViewController = [self cyl_getViewControllerInsteadIOfNavigationController];
-    NSArray *childViewControllers = fromViewController.navigationController.childViewControllers;
-    if (childViewControllers.count > 0) {
-        if ([[childViewControllers lastObject] isKindOfClass:[viewController class]]) {
-            return;
-        }
-    }
-    [fromViewController.navigationController pushViewController:viewController animated:animated];
-}
+#pragma mark -
+#pragma mark - Private Methods
 
 - (UIViewController *)cyl_getViewControllerInsteadIOfNavigationController {
     BOOL isNavigationController = [[self class] isSubclassOfClass:[UINavigationController class]];
@@ -103,11 +95,8 @@
     return self;
 }
 
-#pragma mark -
-#pragma mark - Private Methods
-
 - (NSArray<__kindof UIViewController *> *)cyl_getOtherSameClassTypeViewControllersInCurrentNavigationControllerStack:(UIViewController *)viewController {
-    NSArray *currentNavigationControllerStack = [self.navigationController childViewControllers];
+    NSArray *currentNavigationControllerStack = [self.navigationController viewControllers];
     if (currentNavigationControllerStack.count < 2) {
         return nil;
     }
