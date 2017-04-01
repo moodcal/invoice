@@ -792,8 +792,8 @@
 				TargetAttributes = {
 					AB330D041E777F9D002C6FCD = {
 						CreatedOnToolsVersion = 8.2.1;
-						DevelopmentTeam = 25WUPDZ7Y7;
-						ProvisioningStyle = Automatic;
+						DevelopmentTeam = 7ZH6UCC82W;
+						ProvisioningStyle = Manual;
 					};
 				};
 			};
@@ -1099,13 +1099,16 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
-				DEVELOPMENT_TEAM = 25WUPDZ7Y7;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution";
+				DEVELOPMENT_TEAM = 7ZH6UCC82W;
 				GCC_PREFIX_HEADER = Invoice/PrefixHeader.pch;
 				INFOPLIST_FILE = Invoice/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.links.invoice;
+				PRODUCT_BUNDLE_IDENTIFIER = com.alinks.invoice;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "f337f845-ef3e-4066-b3e4-fc2b254e72fd";
+				PROVISIONING_PROFILE_SPECIFIER = Profile_qiye_distribution_inhouse_invoice;
 			};
 			name = Debug;
 		};
@@ -1115,13 +1118,16 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
-				DEVELOPMENT_TEAM = 25WUPDZ7Y7;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution";
+				DEVELOPMENT_TEAM = 7ZH6UCC82W;
 				GCC_PREFIX_HEADER = Invoice/PrefixHeader.pch;
 				INFOPLIST_FILE = Invoice/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.links.invoice;
+				PRODUCT_BUNDLE_IDENTIFIER = com.alinks.invoice;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "f337f845-ef3e-4066-b3e4-fc2b254e72fd";
+				PROVISIONING_PROFILE_SPECIFIER = Profile_qiye_distribution_inhouse_invoice;
 			};
 			name = Release;
 		};
