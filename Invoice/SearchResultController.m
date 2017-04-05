@@ -66,6 +66,9 @@
     }
     NSPredicate *predicate = [NSPredicate predicateWithFormat:@"%K = %@", @"inspect_status", [NSNumber numberWithInteger:status]];
     self.filteredInvoices = [self.invoices filteredArrayUsingPredicate:predicate];
+    if (self.filteredInvoices.count == 0) {
+        [SVProgressHUD showErrorWithStatus:@"发票不存在"];
+    }
     [self.collectionView reloadData];
 }
 

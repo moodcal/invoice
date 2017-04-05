@@ -40,6 +40,6 @@
         </scene>
     </scenes>
     <resources>
-        <image name="sign_bg" width="180" height="320"/>
+        <image name="sign_bg" width="720" height="1280"/>
     </resources>
 </document>
