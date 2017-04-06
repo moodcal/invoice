@@ -11,7 +11,7 @@
 //#define ApiHost @"http://10.38.12.97"
 #else
 //#define ApiHost @"http://10.38.42.45:8086"
-#define ApiHost @"https://app.haipingx.cn"
+#define ApiHost @"http://app.haipingx.cn:8080"
 #endif
 
 #define ApiMethodInvoicsList (ApiHost @"/invoices/list")
