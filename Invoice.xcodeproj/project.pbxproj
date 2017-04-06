@@ -1105,7 +1105,7 @@
 				INFOPLIST_FILE = Invoice/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.links.invoice;
+				PRODUCT_BUNDLE_IDENTIFIER = com.alinks.invoice;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "f3f0ed23-e932-48aa-ad9b-b1c60499f6c0";
 				PROVISIONING_PROFILE_SPECIFIER = Profile_new_dev_invoice;
@@ -1124,7 +1124,7 @@
 				INFOPLIST_FILE = Invoice/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.links.invoice;
+				PRODUCT_BUNDLE_IDENTIFIER = com.alinks.invoice;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "f337f845-ef3e-4066-b3e4-fc2b254e72fd";
 				PROVISIONING_PROFILE_SPECIFIER = Profile_qiye_distribution_inhouse_invoice;
