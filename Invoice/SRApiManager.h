@@ -7,11 +7,11 @@
 //
 
 #ifdef DEBUG
-#define ApiHost @"http://app.haipingx.cn:8080"
+#define ApiHost @"http://app.haipingx.cn/ib"
 //#define ApiHost @"http://10.38.12.97"
 #else
 //#define ApiHost @"http://10.38.42.45:8086"
-#define ApiHost @"http://app.haipingx.cn:8080"
+#define ApiHost @"http://app.haipingx.cn/ib"
 #endif
 
 #define ApiMethodInvoicsList (ApiHost @"/invoices/list")

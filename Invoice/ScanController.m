@@ -208,72 +208,77 @@
     
     if ([metadataObjects count] >0)
     {
-        //停止扫描
-        [_session stopRunning];
-        [timer setFireDate:[NSDate distantFuture]];
-        
+
         AVMetadataMachineReadableCodeObject * metadataObject = [metadataObjects objectAtIndex:0];
         stringValue = metadataObject.stringValue;
         DLog(@"扫描结果：%@",stringValue);//01,04,3100162320,80893920,236.75,20170125,54877368153269129828,5F49,
         
-//        InvoiceDetailController *controller = [[InvoiceDetailController alloc] init];
-//        self.navigationController.navigationBar.hidden = NO;
-//        [self.navigationController pushViewController:controller animated:NO];
-//        return;
-        
-        NSArray *array = [stringValue componentsSeparatedByString:@","];
-        
-        if (!self.blackLoadingView.superview) {
-            [self.view addSubview:self.blackLoadingView];
-        }
-        
-        AFHTTPSessionManager *sessionManager = [[SRApiManager sharedInstance] sessionManager];
-        NSMutableDictionary *params = [NSMutableDictionary dictionary];
-        [params setObject:array[2] forKey:@"ticket_code"];
-        [params setObject:array[3] forKey:@"ticket_no"];
-        [params setObject:array[4] forKey:@"money"];
-        [params setObject:[NSString stringWithFormat:@"%@-%@-%@",[array[5] substringWithRange:NSMakeRange(0, 4)],[array[5] substringWithRange:NSMakeRange(4, 2)],[array[5] substringWithRange:NSMakeRange(6, 2)]] forKey:@"invoice_date"];
-        [params appendInfo];
-        [sessionManager.requestSerializer setValue:params.signature forHTTPHeaderField:@"sign"];
-        [sessionManager POST:ApiMethodInvoicsCreate parameters:params progress:nil success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
+        if (stringValue.length > 0) {
+            NSArray *array = [stringValue componentsSeparatedByString:@","];
             
-            NSData *jsonData = [NSJSONSerialization dataWithJSONObject:responseObject options:NSJSONWritingPrettyPrinted error:nil];
-            NSString *jsonStr = [[NSString alloc] initWithData:jsonData encoding:NSUTF8StringEncoding];
-            NSLog(@"response: %@", jsonStr);
-            
-            [self.blackLoadingView removeFromSuperview];
-            
-            if ([[responseObject objectForKey:@"success"] boolValue]) {
-                InvoiceDetailController *controller = [[InvoiceDetailController alloc] init];
-                controller.invoice = [Invoice yy_modelWithDictionary:[responseObject objectForKey:@"invoice"]];
-                self.navigationController.navigationBar.hidden = NO;
-                [self.navigationController pushViewController:controller animated:NO];
+            if (array.count >= 6) {
                 
-            } else {
-                DLog(@"request error");
+                //停止扫描
+                [_session stopRunning];
+                [timer setFireDate:[NSDate distantFuture]];
                 
-                [self.view showInfo:@"请求失败" autoHidden:YES];
-                
-                [_session startRunning];
-                [timer setFireDate:[NSDate date]];
-                
-                if ([[responseObject objectForKey:@"error_code"] integerValue] == 401) {
-                    [[NSNotificationCenter defaultCenter] postNotificationName:@"SRNotificationNeedSignin" object:nil];
+                if (!self.blackLoadingView.superview) {
+                    [self.view addSubview:self.blackLoadingView];
                 }
+                
+                AFHTTPSessionManager *sessionManager = [[SRApiManager sharedInstance] sessionManager];
+                NSMutableDictionary *params = [NSMutableDictionary dictionary];
+                [params setObject:array[2] forKey:@"ticket_code"];
+                [params setObject:array[3] forKey:@"ticket_no"];
+                [params setObject:array[4] forKey:@"money"];
+                [params setObject:[NSString stringWithFormat:@"%@-%@-%@",[array[5] substringWithRange:NSMakeRange(0, 4)],[array[5] substringWithRange:NSMakeRange(4, 2)],[array[5] substringWithRange:NSMakeRange(6, 2)]] forKey:@"invoice_date"];
+                [params appendInfo];
+                [sessionManager.requestSerializer setValue:params.signature forHTTPHeaderField:@"sign"];
+                [sessionManager POST:ApiMethodInvoicsCreate parameters:params progress:nil success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
+                    
+                    NSData *jsonData = [NSJSONSerialization dataWithJSONObject:responseObject options:NSJSONWritingPrettyPrinted error:nil];
+                    NSString *jsonStr = [[NSString alloc] initWithData:jsonData encoding:NSUTF8StringEncoding];
+                    NSLog(@"response: %@", jsonStr);
+                    
+                    [self.blackLoadingView removeFromSuperview];
+                    
+                    if ([[responseObject objectForKey:@"success"] boolValue]) {
+                        InvoiceDetailController *controller = [[InvoiceDetailController alloc] init];
+                        controller.invoice = [Invoice yy_modelWithDictionary:[responseObject objectForKey:@"invoice"]];
+                        self.navigationController.navigationBar.hidden = NO;
+                        [self.navigationController pushViewController:controller animated:NO];
+                        
+                    } else {
+                        DLog(@"request error");
+                        
+                        [self.view showInfo:@"请求失败" autoHidden:YES];
+                        
+                        [_session startRunning];
+                        [timer setFireDate:[NSDate date]];
+                        
+                        if ([[responseObject objectForKey:@"error_code"] integerValue] == 401) {
+                            [[NSNotificationCenter defaultCenter] postNotificationName:@"SRNotificationNeedSignin" object:nil];
+                        }
+                    }
+                } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
+                    DLog(@"error: %@", error);
+                    [self.blackLoadingView removeFromSuperview];
+                    
+                    [self.view showInfo:@"请求失败" autoHidden:YES];
+                    
+                    [_session startRunning];
+                    [timer setFireDate:[NSDate date]];
+                }];
+            } else {
+                DLog(@"无扫描信息");
             }
-        } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
-            DLog(@"error: %@", error);
-            [self.blackLoadingView removeFromSuperview];
             
-            [self.view showInfo:@"请求失败" autoHidden:YES];
-            
-            [_session startRunning];
-            [timer setFireDate:[NSDate date]];
-        }];
+        } else {
+            DLog(@"无扫描信息");
+        }
         
     } else {
         DLog(@"无扫描信息");
-        return;
     }
     
 }
